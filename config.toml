@@ -23,7 +23,7 @@ enableEmoji = true
 defaultContentLanguage = "en"
 
 [params.info]
-description = "I write software and read IT news."
+description = "I write software and read tech news."
 title404 = "Nothing's here!"
 
 [params.assets]
