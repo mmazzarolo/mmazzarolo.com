@@ -1,0 +1,30 @@
+.header-info {
+  margin-top: 0;
+}
+
+.site-desc {
+  font-style:normal; 
+}
+
+.highlight {
+  font-size: 0.9em;
+}
+
+.header-info-back {
+  margin-bottom: 3px;
+  color: #37474f;
+}
+
+.widget-title.title  {
+  display: none !important;
+}
+
+header img {
+  float: right;
+  height: 3em;
+}
+
+.copyright {
+  font-size: 1em;
+  color: rgba(0,0,0,0.5);
+}
