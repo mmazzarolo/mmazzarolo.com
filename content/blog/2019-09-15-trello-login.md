@@ -1,7 +1,7 @@
 ---
-date: "2018-09-13"
+date: "2018-09-15"
 title: "Trello authentication in React-Native"
-tags: [javascript, react, typescript, mobx]
+tags: [javascript, react, react-native, trello]
 ---
 
 If you'll ever find yourself needing to use Trello's APIs on React-Native you'll quickly realize that to do so you'll first have to go through the [Trello authentication process to obtain an authentication token](https://developers.trello.com/page/authorization).  
