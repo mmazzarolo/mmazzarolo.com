@@ -41,7 +41,7 @@ Again, we're not going to focus too much on it, so, if you feel more comfortable
 Here is the directory structure we're going to use in the tutorial:
 
 <p align="center">
-<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/01-directory-structure.png?raw=true" height="520"></img>
+<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/01-directory-structure.png?raw=true" height="520" style="height:520px"></img>
 </p>
 
 - **assets**: Images, fonts, etc...

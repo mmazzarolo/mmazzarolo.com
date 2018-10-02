@@ -20,9 +20,9 @@ I'm planning to periodically submit a new update but I haven't defined the relea
 <br />
 
 <p align="center">
-<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/00-screenshot-1.png?raw=true" height="520"></img>
-<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/00-screenshot-2.png?raw=true" height="520"></img>
-<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/00-screenshot-3.png?raw=true" height="520"></img>
+<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/00-screenshot-1.png?raw=true" height="520" style="height:520px"></img>
+<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/00-screenshot-2.png?raw=true" height="520" style="height:520px"></img>
+<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/00-screenshot-3.png?raw=true" height="520" style="height:520px" style="height:520px"></img>
 </p>
 
 # The tutorial

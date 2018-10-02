@@ -16,7 +16,7 @@ In the previous chapter we completed the setup of the development environment so
 In this chapter we'll create the UI of the login screen, starting from the following mockup:
 
 <p align="center">
-<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/02-mockup.png?raw=true" height="520"></img>
+<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/02-mockup.png?raw=true" height="520" style="height:520px"></img>
 </p>
 
 ## The Button component
@@ -217,7 +217,7 @@ export default LoginScreen;
 ```
 
 <p align="center">
-<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/02-login-ui.png?raw=true" height="520"></img>
+<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/02-login-ui.png?raw=true" height="520" style="height:520px"></img>
 </p>
 
 Neat!
