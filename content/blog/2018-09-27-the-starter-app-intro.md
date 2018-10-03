@@ -46,10 +46,6 @@ Also thank you to:
 - Vadim Ponomaryov for the [friend profile screen inspiration]
 - [365randommuppets] for the amazing placeholders
 
-# Acknowledgements
-
-I created this project because I wanted to share a few tricks I learned while working with React-Native in the past few years.  
-That said though, we all know that we can never stop learning, so feel free to point out mistakes and/or submit a feedback. Thank you!
 
 [github]: https://github.com/mmazzarolo/the-starter-app
 [medium]: https://medium.com/@mmazzarolo/the-starter-app-introduction-3ead074cc589
