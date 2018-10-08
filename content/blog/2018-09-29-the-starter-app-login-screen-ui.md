@@ -1,6 +1,6 @@
 ---
 date: "2018-09-29"
-title: "The Starter App: Login screen UI"
+title: "The Starter App, Part 2: Login screen UI"
 tags: [programming, javascript, react, react-native]
 ---
 

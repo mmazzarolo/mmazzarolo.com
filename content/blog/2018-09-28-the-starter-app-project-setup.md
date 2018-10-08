@@ -1,6 +1,6 @@
 ---
 date: "2018-09-28"
-title: "The Starter App: Project Setup"
+title: "The Starter App, Part 1: Project Setup"
 tags: [programming, javascript, react, react-native]
 ---
 

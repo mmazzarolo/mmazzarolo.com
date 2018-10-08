@@ -1,6 +1,6 @@
 ---
 date: "2018-09-30"
-title: "The Starter App: Keyboard improvements"
+title: "The Starter App, Part 3: Keyboard improvements"
 tags: [programming, javascript, react, react-native]
 ---
 
