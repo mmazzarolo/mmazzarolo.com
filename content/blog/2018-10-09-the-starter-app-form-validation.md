@@ -319,6 +319,6 @@ And now, let's bring our login screen to Android as well!
 
 [github]: https://github.com/mmazzarolo/the-starter-app
 [medium]: https://medium.com/@mmazzarolo/the-starter-app-introduction-3ead074cc589
-[next - part 5: login screen on android]: https://github.com/mmazzarolo/the-starter-app/tree/master/05-login-screen-on-android
+[next - part 5: login screen on android]: https://mmazzarolo.com/blog/2018-10-10-the-starter-app-login-screen-on-android
 
 [formik]: https://github.com/jaredpalmer/formik
