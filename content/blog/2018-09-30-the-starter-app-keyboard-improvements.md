@@ -323,7 +323,7 @@ export default LoginScreen;
 <img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/03-keyboard-focus.gif?raw=true" height="520" style="height:520px"></img>
 </p>
 
-Next - part 4: form validation (WIP)
+[Next - part 4: Form validation]
 
 [github]: https://github.com/mmazzarolo/the-starter-app
 [medium]: https://medium.com/@mmazzarolo/the-starter-app-introduction-3ead074cc589
@@ -335,4 +335,5 @@ Next - part 4: form validation (WIP)
 [textinput returnkeytype to "done"]: https://facebook.github.io/react-native/docs/textinput#returnkeytype
 [textinput securetextentry prop to true]: https://facebook.github.io/react-native/docs/textinput#securetextentry
 [textinput onsubmitediting prop]: https://facebook.github.io/react-native/docs/textinput#onsubmitediting
+[Next - part 4: Form validation]: https://mmazzarolo.com/blog/2018-10-09-the-starter-app-form-validation
 

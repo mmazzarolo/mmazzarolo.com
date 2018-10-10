@@ -230,5 +230,6 @@ That's all for this chapter. In the next one we'll improve the keyboard support 
 
 [github]: https://github.com/mmazzarolo/the-starter-app
 [medium]: https://medium.com/@mmazzarolo/the-starter-app-introduction-3ead074cc589
+[Next - part 3: Keyboard improvements]: https://mmazzarolo.com/blog/2018-09-30-the-starter-app-keyboard-improvements
+
 [react native textinput]: https://facebook.github.io/react-native/docs/textinput
-[next - part 3: keyboard improvements]: https://mmazzarolo.com/blog/2018-09-30-the-starter-app-keyboard-improvements
