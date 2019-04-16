@@ -1,6 +1,5 @@
 ---
-title: Home
-menu:
-  - main
-weight: -270
+title: mmazzarolo.com
+layout: "blog"
+type: "blog"
 ---

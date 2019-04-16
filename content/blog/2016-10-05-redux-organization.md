@@ -44,9 +44,9 @@ This structure is promoted by the [official Redux repository examples](https://g
 The main drawback of a structure like is that even adding a small feature might end up in editing many different files.  
 For example adding a field (that is updated by an action) to the product store means that you'll have to:
 
-* add the action type in `types/product.js`
-* add the action creator in `actions/products.js`
-* add the field in `reducers/product.js`
+- add the action type in `types/product.js`
+- add the action creator in `actions/products.js`
+- add the field in `reducers/product.js`
 
 And it doesn't end here! When the app grows you'll probably add other directories to the mix:
 
@@ -144,9 +144,15 @@ export default (state = initialState, action) => {
   }
 }
 
-export const signup = (email, password) => ({ type: SIGNUP_REQUEST, email, password })
-export const login = (email, password) => ({ type: LOGIN_REQUEST, email, password })
-export const logout = () => ({ type: LOGOUT })
+export const signup = (email, password) => ({
+  type: SIGNUP_REQUEST, email, password
+})
+export const login = (email, password) => ({
+  type: LOGIN_REQUEST, email, password
+})
+export const logout = () => ({
+  type: LOGOUT
+})
 
 // src/ducks/product.js
 const GET_PRODUCTS_REQUEST = 'PRODUCT/GET_PRODUCTS_REQUEST'
@@ -175,7 +181,9 @@ export default (state = initialState, action) => {
   }
 }
 
-export const getProducts = () => ({ type: GET_PRODUCTS_REQUEST })
+export const getProducts = () => ({
+  type: GET_PRODUCTS_REQUEST
+})
 ```
 
 The first time I adopted this syntax I fell in love with it.  
@@ -183,13 +191,13 @@ It's clean, it removes a lot of unnecessary boilerplate and you can easily add a
 
 Unfortunately thought, using ducks started showing quickly its limits because exporting individually every single action creator and action type has some nasty side effects.
 
-* In bigger containers you'll end up having a huge list of imported actions that are only used one time (for feeding `mapDispatchToProps`):
+- In bigger containers you'll end up having a huge list of imported actions that are only used one time (for feeding `mapDispatchToProps`):
   `import { signup, login, resetPassword, logout, ... } from 'ducks/authReducer'`
-* You won't be able to pass to `mapDispatchToProps` directly all the actions of a duck.
+- You won't be able to pass to `mapDispatchToProps` directly all the actions of a duck.
   Using `import * as actions from 'ducks/authReducer'` won't work, because you'll import even the reducer this way.
-* You'll waste a super precious variable name just for passing it to `mapDispatchToProps`.  
+- You'll waste a super precious variable name just for passing it to `mapDispatchToProps`.  
   Think about it, you won't even be able do something like this: `const { login } = this.props` because you already defined the `login` variable by assigning it to the action creator imported from the duck.
-* In bigger sagas you'll end up using a lot of different actions without knowing their context (you'll have to scroll to the top imports every time).
+- In bigger sagas you'll end up using a lot of different actions without knowing their context (you'll have to scroll to the top imports every time).
 
 ## Customizing the ducks
 
@@ -237,9 +245,15 @@ export default (state = initialState, action) => {
 }
 
 export const actions = {
-  signup: (email, password) => ({ type: SIGNUP_REQUEST, email, password })
-  login: (email, password) => ({ type: actionTypes.LOGIN_REQUEST, email, password }),
-  logout: () => ({ type: actionTypes.LOGOUT })
+  signup: (email, password) => ({
+    type: SIGNUP_REQUEST, email, password
+  })
+  login: (email, password) => ({
+    type: actionTypes.LOGIN_REQUEST, email, password
+  }),
+  logout: () => ({
+    type: actionTypes.LOGOUT
+  })
 }
 ```
 
@@ -285,9 +299,9 @@ I know, it's a bit uglier, but any other solution is well accepted!
 In my opinion selectors are the most overlooked feature of Redux.  
 I must admit that I started used them a bit too late, but reading [this tweet of Dan Abramov](https://twitter.com/dan_abramov/status/730933179511640064) opened my eyes and I begun viewing selectors as interfaces that expose the store to the containers.
 
-* Need to display a list in a certain order? Define the `getProductOrderedByName` selector.
-* Need to get a specific element of a list? Define the `getProductById` selector.
-* Need to get a filter for the list? Define the `getExpiredProducts` selector.
+- Need to display a list in a certain order? Define the `getProductOrderedByName` selector.
+- Need to get a specific element of a list? Define the `getProductById` selector.
+- Need to get a filter for the list? Define the `getExpiredProducts` selector.
 
 Following this strategy most of the selectors you'll define will be strongly tied to a specific reducer, so the right place for defining them is the file containing the reducer itself.
 
@@ -486,8 +500,8 @@ If you have any tips or critics just drop me a comment!
 
 Thanks to/useful links:
 
-* [The Redux bible](https://github.com/markerikson/react-redux-links) by Marker Erikson
-* [This discussion](https://github.com/infinitered/ignite/pull/356) in a pull request of the awesome Ignite boilerplate repository (which uses a structure just like the one I showed you)
-* [Steve Kellock](https://github.com/skellock), because he inspired me to write this post and because we had an interesting discussion on Redux that you can find [here](https://github.com/infinitered/ignite/issues/158)
-* [Dan Abramov](https://twitter.com/dan_abramov), because all the stuff he posts is super-interesting and well written
-* [This baby boilerplate](https://github.com/mmazzarolo/react-native-boilerplate), a bit outdated but I'll try update it as soon as possible
+- [The Redux bible](https://github.com/markerikson/react-redux-links) by Marker Erikson
+- [This discussion](https://github.com/infinitered/ignite/pull/356) in a pull request of the awesome Ignite boilerplate repository (which uses a structure just like the one I showed you)
+- [Steve Kellock](https://github.com/skellock), because he inspired me to write this post and because we had an interesting discussion on Redux that you can find [here](https://github.com/infinitered/ignite/issues/158)
+- [Dan Abramov](https://twitter.com/dan_abramov), because all the stuff he posts is super-interesting and well written
+- [This baby boilerplate](https://github.com/mmazzarolo/react-native-boilerplate), a bit outdated but I'll try update it as soon as possible

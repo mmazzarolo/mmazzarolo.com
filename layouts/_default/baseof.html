@@ -1,0 +1,48 @@
+{{ $prismCSS := resources.Get "css/prism.css" }}
+{{ $mainCSS := resources.Get "css/main.css" }}
+{{ $style := slice $prismCSS $mainCSS | resources.Concat "bundle.css" | minify | fingerprint }}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+    <title>
+      {{ block "title" . }}
+      {{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
+      {{ end }}
+    </title>
+
+    <link
+      rel="stylesheet"
+      href="/css/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ $style.Permalink }}"
+      integrity="{{ $style.Data.Integrity }}"
+    />
+
+    {{- if .RSSLink -}}
+    <link
+      href="{{ .RSSLink }}"
+      rel="alternate"
+      type="application/rss+xml"
+      title="{{ .Site.Title }}"
+    />
+    {{- end -}}
+
+    {{ template "_internal/google_analytics_async.html" . }}
+  </head>
+
+  <body>
+    {{ partial "header.html" . }}
+    <main>{{ block "main" . }}{{ end }}</main>
+  </body>
+  <script
+    type="text/javascript"
+    src="/js/prism.min.js"
+  ></script>
+</html>

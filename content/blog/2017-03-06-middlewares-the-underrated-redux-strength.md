@@ -5,7 +5,6 @@ tags: [react, react-native, redux, javascript]
 ---
 
 In this post I'd like to talk a bit about what I think is a key feature of Redux that is not discussed enough: its middlewares.
-<!--more-->
 
 ## What's a Redux middleware?
 
@@ -17,9 +16,9 @@ Simply put: You can think of a Redux middleware as a simple function that runs w
 
 This function can use this three parameters:
 
-* **store**: The store instance, so that you can call `getState()` on it and obtain the current store state;
-* **action**: The action that is being dispatched, the one that triggered the middleware;
-* **next**: A function that when its called it passes the execution to the next middleware.
+- **store**: The store instance, so that you can call `getState()` on it and obtain the current store state;
+- **action**: The action that is being dispatched, the one that triggered the middleware;
+- **next**: A function that when its called it passes the execution to the next middleware.
 
 ## Why should I use a Redux middleware?
 

@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<div class="post-list">
+    <ul>
+        {{ range where .Pages "Section" "blog" }}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              {{- .Title | markdownify }}
+            </a>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+          </li>
+        {{ end }}
+    </ul>
+</div>
+
+{{ end }}

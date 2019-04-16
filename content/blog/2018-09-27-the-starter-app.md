@@ -1,6 +1,6 @@
 ---
 date: "2018-09-27"
-title: "The Starter App: Introduction"
+title: "The Starter App"
 tags: [programming, javascript, react, react-native]
 ---
 
@@ -27,11 +27,7 @@ I'm planning to periodically submit a new update but I haven't defined the relea
 
 # The tutorial
 
-This tutorial is also available on [GitHub], where you can find the source code, and on [Medium].
-
-- [Part 1: Project setup]
-- [Part 2: Login screen UI]
-- [Part 3: Keyboard improvements]
+This tutorial is available on [GitHub], where you can find the source code, and on [Medium].
 
 # Acknowledgements
 
@@ -46,12 +42,8 @@ Also thank you to:
 - Vadim Ponomaryov for the [friend profile screen inspiration]
 - [365randommuppets] for the amazing placeholders
 
-
 [github]: https://github.com/mmazzarolo/the-starter-app
 [medium]: https://medium.com/@mmazzarolo/the-starter-app-introduction-3ead074cc589
 [carbon.now]: https://carbon.now.sh
-[part 1: project setup]: https://mmazzarolo.com/blog/2018-09-28-the-starter-app-project-setup
-[part 2: login screen ui]: https://mmazzarolo.com/blog/2018-09-29-the-starter-app-login-screen-ui
-[part 3: keyboard improvements]: https://mmazzarolo.com/blog/2018-09-30-the-starter-app-keyboard-improvements
-[365randommuppets:]: https://365randommuppets.wordpress.com/
+[365randommuppets]: https://365randommuppets.wordpress.com/
 [friend profile scren inspiration]: https://dribbble.com/shots/3164077-Lanespotter-App-User-Profile

@@ -22,7 +22,7 @@ But first...
 <img src="https://raw.githubusercontent.com/mmazzarolo/tap-the-number/master/extra/screenshot-iphone6plus-2.png" width="240"></img>
 <img src="https://raw.githubusercontent.com/mmazzarolo/tap-the-number/master/extra/screenshot-iphone6plus-3.png" width="240"></img>
 <br /><br /><b><a href="https://www.youtube.com/watch?v=bz7Id_HcEmw">I also published a small game preview on Youtube</a></b><br />
-</p>  
+</p>
 
 ## The stack and the dependencies
 
@@ -237,9 +237,9 @@ relative to the device size (or to their parents).
 Following this approach will make your game resize automatically on bigger/smaller devices (even
 on tablets!) but it also has many drawbacks in my opinion:
 
-* The more the app grows, the more dimensions you'll have to define and keep track of;
-* Handling screen rotation might become difficult (Tap The Game works only in portrait mode);
-* If you're using some native components you'll might not be able to resize them;
+- The more the app grows, the more dimensions you'll have to define and keep track of;
+- Handling screen rotation might become difficult (Tap The Game works only in portrait mode);
+- If you're using some native components you'll might not be able to resize them;
 
 Speaking about dimensions, In Tap The Number I did something that I'm bit ashamed of: I tied the game
 engine to the device size, as you can see in `getRandomTilePosition` of `utils/boardUtils.js`:
@@ -258,8 +258,10 @@ const getRandomTilePosition = (
   const boardOriginY = metrics.BOARD_MARGIN;
   const boardWidth = metrics.BOARD_WIDTH - metrics.BOARD_MARGIN;
   const boardHeight = metrics.BOARD_HEIGHT - metrics.BOARD_MARGIN;
-  // Gets random tile positions until it finds a position that does not overlap another tile.
-  // The while loop is a bit scary but we don't have to worry: we're using relative metrics
+  // Gets random tile positions until it finds a position that does not overlap
+  // another tile.
+  // The while loop is a bit scary but we don't have to worry: we're using
+  // relative metrics
   // and we're limiting the number of tiles.
   while (true) {
     const randomX = random(boardOriginX, boardWidth - metrics.TILE_SIZE);
@@ -279,9 +281,9 @@ using a while-loop.
 I'm aware that this function [can be optimized in many different ways](http://jsfiddle.net/fZtdt/13/),
 and that it can break if the device has a weird width / height ratio, but considering that:
 
-* I'm targeting only iOS (>= iPhone 5);
-* The maximum number of tiles on the board is 6;
-* The tile size is 28% of the device width;
+- I'm targeting only iOS (>= iPhone 5);
+- The maximum number of tiles on the board is 6;
+- The tile size is 28% of the device width;
 
 ...I decided to opt for this solution for the sake of simplicity (and for keeping the code readable, but feel free to correct me if it seems too unreasonable).
 
@@ -292,7 +294,7 @@ so that I can change its default behaviour/font/color easily.
 To get the scaled font size you should do the following:
 
 ```javascript
-const scaledFontSize = Math.round(fontSize * metrics.DEVICE_WIDTH / 375);
+const scaledFontSize = Math.round((fontSize * metrics.DEVICE_WIDTH) / 375);
 ```
 
 (Thanks to Facebook F8 app for the trick).
@@ -353,12 +355,14 @@ export default class TimeBar extends Component<void, {}, State> {
   }
 
   render() {
-    // Animate the TimeBar color from grey to red, starting when there are left only 12 seconds
+    // Animate the TimeBar color from grey to red, starting when there's
+    // only 12 seconds left
     const backgroundColor = this.state.animateValue.interpolate({
       inputRange: [0, timings.TIME_LIMIT_MS * 0.4, timings.TIME_LIMIT_MS],
       outputRange: ["rgba(255,0,0, 1)", "rgba(0,0,0, 0.3)", "rgba(0,0,0, 0.3)"]
     });
-    // Animate the TimeBar width from DEVICE_WIDTH to 0 in TIME_LIMIT_MS (which currently is 30 seconds)
+    // Animate the TimeBar width from DEVICE_WIDTH to 0 in TIME_LIMIT_MS
+    // (which currently is 30 seconds)
     const width = this.state.animateValue.interpolate({
       inputRange: [0, timings.TIME_LIMIT_MS],
       outputRange: [0, metrics.DEVICE_WIDTH]
@@ -393,7 +397,7 @@ you'll start linking animations one after another you'll end up doing it program
 
 ```javascript
 _handleButtonPress = async () => {
-  this.setState({ disableAllButton: true }); // Prevent pressing buttons while animating
+  this.setState({ disableAllButton: true }); // Prevent pressing while animating
   if (this._headerRef && this._bodyRef) {
     // Animates out header and body
     await Promise.all([
@@ -401,7 +405,7 @@ _handleButtonPress = async () => {
       this._bodyRef.fadeOutRight(400)
     ]);
   }
-  this.props.navigateToNextScreen(); // Animations are ended: move to the next screen
+  this.props.navigateToNextScreen(); // Animations ended: move to next screen
 };
 ```
 
@@ -429,12 +433,12 @@ of stuff I had already seen before.
 So, without further ado, here are all the sources I can think of that I used to build this simple
 game:
 
-* [Asset Catalog Creator](https://itunes.apple.com/it/app/asset-catalog-creator-free/id866571115?mt=12)
+- [Asset Catalog Creator](https://itunes.apple.com/it/app/asset-catalog-creator-free/id866571115?mt=12)
   for the iOS assets;
-* [The game background image](https://freeios7.com/download/freeios7.com_apple_wallpaper_geometry-white_ipad_retina.jpg)
+- [The game background image](https://freeios7.com/download/freeios7.com_apple_wallpaper_geometry-white_ipad_retina.jpg)
   that I've found on Google Images (sorry, I don't know who the author is);
-* [freesound.org](https://freesound.org/browse/tags/sound-effects/) for the sound effects;
-* [This Slack image](https://raw.githubusercontent.com/mmazzarolo/tap-the-number/master/extra/slack-tiles.png) that inspired the design of the tiles;
-* And all the libraries I already linked and talked about in this post;
+- [freesound.org](https://freesound.org/browse/tags/sound-effects/) for the sound effects;
+- [This Slack image](https://raw.githubusercontent.com/mmazzarolo/tap-the-number/master/extra/slack-tiles.png) that inspired the design of the tiles;
+- And all the libraries I already linked and talked about in this post;
 
 Forks, comments and critics are warmly welcomed, I just hope that this app example might be helpful to someone sooner or later! :)

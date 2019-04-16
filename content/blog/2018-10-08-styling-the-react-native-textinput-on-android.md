@@ -4,52 +4,41 @@ title: "Styling the React Native TextInput on Android"
 tags: [programming, javascript, react, react-native]
 ---
 
-# Styling the React Native TextInput on Android
+This is how a React Native TextInput looks like on Android if you don’t apply any custom style on it:
 
-This is how a React Native TextInput looks like on Android if you don’t apply any custom style on it:  
-
-<p align="center">
-<img src="https://mmazzarolo.com/images/2019-10-08-styling-the-react-native-textinput-on-android/initial-state.png" style="max-width:520px"></img>
-</p>
+![](/images/2019-10-08-styling-the-react-native-textinput-on-android/initial-state.png)
 
 Can we safely say that nobody will ever ship a production app with such a TextInput?
 
-Specifying the `height` (I’d say `height: 40`) on the component’s style should be the first thing to do here:  
+Specifying the `height` (I’d say `height: 40`) on the component’s style should be the first thing to do here:
 
-<p align="center">
-<img src="https://mmazzarolo.com/images/2019-10-08-styling-the-react-native-textinput-on-android/with-height.png" style="max-width:520px"></img>
-</p>
+![](/images/2019-10-08-styling-the-react-native-textinput-on-android/with-height.png)
 
-Ok, that’s better, but for some reasons the Email placeholder is slightly misaligned. We can fix it by adding a `paddingLeft` of `6` to its `style`: 
+Ok, that’s better, but for some reasons the Email placeholder is slightly misaligned. We can fix it by adding a `paddingLeft` of `6` to its `style`:
 
-<p align="center">
-<img src="https://mmazzarolo.com/images/2019-10-08-styling-the-react-native-textinput-on-android/with-padding.png" style="max-width:520px"></img>
-</p>
+![](/images/2019-10-08-styling-the-react-native-textinput-on-android/with-padding.png)
 
 It looks nice now!
 
-…until you focus it and you notice that its underline color and cursor color is green.  
+…until you focus it and you notice that its underline color and cursor color is green.
 
-<p align="center">
-<img src="https://mmazzarolo.com/images/2019-10-08-styling-the-react-native-textinput-on-android/underline-default.gif" style="max-width:520px"></img>
+![](/images/2019-10-08-styling-the-react-native-textinput-on-android/underline-default.gif)
 
+> The default color (green) is defined in the Android theme and can be changed with a few lines of native code… but let’s keep this discussion for another post.
 
->The default color (green) is defined in the Android theme and can be changed with a few lines of native code… but let’s keep this discussion for another post.  
+Of course everybody loves green but what if the main theme color of my app is blue?
 
-Of course everybody loves green but what if the main theme color of my app is blue?  
+Well, the official React Native TextInput documentation says that we can specify our color in the `selectionColor` and `underlineColorAndroid` props:
 
-Well, the official React Native TextInput documentation says that we can specify our color in the `selectionColor` and `underlineColorAndroid` props:  
+![](/images/2019-10-08-styling-the-react-native-textinput-on-android/underline-blue.gif)
 
-<p align="center">
-<img src="https://mmazzarolo.com/images/2019-10-08-styling-the-react-native-textinput-on-android/underline-blue.gif" style="max-width:520px"></img>  
+Hm… Am I the only one who didn’t expect this behaviour? Why is the underline color blue even when the field is not focused?
 
-Hm… Am I the only one who didn’t expect this behaviour? Why is the underline color blue even when the field is not focused?  
+Don’t get me wrong, I actually prefer this behaviour because now I know that I can programmatically change the underline color… but it is still different from the default one 🤷‍♀️
 
-Don’t get me wrong, I actually prefer this behaviour because now I know that I can programmatically change the underline color… but it is still different from the default one 🤷‍♀️  
+Oh, whatever, let’s customize it for the last time by turning it blue (`#428AF8`) only when focused. While we’re at it, we may as well change the underline color to light gray (`#D3D3D3`, the same color of the placeholder) when the input is not focused.
 
-Oh, whatever, let’s customize it for the last time by turning it blue (`#428AF8`) only when focused. While we’re at it, we may as well change the underline color to light gray (`#D3D3D3`, the same color of the placeholder) when the input is not focused.  
-
-To do so our TextInput must be aware of being focused and then change its `underlineColorAndroid `accordingly; I would suggest creating a custom TextInput (let’s call it `MyTextInput`) which will be smart enough to keep track of its focus state:  
+To do so our TextInput must be aware of being focused and then change its `underlineColorAndroid`accordingly; I would suggest creating a custom TextInput (let’s call it `MyTextInput`) which will be smart enough to keep track of its focus state:
 
 ```javascript
 import * as React from "react";
@@ -96,9 +85,7 @@ class MyTextInput extends React.Component {
     return (
       <TextInput
         selectionColor={BLUE}
-        underlineColorAndroid={
-          isFocused ? BLUE : LIGHT_GRAY
-        }
+        underlineColorAndroid={isFocused ? BLUE : LIGHT_GRAY}
         onFocus={this.handleFocus}
         onBlur={this.handleBlur}
         style={styles.textInput}
@@ -118,19 +105,17 @@ const styles = StyleSheet.create({
 export default MyTextInput;
 ```
 
-And here is the result:   
-  
-<p align="center">
-<img src="https://mmazzarolo.com/images/2019-10-08-styling-the-react-native-textinput-on-android/result.gif" style="max-width:520px"></img>  
+And here is the result:
 
-That’s it 🎉!  
+![](/images/2019-10-08-styling-the-react-native-textinput-on-android/result.gif)
 
-You can now enhance the TextInput as much as you want, for example by passing the red color to theunderlineColorAndroid prop when the input is not valid or by adding a bit of color to an input icon when the input is focused.  
-  
+That’s it 🎉!
+
+You can now enhance the TextInput as much as you want, for example by passing the red color to theunderlineColorAndroid prop when the input is not valid or by adding a bit of color to an input icon when the input is focused.
 
 - [Expo snack of MyTextInput](https://snack.expo.io/SJFUngI5X)
 - [MyTextInput gist](https://gist.github.com/mmazzarolo/77407406eea9a574c060662ab1bcac1f)
-- [MyTextInput gist (TypeScript version)](https://gist.github.com/mmazzarolo/1966b9333ed5c6b4fd0be3ec6bcdb1df)    
-
-
+- [MyTextInput gist (TypeScript version)](https://gist.github.com/mmazzarolo/1966b9333ed5c6b4fd0be3ec6bcdb1df)
+  
+  
 > Disclaimer: The default style of the React Native TextInput has been tested on a few flagship devices on recent versions of Android… but you already know that the result may vary depending on the device used.

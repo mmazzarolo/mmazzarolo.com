@@ -1,7 +1,7 @@
 ---
 date: "2016-09-19"
 title: Parse-Server hidden features
-tags: [ react, react-native, node, javascript]
+tags: [react, react-native, node, javascript]
 ---
 
 I've been a [parse-server](https://github.com/ParsePlatform/parse-server) user since its public release-date and I must admit that it has been a fun ride, parse-server really shines when you need to create small applications or prototypes. Think about it: right now you're just [one click away](https://github.com/ParsePlatform/parse-server#parse-server-sample-application) from deploying on your favorite PaaS an express server with built-in authentication, authorization and storage support.  
@@ -19,9 +19,9 @@ Having said that, here are three snippets that can make your parse-server setup 
 
 In this post I'll show you 3 functions with the following goals:
 
-* Programmatically create an administrator role
-* Programmatically create a class
-* Programmatically set the class level permissions
+- Programmatically create an administrator role
+- Programmatically create a class
+- Programmatically set the class level permissions
 
 These functions can be invoked like scripts just after the server startup.
 
@@ -61,9 +61,9 @@ Class creation is another kind of beast, because changing the database schema pr
 Luckily in [this issue][5] there's a hint on how to obtain the config object and the schema:
 
 ```javascript
-import Config from 'parse-server/lib/Config'
-const config = new Config(APP_ID, PARSE_MOUNT)
-const schema = await config.database.loadSchema()
+import Config from "parse-server/lib/Config";
+const config = new Config(APP_ID, PARSE_MOUNT);
+const schema = await config.database.loadSchema();
 ```
 
 For the schema APIs you can take a look at the [holy bible for the schema APIs: the schema specs][6].  
@@ -117,9 +117,6 @@ export const setCLPs = async () => {
   });
 };
 ```
-
-The result of the above function is the following:  
-![](/img/clps-admin-parse-server.png)
 
 ## Conclusion
 
