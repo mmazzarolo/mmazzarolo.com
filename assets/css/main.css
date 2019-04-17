@@ -146,8 +146,6 @@ header nav > a {
   margin-left: 10px;
 }
 
-
-
 /***************
  * POST SINGLE *
  ***************/
@@ -155,4 +153,69 @@ header nav > a {
   display: block;
   margin-top: 3rem;
   color: var(--time-color);
+}
+
+/*********
+ * ABOUT *
+ *********/
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 90px);
+}
+
+.about .about-content {
+  max-width: 540px;
+}
+
+.about h1 {
+  font-size: 3rem;
+  margin: 0;
+  line-height: 3rem;
+  font-weight: 600;
+}
+
+.about h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.3rem;
+}
+
+.about h4 {
+  font-size: 1.3rem;
+  font-family: var(--text-font-family);
+  font-weight: 300;
+  /* line-height: 1.3rem; */
+}
+
+.about p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #9B9B9B;
+}
+
+/*******
+ * 404 *
+ *******/
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 90px);
+}
+
+.not-found h1 {
+  font-size: 3rem;
+  margin: 0;
+  line-height: 3rem;
+  font-weight: 600;
+}
+
+.not-found h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.3rem;
 }

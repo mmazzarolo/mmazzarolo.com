@@ -11,22 +11,16 @@ enableRobotsTXT = true # generate robots.txt
   tag = "tags"
   category = "categories"
 
-# Menu
-# [menu]
-#   [[menu.main]]
-#     url = "/blog"
-#     name = "Blog"
-#     weight = 1
-#   [[menu.main]]
-#     url = "/works/"
-#     name = "Works"
-#     weight = 2
-#   [[menu.main]]
-#     url = "/about/"
-#     name = "About"
-#     weight = 3
+[menu]
+  [[menu.main]]
+    url = "/blog"
+    name = "Blog"
+    weight = 1
+  [[menu.main]]
+    url = "/about/"
+    name = "About"
+    weight = 2
 
 # Links format
 [permalinks]
   blog = ":year/:month/:day/:title/"
-  # page = "/:slug/"

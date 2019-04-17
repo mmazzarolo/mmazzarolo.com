@@ -1,15 +1,19 @@
 ---
-title: "About Hugo"
+title: "About"
+type: "about"
+layout: "about"
 ---
 
-Hugo is the **world’s fastest framework for building websites**. It is written in Go.
+# Hi! I'm Matteo.  
+@mmazzarolo
 
-It makes use of a variety of open source projects including:
+## I'm an introvert, I like [music](https://rateyourmusic.com/collection/mazzaaaaa/r0.5-5.0,ss.dd), [movies](https://rateyourmusic.com/film_collection/mazzaaaaa/r0.5-5.0,ss.dd), reading tech news and wasting a lot of time on [GitHub](https://github.com/mmazzarolo).  
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+#### Currently, I'm building tools for designer at [InVision](https://www.invisionapp.com/). 
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+#### To keep updated with my work, follow me on [Twitter](https://twitter.com/mazzarolomatteo), [GitHub](https://github.com/mmazzarolo) or subscribe to this blog [with RSS](/blog/index.xml).  
+
+
+
+
+
