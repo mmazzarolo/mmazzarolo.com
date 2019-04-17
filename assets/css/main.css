@@ -163,7 +163,7 @@ header nav > a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 120px);
 }
 
 .about .about-content {
@@ -187,7 +187,6 @@ header nav > a {
   font-size: 1.3rem;
   font-family: var(--text-font-family);
   font-weight: 300;
-  /* line-height: 1.3rem; */
 }
 
 .about p {
@@ -204,7 +203,7 @@ header nav > a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 120px);
 }
 
 .not-found h1 {
