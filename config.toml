@@ -19,7 +19,7 @@ enableRobotsTXT = true # generate robots.txt
   [[menu.main]]
     url = "/about/"
     name = "About"
-    weight = 2
+    weight = 3
 
 # Links format
 [permalinks]

@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<div class="review-list">
+    <ul>
+        {{ range where .Pages "Section" "reviews" }}
+          <li>
+            <div class="review-list-header">
+              <div class="review-list-left">
+                <a href="{{ .RelPermalink }}">
+                  <b>{{- .Title | markdownify }}</b>,&nbsp;{{- .Params.director | markdownify }} (2005)
+                </a>
+              </div>
+              <div class="review-list-right">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+                <span>{{ range (seq .Params.score) }}★{{ end }}{{ range (seq (sub 5 .Params.score)) }}☆{{ end }}</span>
+              </div>
+            </div>
+            <div class="review-list-body">
+              {{ .Content }}
+            </div>
+          </li>
+        {{ end }}
+    </ul>
+</div>
+
+{{ end }}
