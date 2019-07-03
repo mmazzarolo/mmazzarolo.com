@@ -7,4 +7,4 @@ year: 1997
 score: 8
 ---
 
-How much are we really attracted to brutality in media? Well, a lot I guess, since Haneke succeeds at purposely making you feel dissatisfied of off-screen violence.
+How much are we really attracted to brutality in media? Well, a lot I guess, since Haneke succeeds at purposely making me feel dissatisfied of off-screen violence.
