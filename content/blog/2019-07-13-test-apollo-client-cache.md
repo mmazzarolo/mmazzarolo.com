@@ -64,16 +64,16 @@ describe("<UpdateItemMutation />", () => {
     };
 
     // 4. Render the <UpdateItemMutation /> component
-    const { getByTestId, getByText } = render(
+    const { getByTestId } = render(
       <MockedProvider cache={cache} mocks={[mutationMock]}>
         <UpdateItemMutation id={itemId}>
-          {mutate => <div data-testid="button-trigger-mutation" onClick={mutate} />}
+          {mutate => <div data-testid="button-mutate" onClick={mutate} />}
         </UpdateItemMutation>
       </MockedProvider>
     );
 
     // 5. Fire the mutation and wait for it to be completed
-    const button = getByTestId("button-trigger-mutation");
+    const button = getByTestId("button-mutate");
     fireEvent.click(button);
     await waitForResponse();
 
