@@ -80,7 +80,7 @@ describe("<UpdateItemMutation />", () => {
     // 8. You can now extract the updated query and make your assertions based
     //    on what you expect from the result of the mutation.
     const updatedCache = cache.extract();
-    expect(updatedCache[`Item:${itemId}`.something]).toBe(true).
+    expect(updatedCache[`Item:${itemId}`].something]).toBe(true).
   });
 });
 ```
