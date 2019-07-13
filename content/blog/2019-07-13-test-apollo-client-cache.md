@@ -4,7 +4,7 @@ title: "Testing an Apollo Client mutation effect on the cache"
 tags: [programming]
 ---
 
-I've recently find myself wanting to add unit tests for an Apollo Client mutation that had a complex optimistic update behaviour (where I had to read and write a few fragment manually to apply the updated states) and I wasn't able to find any official docs about how you can test an Apollo client cache update.
+I've recently found myself wanting to add unit tests for an Apollo Client mutation that had a complex optimistic update behaviour (where I had to read and write a few fragment manually to apply the updated states) and I wasn't able to find any official docs about how you can test an Apollo client cache update.
 
 After a few tentatives, what I ended up doing is passing to the `cache` field of the `<MockProvider>` a object containing the state of the cache I want to use to test the update.
 
