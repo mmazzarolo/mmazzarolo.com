@@ -1,6 +1,6 @@
 ---
 date: "2019-07-14"
-title: Stranger Thinkgs
+title: Stranger Things
 category: tv-series
 season: 3
 director: Duffer Brothers
