@@ -3,6 +3,7 @@ date: "2019-07-02"
 title: Donnie Brasco
 category: movie
 director: Mike Newell
+genre: [crime, drama]
 year: 1997
 score: 2
 ---

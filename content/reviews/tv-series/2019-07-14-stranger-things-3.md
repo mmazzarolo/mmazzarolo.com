@@ -4,6 +4,7 @@ title: Stranger Things
 category: tv-series
 season: 3
 director: Duffer Brothers
+genre: [drama, fantasy, horror]
 year: 2019
 score: 2
 ---
