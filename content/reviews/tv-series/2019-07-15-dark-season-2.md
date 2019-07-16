@@ -8,4 +8,4 @@ year: 2019
 score: 3
 ---
 
-Way than the first season. Good writing. Interesting plot. Weak characters.
+Way better than the first season. Good writing. Interesting plot. Weak characters.
