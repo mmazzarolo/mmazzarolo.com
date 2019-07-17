@@ -1,0 +1,27 @@
+{{ block "review-list-item" . }}
+  {{- $title := .Title | markdownify -}}
+  {{- $category := (index .Params.categories 0) | markdownify -}}
+  {{- $director := cond (ne .Params.director nil) .Params.director .Params.artist | markdownify -}}
+  {{- $year := .Params.year | markdownify -}}
+  {{- $review_date := .Date.Format "2006-01-02" -}}
+  {{- $score_stars := print ("★" | strings.Repeat .Params.score) ("☆" | strings.Repeat (sub 5 .Params.score)) -}}
+  <li>
+    <div class="review-list-subheader">
+      <a href="/categories/{{- $category -}}"> #{{- $category -}} </a>
+    </div>
+    <div class="review-list-header">
+      <div class="review-list-left">
+        <a class="review-link" href="{{ .RelPermalink }}">
+          <span class="review-title"><b>{{- $title -}}</b></span><span class="review-comma">,&nbsp;</span><span class="review-director-and-year">{{- $director -}}&nbsp;({{- $year -}})</span>
+        </a>
+      </div>
+      <div class="review-list-right">
+        <time datetime="{{- $review_date -}}">{{- $review_date -}}</time>
+        <span>{{- $score_stars -}}</span>
+      </div>
+    </div>
+    <div class="review-list-body">
+      {{- .Content -}}
+    </div>
+  </li>
+{{ end }}

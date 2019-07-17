@@ -159,46 +159,63 @@ header nav > a {
 /*************
  * REVIEW LIST *
  *************/
+
 .review-list ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.review-list-header {
-  display: grid;
-  grid-template-columns: 1fr min-content;
-  grid-column-gap: 5px;
-  padding-top: 5px;
-}
-
-@media only screen and (max-width: 540px) {
-  .review-list-header {
-    padding-top: 1rem;
-  }
-}
-
-.review-list-left > a {
+.review-link {
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--text-color);
 }
+
+@media only screen and (max-width: 540px) {
+  .review-link {
+    display: flex;
+    flex-direction: column;
+  }
+  .review-comma {
+    display: none;
+  }
+}
+
+.review-list-header {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-column-gap: 5px;
+}
+
+.review-list-subheader {
+  text-align: right;
+}
+
 .review-list-right {
   display: flex;
   flex-direction:row;
+}
+
+
+@media only screen and (max-width: 540px) {
+.review-list-right {
+  display: flex;
+  flex-direction:column-reverse;
+  justify-content: flex-end;
+}
 }
 
 .review-list-right time {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: auto;
   margin-left: 10px;
 }
 
 .review-list-right span {
-  margin: auto;
   margin-left: 10px;
+  text-align: right
 }
 
 .review-list-body {
@@ -210,6 +227,14 @@ header nav > a {
 /***************
  * REVIEW SINGLE *
  ***************/
+.review-single-by{
+  color:#ACB3C1;
+}
+.review-single-category {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .review-single footer{
   display: block;
   margin-top: 3rem;

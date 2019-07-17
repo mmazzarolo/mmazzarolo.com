@@ -1,7 +1,7 @@
 ---
 date: "2019-07-03"
 title: Funny Games
-category: movie
+categories: [movie]
 director: Michael Haneke
 genre: [crime, drama, horror]
 year: 1997

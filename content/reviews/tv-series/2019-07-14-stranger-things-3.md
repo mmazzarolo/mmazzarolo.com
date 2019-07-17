@@ -1,7 +1,7 @@
 ---
 date: "2019-07-14"
 title: Stranger Things
-category: tv-series
+categories: [tv-series]
 season: 3
 director: Duffer Brothers
 genre: [drama, fantasy, horror]

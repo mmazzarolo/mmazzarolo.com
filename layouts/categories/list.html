@@ -1,11 +1,12 @@
 {{ define "main" }}
 
+<h2>#{{ .Title | urlize }}</h2>
 <div class="review-list">
   <ul>
-    {{ range where .Pages "Section" "reviews" }}
+    {{ range .Pages  }}
       {{ partial "review-list-item.html" . }}
     {{ end }}
   </ul>
-</div>
 
 {{ end }}
+

@@ -1,7 +1,7 @@
 ---
 date: "2019-07-14"
 title: Dark
-category: tv-series
+categories: [tv-series]
 season: 2
 director: Baran bo Odar, Jantje Friese
 genre: [drama, mistery]
