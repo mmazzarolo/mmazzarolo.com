@@ -9,4 +9,4 @@ year: 2019
 score: 2
 ---
 
-Thanks to over the top action scenes, uninspired plot and a ton of clichè, the fine line between 80's tribute and lazy writing has been clearly crossed in this season.
+I didn't like it. Thanks to over the top action scenes, uninspired plot and a ton of clichè, the fine line between 80's tribute and lazy writing has been clearly crossed in this season for me.
