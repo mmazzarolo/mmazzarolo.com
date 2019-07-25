@@ -8,4 +8,4 @@ year: 2019
 score: 2
 ---
 
-It wasn't *that* bad. A couple of fun moment, a linear plot and some heavy fan service. A good videogame adaptation, but it's not really my thing.  
+It wasn't *that* bad. A couple of fun moments, a linear plot and some heavy fan service. A good videogame adaptation, but it's not really my thing.  
