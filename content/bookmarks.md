@@ -1,0 +1,2 @@
+- [If Sapiens were a blog post | Neil Kakkar](https://neilkakkar.com/sapiens.html)
+- [Computer latency: 1977-2017](https://danluu.com/input-lag/)
