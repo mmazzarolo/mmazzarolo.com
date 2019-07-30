@@ -1,7 +1,7 @@
 {{ block "review-list-item" . }}
   {{- $title := .Title | markdownify -}}
   {{- $category := (index .Params.categories 0) | markdownify -}}
-  {{- $director := cond (ne .Params.director nil) .Params.director .Params.artist | markdownify -}}
+  {{- $director := cond (isset .Params "director") .Params.director (cond (isset .Params "author") .Params.author .Params.artist) | markdownify -}}
   {{- $year := .Params.year | markdownify -}}
   {{- $season := .Params.season | markdownify -}}
   {{- $review_date := .Date.Format "2006-01-02" -}}
