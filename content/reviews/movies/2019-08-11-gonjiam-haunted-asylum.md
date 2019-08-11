@@ -1,9 +1,9 @@
 ---
 date: "2019-08-11"
 categories: [movies]
-title: Gonjiam: Haunted Asylum
+title: Gonjiam - Haunted Asylum
 director: Jung Bum-shik
-genre: [horror, mistery]
+genre: [neo-soul]
 year: 2018
 score: 3
 ---
