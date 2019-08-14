@@ -1,6 +1,6 @@
 ---
 date: "2019-08-12"
-title: "I use an Apple magic keyboard"
+title: "About Apple keyboards..."
 tags: [programming, hardware]
 draft: true
 ---
