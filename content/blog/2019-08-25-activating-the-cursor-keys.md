@@ -4,7 +4,7 @@ title: "Activating the cursor keys at the center of the keyboard"
 tags: [programming, hardware]
 description: If you're remapping the cursor keys on macOS, try using the right Command key to activate them
 images:
-  - /images/blog/2019-08-25-activating-the-cursor-keys/magic-keyboard.svg
+  - /images/blog/2019-08-25-activating-the-cursor-keys/magic-keyboard-twitter.png
 draft: false
 ---
 
