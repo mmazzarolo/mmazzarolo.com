@@ -6,6 +6,9 @@
   {{- $season := .Params.season | markdownify -}}
   {{- $review_date := .Date.Format "2006-01-02" -}}
   {{- $score_stars := print ("★" | strings.Repeat .Params.score) ("☆" | strings.Repeat (sub 5 .Params.score)) -}}
+  {{- $heart_full_img_src := print (.Site.BaseURL | relLangURL) "images/common/heart.svg" }}
+  {{- $heart_empty_img_src := print (.Site.BaseURL | relLangURL) "images/common/heart-empty.svg" }}
+  
   <li>
     <div class="review-list-subheader">
       <a href="/categories/{{- $category -}}"> #{{- $category -}} </a>
@@ -18,6 +21,7 @@
       </div>
       <div class="review-list-right">
         <time datetime="{{- $review_date -}}">{{- $review_date -}}</time>
+        {{/*  <span>{{- range seq .Params.score -}}<img src="{{- $heart_full_img_src -}}" class="review-single-heart" />{{- end -}}{{- range seq (sub 5 .Params.score) -}}<img src="{{- $heart_empty_img_src -}}" class="review-single-heart" />{{- end -}}</span>  */}}
         <span>{{- $score_stars -}}</span>
       </div>
     </div>

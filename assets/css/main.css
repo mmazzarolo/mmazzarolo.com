@@ -252,9 +252,19 @@ kbd {
 .review-single-by{
   color:#ACB3C1;
 }
+
 .review-single-category {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.review-single-score {   
+}
+
+.review-single-heart {
+  width: 15px;
+  display: inline-block;
+  margin: 1px;
 }
 
 .review-single footer{
@@ -262,6 +272,7 @@ kbd {
   margin-top: 3rem;
   color: var(--time-color);
 }
+
 
 /*********
  * ABOUT *

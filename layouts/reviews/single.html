@@ -6,12 +6,22 @@
 {{- $year := .Params.year | markdownify -}}
 {{- $review_date := .Date.Format "2006-01-02" -}}
 {{- $score_stars := print ("★" | strings.Repeat .Params.score) ("☆" | strings.Repeat (sub 5 .Params.score)) -}}
+{{- $heart_full_img_src := print (.Site.BaseURL | relLangURL) "images/common/heart.svg" }}
+{{- $heart_empty_img_src := print (.Site.BaseURL | relLangURL) "images/common/heart-empty.svg" }}
 
 <div class="post-single">
     <h1>
         {{- $title -}} <span class="review-single-by">&nbsp;by&nbsp;</span>{{- $director -}} <span class="review-single-year">&nbsp;({{- $year -}})</span>
     </h1>
     <h2>{{- $score_stars -}}</h2>
+    {{/*  <div class="review-single-score">
+        {{- range seq .Params.score -}}
+            <img src="{{- $heart_full_img_src -}}" class="review-single-heart" />
+        {{- end -}}
+        {{- range seq (sub 5 .Params.score) -}}
+            <img src="{{- $heart_empty_img_src -}}" class="review-single-heart" />
+        {{- end -}}
+    </div>  */}}
     <a href="/categories/{{- $category -}}"><h3 class="review-single-category">#{{- $category -}}</h3></a>
     <article>
         {{ .Content }}

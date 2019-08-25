@@ -2,9 +2,10 @@ baseURL = "https://mmazzarolo.com"
 title = "mmazzarolo.com"
 languageCode = "en-us"
 
-googleAnalytics = "UA-89798360-1"
-
 enableRobotsTXT = true # generate robots.txt
+
+[params]
+  description = "Matteo's personal website"
 
 # Taxonomies
 [taxonomies]

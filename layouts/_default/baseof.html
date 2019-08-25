@@ -8,17 +8,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    {{ template "_internal/twitter_cards.html" . }}
+    <title>{{ block "title" . }}{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}{{ end }}</title>
 
-    <title>
-      {{ block "title" . }}
-      {{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
-      {{ end }}
-    </title>
-
-    <link
-      rel="stylesheet"
-      href="/css/normalize.min.css"
-    />
+    <link rel="stylesheet" href="/css/normalize.min.css" />
     <link
       rel="stylesheet"
       href="{{ $style.Permalink }}"
@@ -33,16 +26,11 @@
       title="{{ .Site.Title }}"
     />
     {{- end -}}
-
-    {{ template "_internal/google_analytics_async.html" . }}
   </head>
 
   <body>
     {{ partial "header.html" . }}
     <main>{{ block "main" . }}{{ end }}</main>
   </body>
-  <script
-    type="text/javascript"
-    src="/js/prism.min.js"
-  ></script>
+  <script type="text/javascript" src="/js/prism.min.js"></script>
 </html>
