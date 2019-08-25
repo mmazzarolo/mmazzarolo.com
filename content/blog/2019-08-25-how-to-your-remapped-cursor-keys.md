@@ -1,17 +1,17 @@
 ---
 date: "2019-08-12"
-title: "How to activate the cursor keys at the center of the keyboard?"
+title: "How to activate your remapped cursor keys?"
 tags: [programming, hardware]
 description: If you're remapping the cursor keys on macOS, try using the right Command key to activate them
 images:
-  - /images/blog/2019-08-25-activating-the-cursor-keys/twitter-card.png
+  - /images/blog/2019-08-25-how-to-your-remapped-cursor-keys/twitter-card.png
 draft: false
 ---
 
 <br />
 _Short post but TL;DR: If you're remapping the cursor keys on macOS, try using the <kbd>Right Command</kbd> key to activate them._
 
-![](/images/blog/2019-08-25-activating-the-cursor-keys/magic-keyboard.svg)
+![](/images/blog/2019-08-25-how-to-your-remapped-cursor-keys/magic-keyboard.svg)
 
 I am a firm believer that keeping the cursor keys to the center of your keyboard provides multiple benefits: to reach the cursor keys of your keyboard you need to move your palm, mapping the cursor keys to a set of keys in the center of your keyboard is an ergonomic solution to make you type faster.  
 Vim users should be familiar with this approach, since Vim defaults the cursor keys to <kbd>H</kbd>, <kbd>J</kbd>, <kbd>K</kbd> and <kbd>L</kbd>.
