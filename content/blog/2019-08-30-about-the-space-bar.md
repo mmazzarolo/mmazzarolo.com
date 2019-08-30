@@ -31,8 +31,8 @@ Do mechanical keyboards with a short space bar exist?
 
 > Originally (on early writers dating back to the late 19th century) the "bar" was literally a metal bar running across the full width of the keyboard (or even wider, and even surrounding it) that triggered the carriage advance without also firing any of the typebars towards the platen. Later examples gradually shrank and developed into their current more ergonomic form as a wide, centrally located but otherwise apparently normal "key", as typewriter (and computer) keyboards began to incorporate additional function keys and were more deliberately "styled". Although it varies by keyboard type, the space bar usually lies between the Alt keys (or Command keys on Macintosh keyboards) and below the letter keys: C, V, B, N and M on a standard QWERTY keyboard.
 
-Interestingly enough, some countries use a smaller spacebar.
-For example in Japan the space character is not used much, so the standard Japanese layout has a spacebar even smaller then the Macbook one:
+Interestingly enough, some countries use a shorter space bar.
+For example in Japan the space character is not used much, so the standard Japanese layout has a space bar even smaller than the Macbook one:
 
 {{< figure src="/images/blog/2019-08-30-about-the-space-bar/japanese-layout.svg" title="Japanese layout" >}}
 
