@@ -26,3 +26,7 @@ After several different tests (e.g.: setting <kbd>Caps Lock</kbd> as a "switch" 
 
 Since the activation key is now on the right side of the keyboard I can control it with ease with just my right hand. It took me a few hours of practice to make it "click": now even complex selections are manageable and I'm not actively thinking about which key combination I need to press anymore.  
 If you're remapping the cursor keys on macOS, give it a try.
+
+<br />
+
+<sub>Thanks to [dimensions.guide](https://www.dimensions.guide/element/apple-magic-keyboard) for the Apple Magic Keyboard image.</sub>
