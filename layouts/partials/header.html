@@ -1,8 +1,5 @@
 {{ block "header" . }}
 <header class="header">
-  <h1 class="header-title">
-    <a href="{{ .Site.BaseURL | relLangURL }}">{{- .Site.Title -}}</a>
-  </h1>
   <nav class="header-list">
     {{- range .Site.Menus.main -}}
     <a class="header-item" href="{{ .URL | relLangURL }}">{{- .Name -}}</a>

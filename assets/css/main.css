@@ -129,14 +129,12 @@ figure {
 }
 
 .header-list {
-  float: right;
 }
 
 .header-item {
   font-weight: 500;
-  margin-left: 0.4rem;
+  margin-right: 0.4rem;
   color: var(--text-color);
-  color: rgba(38,52,74,.7);
 }
 
 
