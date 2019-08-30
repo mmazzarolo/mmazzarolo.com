@@ -100,6 +100,13 @@ kbd {
   box-sizing: border-box;
 }
 
+figure {
+  margin-block-start: 2em;
+  margin-block-end: 2.4em;
+  margin-inline-start: 1.2em;
+  margin-inline-end: 1.2em;
+}
+
 /**********
  * HEADER *
  **********/
@@ -177,6 +184,14 @@ kbd {
   margin-top: 3rem;
   color: var(--time-color);
 }
+
+.post-single figcaption > h4 {
+  font-weight: 200;
+  color: gray;
+  text-align: center;
+  margin-top: 10px;
+}
+
 
 /*************
  * REVIEW LIST *
