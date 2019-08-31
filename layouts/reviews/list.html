@@ -1,6 +1,11 @@
 {{ define "main" }}
 
 <div class="review-list">
+  <summary>
+    👋 Here I'm logging my opinions and feelings about movies, tv-series, albums and books, with a score from 1 to 5 to indicate how much I enjoyed them.<br/>  
+    P.S.: My older <a href="https://rateyourmusic.com/~mazzaaaaa#musicrating">album</a> and <a href="https://rateyourmusic.com/~mazzaaaaa#filmrating">movie</a> ratings are still on RateYourMusic.
+  </summary>
+  <br/>
   <ul>
     {{ range where .Pages "Section" "reviews" }}
       {{ partial "review-list-item.html" . }}

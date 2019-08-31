@@ -1,8 +1,15 @@
 {{ block "header" . }}
 <header class="header">
   <nav class="header-list">
-    {{- range .Site.Menus.main -}}
-    <a class="header-item" href="{{ .URL | relLangURL }}">{{- .Name -}}</a>
+      {{ $current := . }}
+    {{- range .Site.Menus.nav -}}
+      {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+      {{ $active = or $active (eq .Name $current.Title) }}
+      {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
+      {{ $active = or $active (and (eq .Name "Reviews") (eq $current.Section "reviews")) }}
+      {{ $active = or $active (and (eq .Name "About") (eq $current.Section "about")) }}
+      {{ $active = or $active (and (eq .Name "About") (eq $current.Title "mmazzarolo.com")) }}
+      <a href="{{ .URL }}" class="header-item {{ if $active }}header-item-active{{ end }}">{{ .Name }}</a>
     {{ end }}
   </nav>
 </header>

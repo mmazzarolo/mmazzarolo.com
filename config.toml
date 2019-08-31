@@ -13,15 +13,15 @@ enableRobotsTXT = true # generate robots.txt
   category = "categories"
 
 [menu]
-  [[menu.main]]
+  [[menu.nav]]
     url = "/blog"
     name = "Blog"
     weight = 1
-  [[menu.main]]
+  [[menu.nav]]
     url = "/reviews/"
     name = "Reviews"
     weight = 2
-  [[menu.main]]
+  [[menu.nav]]
     url = "/about/"
     name = "About"
     weight = 3

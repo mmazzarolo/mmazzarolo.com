@@ -137,10 +137,19 @@ figure {
   color: var(--text-color);
 }
 
+.header-item-active {
+  text-decoration: underline;
+}
+
 
 /*************
  * POST LIST *
  *************/
+.post-list h3 {
+  margin-block-end: 0.3em;
+  margin-block-start: 1.5em;
+}
+
 .post-list ul {
   list-style: none;
   margin: 0;
@@ -157,6 +166,7 @@ figure {
 @media only screen and (max-width: 540px) {
   .post-list li {
     padding-top: 1rem;
+    display: block;
   }
 }
 
@@ -171,13 +181,18 @@ figure {
   overflow: hidden;
   text-overflow: ellipsis;
   margin: auto;
-  margin-left: 10px;
+}
+
+@media only screen and (min-width: 541px) {
+  .post-list .time-mobile {
+    margin-left: 10px;
+  }
 }
 
 /***************
  * POST SINGLE *
  ***************/
-.post-single footer{
+.post-single footer {
   display: block;
   margin-top: 3rem;
   color: var(--time-color);
@@ -286,7 +301,6 @@ figure {
   color: var(--time-color);
 }
 
-
 /*********
  * ABOUT *
  *********/
@@ -325,6 +339,28 @@ figure {
   font-size: 1.2rem;
   font-weight: 300;
   color: #9B9B9B;
+}
+
+
+@media only screen and (max-width: 360px) {
+
+  .about h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  
+  .about h2 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+  
+  .about h4 {
+    font-size: 1rem;
+  }
+  
+  .about p {
+    font-size: 0.8rem;
+  }
 }
 
 /*******
