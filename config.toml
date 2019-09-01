@@ -14,16 +14,16 @@ enableRobotsTXT = true # generate robots.txt
 
 [menu]
   [[menu.nav]]
+    url = "/about/"
+    name = "About"
+    weight = 1
+  [[menu.nav]]
     url = "/blog"
     name = "Blog"
-    weight = 1
+    weight = 2
   [[menu.nav]]
     url = "/reviews/"
     name = "Reviews"
-    weight = 2
-  [[menu.nav]]
-    url = "/about/"
-    name = "About"
     weight = 3
 
 # Links format
