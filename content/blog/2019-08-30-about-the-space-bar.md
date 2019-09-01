@@ -3,6 +3,10 @@ date: "2019-08-30"
 title: "About the space bar"
 tags: [programming, hardware]
 draft: false
+description: Why is the space bar key so big?
+images:
+  - /images/blog/2019-08-30-space-bar.png
+draft: false
 ---
 
 
