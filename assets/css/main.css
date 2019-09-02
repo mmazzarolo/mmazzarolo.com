@@ -386,3 +386,15 @@ figure {
   font-weight: 400;
   line-height: 2.3rem;
 }
+
+/*******
+ * Gist *
+ *******/
+
+ .gist-data {
+   padding: 6px;
+ }
+
+.gist .markdown-body .highlight pre, .gist .markdown-body pre {
+  font-size: .85rem !important;
+}
