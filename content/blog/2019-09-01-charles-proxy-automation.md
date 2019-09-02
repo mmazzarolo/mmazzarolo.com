@@ -5,7 +5,7 @@ tags: [programming]
 draft: false
 description: Automating Charles usage trough the CLI
 images:
-  - /images/blog/2019-09-01-charles-proxy-automation/twitter-card.png
+  - /images/blog/2019-09-01-charles-proxy-automation/twitter-card.jpg
 ---
 
 <img src="/images/blog/2019-09-01-charles-proxy-automation/charles.jpg" style="width:60%;" />
