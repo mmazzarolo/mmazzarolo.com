@@ -5,7 +5,7 @@ tags: [programming, hardware]
 draft: false
 description: Why is the space bar key so big?
 images:
-  - /images/blog/2019-08-30-about-the-space-bar.png
+  - /images/blog/2019-08-30-about-the-space-bar/space-bar.png
 draft: false
 ---
 
