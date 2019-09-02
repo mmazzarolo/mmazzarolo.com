@@ -10,4 +10,4 @@ score: 3
 
 A nice single.  
 The first two tracks are pure (good) club material.  
-I still miss the playful vibe of its oldest records.
+I still miss the playful vibe of his older records.
