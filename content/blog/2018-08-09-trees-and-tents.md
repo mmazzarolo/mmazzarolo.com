@@ -24,7 +24,7 @@ The rules are simple:
 &nbsp;  
 &nbsp;
 
-<div style="display:flex;flex-wrap:wrap;" margin-bottom="0">
+<div class="float-images">
 <img src="https://raw.githubusercontent.com/mmazzarolo/trees-and-tents-sample/master/.github/capture-menu.png" width="220"></img>
 <img src="https://raw.githubusercontent.com/mmazzarolo/trees-and-tents-sample/master/.github/capture-levels.png" width="220"></img>
 <img src="https://raw.githubusercontent.com/mmazzarolo/trees-and-tents-sample/master/.github/capture-game.png" width="220"></img>

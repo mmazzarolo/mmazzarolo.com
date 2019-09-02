@@ -210,10 +210,12 @@ figure {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
 }
 
 .post-single .float-images img {
+  display: initial;
   max-width: initial;
   max-height: initial;
   margin: initial;
