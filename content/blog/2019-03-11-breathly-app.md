@@ -7,7 +7,7 @@ tags: [react-native, android, ios, react, programming]
 Today I published [Breathly App](https://github.com/mmazzarolo/breathly-app): a React-Native mobile app that allows you to focus on your breathing.  
 You can use Breathly for daily relaxation and breath training: just choose a breathing technique and focus on the guided exercise.
 
-<div style="display:flex;flex-wrap:wrap;" margin-bottom="0">
+<div class="float-images">
     <img alt="Breathly" width="320" height="auto" src="https://github.com/mmazzarolo/breathly-app/raw/master/.github/iphone-1.png">
     <img alt="Breathly" width="320" height="auto" src="https://github.com/mmazzarolo/breathly-app/raw/master/.github/iphone-2.png">
 </div>

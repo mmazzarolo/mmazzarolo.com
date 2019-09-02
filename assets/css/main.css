@@ -206,6 +206,19 @@ figure {
 }
 
 
+.post-single .float-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.post-single .float-images img {
+  max-width: initial;
+  max-height: initial;
+  margin: initial;
+}
+
 /*************
  * REVIEW LIST *
  *************/
@@ -300,6 +313,8 @@ figure {
   margin-top: 3rem;
   color: var(--time-color);
 }
+
+
 
 /*********
  * ABOUT *
