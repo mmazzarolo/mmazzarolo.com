@@ -1,6 +1,6 @@
 ---
 date: "2019-03-11"
-title: "Breathly app: A breathing training app built with React-Native"
+title: "Breathly: A breathing training app built with React-Native"
 tags: [react-native, android, ios, react, programming]
 ---
 
