@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ (default .Site.Params.description .Description) }}">
-    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     {{ template "_internal/twitter_cards.html" . }}
     <title>{{ block "title" . }}{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}{{ end }}</title>
 
