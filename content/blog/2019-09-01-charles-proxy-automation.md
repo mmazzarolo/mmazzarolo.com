@@ -18,3 +18,9 @@ I've recently started to use it a lot more than what I was used to at my daily j
 
 <br />
 {{< gist mmazzarolo 5eb88f68865a7bf9c2ec99b16286435b >}}
+
+<br />
+### 2019-10-07 update: 
+After publishing this post I got in touch with [@charlesproxy on Twitter](https://twitter.com/charlesproxy) to start a discussion about what we can do to allow editing settings (e.g.: adding new rewrite rules) trough the CLI:
+
+{{< tweet 1170108587978313728 >}}
