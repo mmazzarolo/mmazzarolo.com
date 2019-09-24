@@ -8,7 +8,7 @@ layout: "about"
 
 @mmazzarolo
 
-## I'm a software engineer and a top-notch introvert who likes [music](/reviews/), [movies](/reviews/), reading tech news and wasting a ton of time on [GitHub](https://github.com/mmazzarolo).
+## I'm a software engineer, I like [music](/reviews/), [movies](/reviews/), reading tech news and wasting all the remaining free time on [GitHub](https://github.com/mmazzarolo).  
 
 #### Currently, I'm building tools for designers at [InVision](https://www.invisionapp.com/).
 
