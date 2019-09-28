@@ -23,7 +23,7 @@ const REVIEW_LIST_QUERY = graphql`
             artist
             author
             categories
-            date(formatString: "YYYY-MM-DD")
+            date(formatString: "MMM DD, 'YY")
             director
             featured_image {
               childImageSharp {

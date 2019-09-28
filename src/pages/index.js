@@ -14,9 +14,8 @@ export const IndexPage = () => {
           <Username>@mmazzarolo</Username>
           <Content>
             I'm a software engineer, I like <a href="/reviews/">music</a>,{" "}
-            <a href="/reviews/">movies</a>, reading tech news and wasting all
-            the remaining free time on{" "}
-            <a href="https://github.com/mmazzarolo/">GitHub</a>.
+            <a href="/reviews/">movies</a>, reading tech news and wasting time
+            on <a href="https://github.com/mmazzarolo/">GitHub</a>.
           </Content>
           <SubContent>
             Currently, I'm building tools for designers at{" "}
@@ -54,7 +53,7 @@ const Greetings = styled.h1`
   line-height: 3rem;
   font-weight: 600;
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 380px) {
     font-size: 2rem;
     line-height: 2rem;
   }
@@ -64,7 +63,7 @@ const Username = styled.p`
   font-size: 1.2rem;
   font-weight: 300;
   color: #9b9b9b;
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 380px) {
     font-size: 0.8rem;
   }
 `;
@@ -73,7 +72,7 @@ const Content = styled.h2`
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.3rem;
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 380px) {
     font-size: 1.6rem;
     line-height: 1.8rem;
   }
@@ -83,7 +82,7 @@ const SubContent = styled.h4`
   font-size: 1.3rem;
   font-family: var(--text-font-family);
   font-weight: 300;
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 380px) {
     font-size: 1rem;
   }
 `;

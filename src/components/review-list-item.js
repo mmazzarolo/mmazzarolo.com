@@ -92,7 +92,6 @@ const TitleAndSeason = styled.span`
 `;
 
 const DirectorAndYear = styled.span`
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
@@ -101,7 +100,7 @@ const HeaderRight = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 `;
 
 const Body = styled.div`
