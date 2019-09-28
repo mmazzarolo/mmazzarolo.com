@@ -70,6 +70,16 @@ module.exports = {
                 name: "season",
                 getter: node => node.frontmatter.season,
                 defaultValue: ""
+              },
+              {
+                name: "artist",
+                getter: node => node.frontmatter.artist,
+                defaultValue: ""
+              },
+              {
+                name: "author",
+                getter: node => node.frontmatter.author,
+                defaultValue: ""
               }
             ]
           }

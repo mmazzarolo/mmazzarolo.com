@@ -1,6 +1,5 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { groupBy, uniq } from "lodash";
 import styled from "styled-components";
 
 import Layout from "../components/layout";
@@ -16,10 +15,13 @@ const REVIEW_LIST_QUERY = graphql`
       edges {
         node {
           excerpt
+          html
           fields {
             slug
           }
           frontmatter {
+            artist
+            author
             categories
             date(formatString: "MMM DD")
             director
@@ -39,39 +41,44 @@ export const ReviewsIndexPage = () => {
   const reviews = queryResult.allMarkdownRemark.edges;
   return (
     <Layout>
-      <SEO title="Reviews" />
-      {reviews.map(({ node }) => {
-        const category = node.frontmatter.categories[0];
-        const content = node.html;
-        const date = node.frontmatter.date;
-        const director = node.frontmatter.director;
-        const score = node.frontmatter.score;
-        const season = node.frontmatter.season;
-        const title = node.frontmatter.title || node.fields.slug;
-        const year = node.frontmatter.year;
-        const slug = node.fields.slug;
-        return (
-          <ReviewListItem
-            key={slug}
-            category={category}
-            content={content}
-            date={date}
-            director={director}
-            score={score}
-            season={season}
-            title={title}
-            url={slug}
-            year={year}
-          />
-        );
-      })}
+      <Reviews>
+        <SEO title="Reviews" />
+        {reviews.map(({ node, ...other }) => {
+          const category = node.frontmatter.categories[0];
+          const content = node.html;
+          const date = node.frontmatter.date;
+          const director =
+            node.frontmatter.director ||
+            node.frontmatter.artist ||
+            node.frontmatter.author;
+          const score = node.frontmatter.score;
+          const season = node.frontmatter.season;
+          const title = node.frontmatter.title || node.fields.slug;
+          const year = node.frontmatter.year;
+          const slug = node.fields.slug;
+          return (
+            <ReviewListItem
+              key={slug}
+              category={category}
+              content={content}
+              date={date}
+              director={director}
+              score={score}
+              season={season}
+              title={title}
+              url={slug}
+              year={year}
+            />
+          );
+        })}
+      </Reviews>
     </Layout>
   );
 };
 
 export default ReviewsIndexPage;
 
-const PostsGroup = styled.ul`
+const Reviews = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
