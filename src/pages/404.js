@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-export default () => {
+export const NotFound = () => {
   return (
     <Layout>
       <SEO title="404: Not Found" />
@@ -16,6 +16,8 @@ export default () => {
     </Layout>
   );
 };
+
+export default NotFound;
 
 const Main = styled.main`
   display: flex;

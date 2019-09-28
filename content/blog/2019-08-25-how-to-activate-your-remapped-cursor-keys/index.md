@@ -3,8 +3,7 @@ date: "2019-08-12"
 title: "How to activate your remapped cursor keys?"
 tags: [programming, hardware]
 description: If you're remapping the cursor keys on macOS, try using the right Command key to activate them
-images:
-  - /images/twitter-card.png
+twitter_image: /images/twitter-card.png
 redirect_from:
   - /2019/08/12/how-to-activate-your-remapped-cursor-keys
 ---

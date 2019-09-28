@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "gatsby";
+import Img from "gatsby-image";
 import styled from "styled-components";
-
-const linkActiveClassName = "active";
+import { times } from "lodash";
 
 export const ReviewListItem = ({
   category,
   content,
+  featuredImgFluid,
   date,
   director,
   score,
@@ -15,29 +15,25 @@ export const ReviewListItem = ({
   url,
   year
 }) => {
+  const titleAndSeason = `${title}${season ? ` (Season ${season})` : ""}`;
+  const directorAndYear = `${director} (${year})`;
+  const positiveStars = times(score).map(x => "★");
+  const negativeStarts = times(5 - score).map(x => "☆");
+  const stars = positiveStars.concat(negativeStarts).join("");
   return (
     <Root>
-      <Category>
-        <a href="/categories/">{category}</a>
-      </Category>
+      <Category>#{category}</Category>
       <Header>
         <HeaderLeft>
-          <TitleWrapper>
-            <Title>
-              <b>
-                {title}
-                {season && ` (Season ${season})`}
-              </b>
-            </Title>
-            <MobileComma>,&nbsp;</MobileComma>
-            <span class="review-director-and-year">
-              {director} ({year})
-            </span>
-          </TitleWrapper>
+          <CoverArtImage fluid={featuredImgFluid} />
+          <Info>
+            <TitleAndSeason>{titleAndSeason}</TitleAndSeason>
+            <DirectorAndYear>{directorAndYear}</DirectorAndYear>
+          </Info>
         </HeaderLeft>
         <HeaderRight>
+          <Score>{stars}</Score>
           <Time datetime="Sep 1">{date}</Time>
-          <Score>{score}</Score>
         </HeaderRight>
       </Header>
       <Body>
@@ -47,16 +43,7 @@ export const ReviewListItem = ({
   );
 };
 
-const Root = styled.li`
-  /* display: grid;
-  grid-template-columns: 1fr min-content;
-  grid-column-gap: 5px;
-  padding-top: 5px;
-  @media only screen and (max-width: 540px) {
-    padding-top: 1rem;
-    display: block;
-  } */
-}`;
+const Root = styled.li``;
 
 const Category = styled.div`
   text-align: right;
@@ -66,36 +53,55 @@ const Header = styled.div`
   display: grid;
   grid-template-columns: 1fr min-content;
   grid-column-gap: 5px;
+  flex-direction: column;
+  justify-content: center;
 `;
 
-const HeaderLeft = styled.div``;
+const HeaderLeft = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
 
-const TitleWrapper = styled.a`
+const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const CoverArtImage = styled(Img)`
+  display: block;
+  min-width: 70px;
+  min-height: 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 3px;
+  margin-right: 12px;
+  @media only screen and (max-width: 540px) {
+    min-width: 50px;
+    min-height: 50px;
+    width: 50px;
+    height: 50px;
+  }
+`;
+
+const TitleAndSeason = styled.span`
+  font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--text-color);
-  @media only screen and (max-width: 540px) {
-    display: flex;
-    flex-direction: column;
-  }
-}
 `;
 
-const Title = styled.span`
+const DirectorAndYear = styled.span`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 10px;
 `;
 
 const HeaderRight = styled.div`
   display: flex;
-  flex-direction: row;
-  @media only screen and (max-width: 540px) {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-  }
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
 `;
 
 const Body = styled.div`
@@ -103,14 +109,7 @@ const Body = styled.div`
   color: var(--text-content-color);
 `;
 
-const MobileComma = styled.span`
-  @media only screen and (max-width: 540px) {
-    display: none;
-  }
-`;
-
 const Score = styled.span`
-  margin-left: 10px;
   text-align: right;
 `;
 
@@ -118,7 +117,8 @@ const Time = styled.time`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: auto;
+  margin: 0;
+  text-align: right;
 `;
 
 export default ReviewListItem;

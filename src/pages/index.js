@@ -4,43 +4,37 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-export default class IndexPage extends React.Component {
-  render() {
-    return (
-      <Layout>
-        <SEO title="Mazzarolo Matteo" />
-        <Root>
-          <Main>
-            <Greetings>Hi! I'm Matteo.</Greetings>
-            <Username>@mmazzarolo</Username>
-            <Content>
-              I'm an introvert, I like{" "}
-              <a href="https://rateyourmusic.com/collection/mazzaaaaa/r0.5-5.0,ss.dd">
-                music
-              </a>
-              ,{" "}
-              <a href="https://rateyourmusic.com/film_collection/mazzaaaaa/r0.5-5.0,ss.dd">
-                movies
-              </a>
-              , reading tech news and wasting a lot of time on{" "}
-              <a href="https://github.com/mmazzarolo">GitHub</a>.
-            </Content>
-            <SubContent>
-              Currently, I'm building tools for designers at{" "}
-              <a href="https://www.invisionapp.com/">InVision</a>.
-            </SubContent>
-            <SubContent>
-              To keep updated with my work, follow me on{" "}
-              <a href="https://twitter.com/mazzarolomatteo">Twitter</a>,{" "}
-              <a href="https://github.com/mmazzarolo">GitHub</a> or subscribe to
-              this blog <a href="">with RSS</a>.
-            </SubContent>
-          </Main>
-        </Root>
-      </Layout>
-    );
-  }
-}
+export const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Mazzarolo Matteo" />
+      <Root>
+        <Main>
+          <Greetings>Hi! I'm Matteo.</Greetings>
+          <Username>@mmazzarolo</Username>
+          <Content>
+            I'm a software engineer, I like <a href="/reviews/">music</a>,{" "}
+            <a href="/reviews/">movies</a>, reading tech news and wasting all
+            the remaining free time on{" "}
+            <a href="https://github.com/mmazzarolo/">GitHub</a>.
+          </Content>
+          <SubContent>
+            Currently, I'm building tools for designers at{" "}
+            <a href="https://www.invisionapp.com/">InVision</a>.
+          </SubContent>
+          <SubContent>
+            To keep updated with my work, follow me on{" "}
+            <a href="https://twitter.com/mazzarolomatteo">Twitter</a>,{" "}
+            <a href="https://github.com/mmazzarolo">GitHub</a> or subscribe to
+            this blog <a href="/blog/index.xml">with RSS</a>.
+          </SubContent>
+        </Main>
+      </Root>
+    </Layout>
+  );
+};
+
+export default IndexPage;
 
 const Root = styled.div`
   display: flex;

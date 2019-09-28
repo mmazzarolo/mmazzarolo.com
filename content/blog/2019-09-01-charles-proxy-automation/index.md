@@ -3,8 +3,7 @@ date: "2019-09-01"
 title: "Charles Proxy automation"
 tags: [programming]
 description: Automating Charles usage trough the CLI
-images:
-  - images/twitter-card.jpg
+twitter_image: images/twitter-card.jpg
 redirect_from:
   - /2019/09/01/charles-proxy-automation
 ---

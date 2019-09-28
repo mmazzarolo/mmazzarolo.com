@@ -3,8 +3,7 @@ date: "2019-08-30"
 title: "About the space bar"
 tags: [programming, hardware]
 description: Why is the space bar key so big?
-images:
-  - /images/space-bar.png
+twitter_image: /images/space-bar.png
 redirect_from:
   - /2019/08/30/about-the-space-bar
 ---

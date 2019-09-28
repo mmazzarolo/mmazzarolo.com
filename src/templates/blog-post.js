@@ -9,7 +9,6 @@ export const SINGLE_POST_QUERY = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

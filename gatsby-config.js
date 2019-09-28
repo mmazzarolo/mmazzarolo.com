@@ -1,12 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `mmazzarolo.com`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@mmazzarolo`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `mmazzarolo`
-    },
+    titleTemplate: "%s · mmazzarolo.com",
+    description: `Personal blog by Matteo. Tech, code, dumb stuff.`,
+    siteUrl: `https://mmazzarolo.com/`,
+    twitterUsername: `@mmazzarolo`,
     menuLinks: [
       { name: "About", link: "/" },
       { name: "Blog", link: "/blog" },
@@ -82,6 +80,60 @@ module.exports = {
                 defaultValue: ""
               }
             ]
+          }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { fileAbsolutePath: { regex: "/blog/" } }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "blog/index.xml",
+            title: "mmazzarolo.com blog",
+            match: "/blog/"
           }
         ]
       }

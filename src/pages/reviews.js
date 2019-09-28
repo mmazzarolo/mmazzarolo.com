@@ -23,8 +23,15 @@ const REVIEW_LIST_QUERY = graphql`
             artist
             author
             categories
-            date(formatString: "MMM DD")
+            date(formatString: "YYYY-MM-DD")
             director
+            featured_image {
+              childImageSharp {
+                fluid(maxWidth: 60) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             score
             season
             title
@@ -41,8 +48,21 @@ export const ReviewsIndexPage = () => {
   const reviews = queryResult.allMarkdownRemark.edges;
   return (
     <Layout>
+      <SEO title="Reviews" />
+      <summary>
+        👋 Here I'm logging my opinions and feelings about movies, tv-series,
+        albums and books, with a score from 1 to 5 to indicate how much I
+        enjoyed them.
+        <br />
+        P.S.: My older{" "}
+        <a href="https://rateyourmusic.com/~mazzaaaaa#musicrating">
+          albums
+        </a>{" "}
+        and <a href="https://rateyourmusic.com/~mazzaaaaa#filmrating">movies</a>{" "}
+        ratings are still on RateYourMusic.
+      </summary>
+      <br />
       <Reviews>
-        <SEO title="Reviews" />
         {reviews.map(({ node, ...other }) => {
           const category = node.frontmatter.categories[0];
           const content = node.html;
@@ -56,11 +76,16 @@ export const ReviewsIndexPage = () => {
           const title = node.frontmatter.title || node.fields.slug;
           const year = node.frontmatter.year;
           const slug = node.fields.slug;
+
+          const featuredImgFluid =
+            node.frontmatter.featured_image.childImageSharp.fluid;
+
           return (
             <ReviewListItem
               key={slug}
               category={category}
               content={content}
+              featuredImgFluid={featuredImgFluid}
               date={date}
               director={director}
               score={score}
@@ -82,9 +107,4 @@ const Reviews = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-`;
-
-const Year = styled.h3`
-  margin-block-end: 0.3em;
-  margin-block-start: 1.5em;
 `;
