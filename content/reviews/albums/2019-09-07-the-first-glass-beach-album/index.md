@@ -6,7 +6,6 @@ artist: glass beach
 genre: [power-pop, indie-rock]
 year: 2019
 score: 3
-id: glass-beach-the-first-glass-beach-album
 featured_image: featured_image.jpg
 ---
 
