@@ -41,7 +41,8 @@ module.exports = {
           `gatsby-remark-embed-gist`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-external-links`
         ]
       }
     },
@@ -138,7 +139,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    `gatsby-remark-external-links`,
     { resolve: `gatsby-plugin-styled-components`, options: { display: true } }
   ]
 };
