@@ -143,6 +143,9 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-canonical-urls`,
     { resolve: `gatsby-plugin-styled-components`, options: { display: true } }
   ]
 };
