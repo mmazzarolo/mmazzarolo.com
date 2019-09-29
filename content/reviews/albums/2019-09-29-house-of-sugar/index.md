@@ -9,4 +9,4 @@ score: 3
 featured_image: featured_image.jpg
 ---
 
-I liked it. But not much.
+I liked it. Just not _that_ much.
