@@ -138,6 +138,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
+    `gatsby-remark-external-links`,
     { resolve: `gatsby-plugin-styled-components`, options: { display: true } }
   ]
 };
