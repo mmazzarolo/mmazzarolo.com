@@ -138,7 +138,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-canonical-urls`,
     { resolve: `gatsby-plugin-styled-components`, options: { display: true } }
   ]
 };
