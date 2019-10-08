@@ -152,4 +152,9 @@ export const GlobalStyle = createGlobalStyle`
     margin-right: auto;
     max-width: 590px;
   }
+
+  video {
+    max-width: 100%;
+    margin-bottom: 26px;
+  }
 `;
