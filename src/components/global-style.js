@@ -156,5 +156,6 @@ export const GlobalStyle = createGlobalStyle`
   video {
     max-width: 100%;
     margin-bottom: 26px;
+    border-radius: 4px;
   }
 `;
