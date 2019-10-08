@@ -12,14 +12,14 @@ I hate slow animations that don't provide any value.
 
 Here's a short video of me clicking on a ticket in the new and shiny [Jira Cloud for Mac](https://www.atlassian.com/software/jira/mac):
 
-<video autoplay loop>
+<video autoplay loop playsinline>
   <source src="videos/jira-app.mp4" type="video/mp4" />
   <source src="videos/jira-app.webm" type="video/webm" />
 </video>
 
 And here's another short video of me clicking on the same ticket on Jira Cloud in the browser:
 
-<video autoplay loop>
+<video autoplay loop playsinline>
   <source src="videos/jira-web.mp4" type="video/mp4" />
   <source src="videos/jira-web.webm" type="video/webm" />
 </video>
