@@ -4,6 +4,7 @@ title: How I built a super-simple game using React-Native
 tags: [react, react-native, mobx, game, javascript]
 redirect_from:
   - /2017/02/28/how-i-built-a-super-simple-game-using-react-native/
+  - /how-i-built-a-super-simple-game-using-react-native/
 ---
 
 Today I released a simple React-Native game on the App Store with the aim of providing some tips on how to handle small React-Native projects like this one. The game is, of course, completely open-source, you can find the repository on [GitHub](https://github.com/mmazzarolo/tap-the-number) and in the [App Store](https://itunes.apple.com/us/app/tap-the-number/id1206517840?l=it&ls=1&mt=8).
