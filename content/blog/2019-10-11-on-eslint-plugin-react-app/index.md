@@ -5,7 +5,7 @@ tags: [programming]
 description: eslint-plugin-react-app is a minimal set of easy to install ESLint rules for your project. Just install a single NPM package, add it to your .eslintrc, and you'll be all set.
 ---
 
-The more time I spend in the JavaScript ecosystem, the more I enjoy using opinionated solutions to solve common problems.
+The more I work in the JavaScript ecosystem, the more I enjoy using opinionated solutions to solve common problems.
 
 A couple of years ago I created [eslint-plugin-react-app](https://github.com/mmazzarolo/eslint-plugin-react-app): a minimal set of unobtrusive ESLint rules that can be installed trough a single npm package.  
 I can just run `yarn add eslint-plugin-react-app`, add it to my `.eslintrc` config, and I'm ready to go.  
