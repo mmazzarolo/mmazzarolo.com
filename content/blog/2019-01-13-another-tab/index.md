@@ -33,7 +33,7 @@ The project source code is available on [GitHub](https://github.com/mmazzarolo/c
 
 I initially built this extension just for personal use... and for trying building a Chrome extension 🤷‍♂️, so for now it has just the features that I need...  
 That said, PRs are welcome!  
-[Check the DEVLOG to see the history of the project](./DEVLOG.md).
+[Check the DEVLOG to see the history of the project](https://github.com/mmazzarolo/chrome-another-tab/blob/develop/DEVLOG.md).
 
 ### Features
 
@@ -71,7 +71,7 @@ Also, if you're not confortable with hooks feel free to use class components.
 
 ### Chrome Web Store deployment
 
-I setup a [semi-automated Chrome Web Store deployment using CircleCI](./.circleci/config.yml).  
+I setup a [semi-automated Chrome Web Store deployment using CircleCI](https://github.com/mmazzarolo/chrome-another-tab/tree/develop/.circleci).  
 It currently runs only when the `master` branch receives a new push, but I still haven't automated the version number bumping (so I still have to do it manually).  
 It would be great making the publishing step manipulate the `manifest.json` so that it reflects the `package.json` version and/or a git tag.
 
