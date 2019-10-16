@@ -4,6 +4,11 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+const RYM_MOVIES_URL =
+  "https://rateyourmusic.com/film_collection/mazzaaaaa/r0.5-5.0,ss.dd";
+const RYM_ALBUMS_URL =
+  "https://rateyourmusic.com/collection/mazzaaaaa/r0.5-5.0,ss.dd";
+
 export const IndexPage = () => {
   return (
     <Layout>
@@ -13,9 +18,9 @@ export const IndexPage = () => {
           <Greetings>Hi! I'm Matteo.</Greetings>
           <Username>@mmazzarolo</Username>
           <Content>
-            I'm a software engineer, I like <a href="/reviews/">music</a>,{" "}
-            <a href="/reviews/">movies</a>, reading tech news and wasting time
-            on <a href="https://github.com/mmazzarolo/">GitHub</a>.
+            I'm a software engineer, I like <a href={RYM_ALBUMS_URL}>music</a>,{" "}
+            <a href={RYM_MOVIES_URL}>movies</a>, reading tech news and wasting
+            time on <a href="https://github.com/mmazzarolo/">GitHub</a>.
           </Content>
           <SubContent>
             Currently, I'm building tools for designers at{" "}
@@ -40,7 +45,7 @@ const Root = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 128px);
 `;
 
 const Main = styled.main`

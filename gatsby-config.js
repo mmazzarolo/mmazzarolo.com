@@ -2,14 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `mmazzarolo.com`,
     titleTemplate: "%s · mmazzarolo.com",
-    description: `Personal blog by Matteo. Tech, code, reviews, dumb stuff.`,
+    description: `Personal blog by Matteo. Tech, code, dumb stuff.`,
     siteUrl: `https://mmazzarolo.com/`,
     twitterUsername: `@mmazzarolo`,
-    menuLinks: [
-      { name: "About", link: "/" },
-      { name: "Blog", link: "/blog" },
-      { name: "Reviews", link: "/reviews" }
-    ]
+    menuLinks: [{ name: "About", link: "/" }, { name: "Blog", link: "/blog" }]
   },
   plugins: [
     {
@@ -43,38 +39,6 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           `gatsby-remark-external-links`
-        ]
-      }
-    },
-    {
-      resolve: "gatsby-plugin-node-fields",
-      options: {
-        descriptors: [
-          {
-            predicate: node => node.internal.type === `MarkdownRemark`,
-            fields: [
-              {
-                name: "director",
-                getter: node => node.frontmatter.director,
-                defaultValue: ""
-              },
-              {
-                name: "season",
-                getter: node => node.frontmatter.season,
-                defaultValue: ""
-              },
-              {
-                name: "artist",
-                getter: node => node.frontmatter.artist,
-                defaultValue: ""
-              },
-              {
-                name: "author",
-                getter: node => node.frontmatter.author,
-                defaultValue: ""
-              }
-            ]
-          }
         ]
       }
     },
