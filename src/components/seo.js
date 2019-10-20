@@ -7,6 +7,7 @@ const SEO_QUERY = graphql`
     site {
       siteMetadata {
         description
+        image
         siteUrl
         title
         titleTemplate
@@ -21,10 +22,11 @@ function SEO({ description, location, title, twitterImage }) {
 
   const seo = {
     description: description || site.siteMetadata.description,
-    image: ``, // TODO:
+    image: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
     title: title || site.siteMetadata.title,
     titleTemplate: site.siteMetadata.titleTemplate,
-    twitterImage: ``, // TODO:
+    twitterImage: `${site.siteMetadata.siteUrl}${twitterImage ||
+      site.siteMetadata.image}`,
     twitterUsername: site.siteMetadata.twitterUsername
   };
 
@@ -38,7 +40,7 @@ function SEO({ description, location, title, twitterImage }) {
         <meta property="og:description" content={seo.description} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary" />
       {seo.twitterUsername && (
         <meta name="twitter:creator" content={seo.twitterUsername} />
       )}

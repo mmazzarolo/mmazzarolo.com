@@ -4,6 +4,7 @@ module.exports = {
     titleTemplate: "%s · mmazzarolo.com",
     description: `Personal blog by Matteo. Tech, code, dumb stuff.`,
     siteUrl: `https://mmazzarolo.com/`,
+    image: `/seo.png`,
     twitterUsername: `@mmazzarolo`,
     menuLinks: [{ name: "About", link: "/" }, { name: "Blog", link: "/blog" }]
   },
