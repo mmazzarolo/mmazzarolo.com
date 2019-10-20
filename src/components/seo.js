@@ -21,10 +21,10 @@ function SEO({ description, location, title, twitterImage }) {
 
   const seo = {
     description: description || site.siteMetadata.description,
-    image: ``, // TODO:
+    image: site.siteMetadata.image,
     title: title || site.siteMetadata.title,
     titleTemplate: site.siteMetadata.titleTemplate,
-    twitterImage: ``, // TODO:
+    twitterImage: twitterImage || site.siteMetadata.image,
     twitterUsername: site.siteMetadata.twitterUsername
   };
 
