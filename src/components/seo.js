@@ -22,7 +22,7 @@ function SEO({ description, location, title, twitterImage }) {
 
   const seo = {
     description: description || site.siteMetadata.description,
-    image: `${site.siteMetadata.siteUrl}{$site.siteMetadata.image}`,
+    image: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
     title: title || site.siteMetadata.title,
     titleTemplate: site.siteMetadata.titleTemplate,
     twitterImage: `${site.siteMetadata.siteUrl}${twitterImage ||
