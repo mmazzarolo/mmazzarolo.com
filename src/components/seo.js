@@ -39,6 +39,7 @@ function SEO({ description, location, title, twitterImage }) {
         <meta property="og:description" content={seo.description} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
+      <meta name="twitter:card" content="summary" />
       {seo.twitterUsername && (
         <meta name="twitter:creator" content={seo.twitterUsername} />
       )}
