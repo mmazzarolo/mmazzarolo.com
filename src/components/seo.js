@@ -17,15 +17,16 @@ const SEO_QUERY = graphql`
   }
 `;
 
-function SEO({ description, location, siteUrl, title, twitterImage }) {
+function SEO({ description, location, title, twitterImage }) {
   const { site } = useStaticQuery(SEO_QUERY);
 
   const seo = {
     description: description || site.siteMetadata.description,
-    image: `${siteUrl}$site.siteMetadata.image}`,
+    image: `${site.siteMetadata.siteUrl}{$site.siteMetadata.image}`,
     title: title || site.siteMetadata.title,
     titleTemplate: site.siteMetadata.titleTemplate,
-    twitterImage: `${siteUrl}${twitterImage || site.siteMetadata.image}`,
+    twitterImage: `${site.siteMetadata.siteUrl}${twitterImage ||
+      site.siteMetadata.image}`,
     twitterUsername: site.siteMetadata.twitterUsername
   };
 
