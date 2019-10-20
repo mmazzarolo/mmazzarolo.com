@@ -7,6 +7,7 @@ const SEO_QUERY = graphql`
     site {
       siteMetadata {
         description
+        image
         siteUrl
         title
         titleTemplate
