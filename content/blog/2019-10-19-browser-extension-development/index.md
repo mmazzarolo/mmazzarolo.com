@@ -1,6 +1,6 @@
 ---
 date: "2019-10-19"
-title: "Browser extensions development with Create React App"
+title: "Developing a browser extension with Create React App"
 tags: [programming]
 description: Create React App is a great tool for developing React applications for the web. With a couple of tweaks it can also become one of the best ways to create browser extensions.
 ---
@@ -92,7 +92,7 @@ And finally, add a `watch` script to your `package.json`:
 That's it! 🎉
 From now on you can run `yarn watch` to develop your extension with live-reloading, or `yarn build` to create a production build.
 
-### Aknowledgments
+### Acknowledgments
 
 Thanks to:
 
