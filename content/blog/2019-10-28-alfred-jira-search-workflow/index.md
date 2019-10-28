@@ -1,7 +1,7 @@
 ---
 date: "2019-10-28"
 title: "Search Jira tickets using Alfred"
-tags: [programming]
+tags: [programming, automation, jira]
 description: I can't stand Jira slowness, so I created an Alfred workflow to search for Jira tickets.
 ---
 
