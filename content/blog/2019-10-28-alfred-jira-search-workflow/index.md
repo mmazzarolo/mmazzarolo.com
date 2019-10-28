@@ -6,7 +6,7 @@ description: I can't stand Jira slowness, so I created an Alfred workflow to sea
 ---
 
 I can't stand Jira slowness.  
-To me, the worst part of it is using Jira cloud's sluggish UI to search for a ticket.  
+To me, the worst part of it is using Jira cloud's sluggish UI when I'm looking for a specific ticket.  
 That's why yesterday I created an Alfred workflow to search for Jira tickets.
 
 ![](/images/jira-multi.png)
