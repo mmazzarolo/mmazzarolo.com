@@ -22,11 +22,11 @@ It's smart enough to return a list of issues if your query is a word, or a speci
 
 The workflow setup still has a huge margin for improvement: I haven't built an authentication flow, so it requires some manual setup (that I abstracted into two workflow environment variables).
 
-**A `domain` variable**
+**A `domain` variable**  
 Part of the Jira URL.  
 E.g. `helloworld`, for `https://helloworld.atlassian.net`.
 
-**A `header` variable**
+**A `header` variable**  
 HTTP header used in the API requests.  
 You should add here your authentication token (JWT or cookie).  
 Personally, using the cookie session token is enough for me for now.  
