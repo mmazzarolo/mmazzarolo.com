@@ -24,7 +24,7 @@ The workflow setup still has a huge margin for improvement: I haven't built an a
 
 **A `domain` variable**
 Part of the Jira URL.  
-E.g. `https://${domain}.atlassian.net`).
+E.g. `helloworld`, for `https://helloworld.atlassian.net`.
 
 **A `header` variable**
 HTTP header used in the API requests.  
