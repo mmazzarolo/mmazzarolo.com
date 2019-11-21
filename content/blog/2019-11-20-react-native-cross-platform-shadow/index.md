@@ -1,6 +1,6 @@
 ---
 date: "2019-11-20"
-title: "A simple React-Native Animated hook"
+title: "React-Native cross-platform shadows"
 tags: [programming, react, react-native]
 description: A set of cross-platform React-Native elevation definitions to make your components shadow look the same on iOS and Android.
 ---
