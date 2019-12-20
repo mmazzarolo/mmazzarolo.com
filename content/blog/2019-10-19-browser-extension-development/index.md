@@ -87,6 +87,8 @@ And finally, add a `watch` script to your `package.json`:
 "watch": "./scripts/watch.js"
 ```
 
+> If you're not able to run the script, try running `chmod +x ./scripts/watch.js` to make it executable.
+
 ### Start the development
 
 That's it! 🎉
@@ -99,3 +101,4 @@ Thanks to:
 - [Hitesh Kumar](https://hiteshkumar.dev/) for [the `watch` script idea](https://smellycode.com/chrome-extension-live-reloading-with-react/)
 - [Rubens Pinheiro](https://github.com/rubenspgcavalcante) for [the Webpack extension reloader plugin](https://github.com/rubenspgcavalcante/webpack-extension-reloader)
 - [Nina Shahri](https://medium.com/@nrshahri?source=post_page-----324dd83fe5ff----------------------) for [this article on CSP](https://medium.com/@nrshahri/csp-cra-324dd83fe5ff)
+- [JP Pincheira](https://twitter.com/restrex) for the `chmod -x` tip
