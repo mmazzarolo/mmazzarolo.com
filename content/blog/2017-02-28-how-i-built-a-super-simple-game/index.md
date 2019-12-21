@@ -9,23 +9,38 @@ redirect_from:
 
 Today I released a simple React-Native game on the App Store with the aim of providing some tips on how to handle small React-Native projects like this one. The game is, of course, completely open-source, you can find the repository on [GitHub](https://github.com/mmazzarolo/tap-the-number) and in the [App Store](https://itunes.apple.com/us/app/tap-the-number/id1206517840?l=it&ls=1&mt=8).
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/mmazzarolo/tap-the-number/master/extra/tap_the_number_title.png" width="420"></img><br />  <br />
-<a href="https://itunes.apple.com/us/app/tap-the-number/id1206517840?l=it&ls=1&mt=8"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/800px-Download_on_the_App_Store_Badge.svg.png" width="120"></img></a>    <br />   <br />
-</p>
+<div align="center">
+  <div style="width:420px">
+    <img src="/images/logo.png" />
+  </div>
+  <a href="https://itunes.apple.com/us/app/tap-the-number/id1206517840?l=it&ls=1&mt=8"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/800px-Download_on_the_App_Store_Badge.svg.png" width="120"></img></a> 
+</div>
+
+<br />
+<br />
 
 Tap The Number is a simple React-Native game where you have to tap the tiles that appear on the screen in a specific order.  
 Even if developing this game didn't take too much time (I should have put in it ~20 hours I guess) it has been a fun ride and I'd like to share some tips and some info on the complexities I found during its development.  
 But first...
 
-## Screenshots and video preview
+## Screenshots and preview
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/mmazzarolo/tap-the-number/master/extra/screenshot-iphone6plus-1.png" width="240"></img>
-<img src="https://raw.githubusercontent.com/mmazzarolo/tap-the-number/master/extra/screenshot-iphone6plus-2.png" width="240"></img>
-<img src="https://raw.githubusercontent.com/mmazzarolo/tap-the-number/master/extra/screenshot-iphone6plus-3.png" width="240"></img>
-<br /><br /><b><a href="https://www.youtube.com/watch?v=bz7Id_HcEmw">I also published a small game preview on Youtube</a></b><br />
-</p>
+<div class="float-images">
+  <div style="width:220px">
+    <img src="/images/screenshot-1.png" />
+  </div>
+  <div style="width:220px">
+    <img src="/images/screenshot-2.png" />
+  </div>
+  <div style="width:220px">
+    <img src="/images/screenshot-3.png" />
+  </div>
+</div>
+ 
+<br />
+<br />
+
+`youtube: bz7Id_HcEmw`
 
 ## The stack and the dependencies
 

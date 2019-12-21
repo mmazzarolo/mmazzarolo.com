@@ -6,13 +6,15 @@ redirect_from:
   - /2018/08/09/trees-and-tents/
 ---
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/mmazzarolo/trees-and-tents-sample/master/.github/logo.png" width="420"></img><br />  <br /> 
-<a href="https://expo.io/@mmazzarolo/trees-and-tents-sample">Try it on Expo</a> 
-</p>
+<div align="center">
+  <div style="width:420px">
+    <img src="/images/logo.png" />
+  </div>
+  <a href="https://expo.io/@mmazzarolo/trees-and-tents-sample">Try it on Expo</a> 
+</div>
 
-&nbsp;  
-&nbsp;
+<br />
+<br />
 
 React-Native implementation of the Trees and Tents puzzle game I built in my free time.
 
@@ -23,16 +25,21 @@ The rules are simple:
 - Tents do not touch each other, not even diagonally.
 - The numbers outside the grid show how many tents there are in that row or column.
 
-&nbsp;  
-&nbsp;
+<br />
+<br />
 
 <div class="float-images">
-<img src="https://raw.githubusercontent.com/mmazzarolo/trees-and-tents-sample/master/.github/capture-menu.png" width="220"></img>
-<img src="https://raw.githubusercontent.com/mmazzarolo/trees-and-tents-sample/master/.github/capture-levels.png" width="220"></img>
-<img src="https://raw.githubusercontent.com/mmazzarolo/trees-and-tents-sample/master/.github/capture-game.png" width="220"></img>
+  <div style="width:220px">
+    <img src="/images/screenshot-1.png" />
+  </div>
+  <div style="width:220px">
+    <img src="/images/screenshot-2.png" />
+  </div>
+  <div style="width:220px">
+    <img src="/images/screenshot-3.png" />
+  </div>
 </div>
  
-&nbsp;  
-&nbsp;
+<br />
 
-{{< youtube wFMYWh2q1Vk >}}
+`youtube: wFMYWh2q1Vk`

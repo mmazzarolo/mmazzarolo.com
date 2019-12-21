@@ -9,8 +9,12 @@ After a few weekends of work, today I finally published [Ordinary Puzzles](https
 You can find the source-code of the app on [GitHub](https://github.com/mmazzarolo/ordinary-puzzles-app).
 
 <div class="float-images">
-  <img alt="Ordinary Puzzles" width="320" height="auto" src="https://github.com/mmazzarolo/ordinary-puzzles-app/raw/master/.github/iphone-screenshot-light.png">
-  <img alt="Ordinary Puzzles" width="320" height="auto" src="https://github.com/mmazzarolo/ordinary-puzzles-app/raw/master/.github/iphone-screenshot-dark.png">
+  <div style="width:320px">
+    <img src="/images/iphone-screenshot-light.png" />
+  </div>
+  <div style="width:320px">
+    <img src="/images/iphone-screenshot-dark.png" />
+  </div>
 </div>
 
 Ordinary Puzzles is a puzzle game inspired by [Juho Snellman](https://www.snellman.net/)'s [Linjat](https://linjat.snellman.net/#fp).  

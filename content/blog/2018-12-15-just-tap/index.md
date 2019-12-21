@@ -9,9 +9,11 @@ redirect_from:
 Today I published on GitHub [Just Tap](https://github.com/mmazzarolo/just-tap): yet another small React-Native game I developed in my free time for testing a new stack.  
 Hooks! 🎣
 
-<p align="center">
-<img src="https://github.com/mmazzarolo/just-tap/raw/master/.github/title.png" width="320"></img>
-</p>
+<div align="center">
+  <div style="width:320px">
+    <img src="/images/logo.png">
+  </div>
+</div>
 
 ## Overview
 

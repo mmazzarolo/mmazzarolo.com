@@ -28,6 +28,7 @@ module.exports = {
               linkImagesToOriginal: false
             }
           },
+          `gatsby-remark-embed-video`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {

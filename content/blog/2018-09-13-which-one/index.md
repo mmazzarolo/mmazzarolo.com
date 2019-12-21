@@ -8,16 +8,25 @@ redirect_from:
 
 Today I published yet another small React game, which has been my testing playground for the TypeScript & Mobx combo: [Which One?](https://github.com/mmazzarolo/which-one).
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/mmazzarolo/which-one/master/.github/which-one-white-bg.png" width="420"></img><br />  <br /> 
-<p align="center">
-<img src="https://raw.githubusercontent.com/mmazzarolo/which-one/master/.github/screenshot-1.png" width="240"></img>
-<img src="https://raw.githubusercontent.com/mmazzarolo/which-one/master/.github/screenshot-2.png" width="240"></img>
-<img src="https://raw.githubusercontent.com/mmazzarolo/which-one/master/.github/screenshot-3.png" width="240"></img>
-</p>
+<div align="center">
+  <div style="width:420px">
+    <img src="/images/logo.png" width="420">
+  </div>
+</div>
+
+<br />
  
-&nbsp;  
-&nbsp;
+<div class="float-images">
+  <div style="width:220px">
+    <img src="/images/screenshot-1.png" />
+  </div>
+  <div style="width:220px">
+    <img src="/images/screenshot-2.png" />
+  </div>
+  <div style="width:220px">
+    <img src="/images/screenshot-3.png" />
+  </div>
+</div>
 
 ## Features overview
 

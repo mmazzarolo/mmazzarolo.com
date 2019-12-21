@@ -6,7 +6,7 @@ redirect_from:
   - /2016/10/05/my-journey-toward-a-maintainable-project-structure-for-react/redux
 ---
 
-When I started learning Redux I was shocked by the number of discussions and “best practice” you could find online about it, but it didn’t take too much time to understand why: Redux is not very opinionated about the way of structuring a project around it, and this can lead to some annoyance when you’re trying figure out what kind of structure suits better your style and your project.
+When I started learning Redux I was shocked by the number of discussions and “best practice” you could find online about it, but it didn’t take me too much time to understand why: Redux is not very opinionated about the way of structuring a project around it, and this can lead to some annoyance when you’re trying figure out what kind of structure suits better your style and your project.
 
 In this post I’d like to share some information on my journey to achieving a comfortable Redux project structure.
 
@@ -19,7 +19,7 @@ Hope you find it interesting!
 
 ## First stop: grouping files by “type”
 
-When I started using Redux I studied the [official doc](http://redux.js.org/docs/recipes) from top to bottom and I organized my project this way:
+When I started using Redux I studied the [official docs](https://redux.js.org/docs) from top to bottom and I organized my project this way:
 
 ```
 src
@@ -42,9 +42,9 @@ src
       └── product.js
 ```
 
-This structure is promoted by the [official Redux repository examples](https://github.com/reactjs/redux/tree/master/examples/todos/src) and in my opinion it is still a pretty solid option.  
-The main drawback of a structure like is that even adding a small feature might end up in editing many different files.  
-For example adding a field (that is updated by an action) to the product store means that you'll have to:
+This structure is promoted by the [official Redux repository examples](https://github.com/reactjs/redux/tree/master/examples/todos/src) and in, my opinion, it's still a pretty solid option.  
+The main drawback of this structure is that even adding a small feature might end up in editing many different files.  
+For example, adding a field (that is updated by an action) to the product store means that you'll have to:
 
 - add the action type in `types/product.js`
 - add the action creator in `actions/products.js`
@@ -61,11 +61,11 @@ And it doesn't end here! When the app grows you'll probably add other directorie
     └── product.js
 ```
 
-So, after introducing redux-saga in my project I relized that it was becoming too hard to maintain and I started looking for alternatives.
+So, after introducing redux-saga in my project I realized that it was becoming too hard to maintain and I started looking for alternatives.
 
 ## A different approach: grouping files by feature
 
-An alternative to the project structure above consists in grouping files by feature:
+An alternative to the structure above consists in grouping files by feature:
 
 ```
 src
@@ -98,13 +98,13 @@ You must also be careful not to be caught in another conceptual trap: don't feel
 
 ## Ducks to the rescue
 
-After the small adventure of grouping by feature I went back to my initial project structure and I noticed that using Sagas for handling the asynchronous flow has the interesting side effect of turning 90% of your action creators in one-liner:
+After the short adventure of grouping by feature I went back to my initial project structure and I noticed that using Sagas for handling the asynchronous flow has the interesting side effect of turning 90% of your action creators in one-liner:
 
 ```javascript
 const login = (email, password) => ({ type: LOGIN_REQUEST, email, password });
 ```
 
-In a situation like this, having a dedicated file for each action creator, action type and reducer seemed a bit overkill, so I decided to try out the "Ducks" approach.
+In such situation, having a dedicated file for each action creator, action type and reducer seemed a bit overkill, so I decided to try out the "Ducks" approach.
 [Ducks](https://github.com/erikras/ducks-modular-redux) is a proposal for bundling reducers, action types and actions in the same file, leading to a reduced boilerplate:
 
 ```javascript
@@ -299,7 +299,7 @@ I know, it's a bit uglier, but any other solution is well accepted!
 ## Selectors
 
 In my opinion selectors are the most overlooked feature of Redux.  
-I must admit that I started used them a bit too late, but reading [this tweet of Dan Abramov](https://twitter.com/dan_abramov/status/730933179511640064) opened my eyes and I begun viewing selectors as interfaces that expose the store to the containers.
+I must admit that I started used them a bit too late, but reading [this tweet by Dan Abramov](https://twitter.com/dan_abramov/status/730933179511640064) opened my eyes and I begun viewing selectors as interfaces that expose the store to the containers.
 
 - Need to display a list in a certain order? Define the `getProductOrderedByName` selector.
 - Need to get a specific element of a list? Define the `getProductById` selector.
