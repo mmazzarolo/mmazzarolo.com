@@ -6,9 +6,9 @@ redirect_from:
   - /2017/10/09/numvalidate-open-source-phone-number-validation-rest-api/
 ---
 
-I recently published [NumValidate](https://numvalidate.com), a fully featured open source phone number validation REST API service.
+I recently publisfhed [NumValidate](https://numvalidate.com), a fully featured open source phone number validation REST API service.
 
-![](https://github.com/mmazzarolo/numvalidate/raw/master/.github/website-screenshot.png)
+![](/images/website-screenshot.png)
 
 NumValidate might not be a big project, but from my point of view it can be used as an example of how you can build a “complete” application from the ground up using modern Javascript.
 

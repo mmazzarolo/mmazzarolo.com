@@ -10,8 +10,12 @@ Today I published [Breathly App](https://github.com/mmazzarolo/breathly-app): a 
 You can use Breathly for daily relaxation and breath training: just choose a breathing technique and focus on the guided exercise.
 
 <div class="float-images">
-    <img alt="Breathly" width="320" height="auto" src="https://github.com/mmazzarolo/breathly-app/raw/master/.github/iphone-1.png">
-    <img alt="Breathly" width="320" height="auto" src="https://github.com/mmazzarolo/breathly-app/raw/master/.github/iphone-2.png">
+  <div style="width:320px">
+    <img src="/images/screenshot-1.png" />
+  </div>
+  <div style="width:320px">
+    <img src="/images/screenshot-2.png" />
+  </div>
 </div>
 
 Breathly is a small React-Native app that I developed on my free time in 2018 for playing around with the React-Native Animated API.

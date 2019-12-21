@@ -10,11 +10,7 @@ Today I published [Another Tab](https://chrome.google.com/webstore/detail/anothe
 Built with Create React App and TypeScript.  
 The project source code is available on [GitHub](https://github.com/mmazzarolo/chrome-another-tab).
 
-<div align="center" margin-bottom="0">
-  <a href="https://github.com/mmazzarolo/chrome-another-tab" target="_blank">
-    <img alt="Another Tab" width="auto" height="auto" src="https://github.com/mmazzarolo/chrome-another-tab/raw/master/.github/2019-01-13-screenshot-dark.png">
-  </a>
-</div>
+![](/images/screenshot.png)
 
 <div align="center">
   <a href="https://chrome.google.com/webstore/detail/oaaeanlgefipegfcbgpgnhhnpengdjld">

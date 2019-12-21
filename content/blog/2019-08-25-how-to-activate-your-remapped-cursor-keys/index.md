@@ -9,6 +9,7 @@ redirect_from:
 ---
 
 <br />
+
 _Short post but TL;DR: If you're remapping the cursor keys on macOS, try using the <kbd>Right Command</kbd> key to activate them._
 
 ![](/images/magic-keyboard.svg)

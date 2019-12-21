@@ -6,9 +6,13 @@ redirect_from:
   - /2018/09/27/the-starter-app/
 ---
 
-<p align="center">
-<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/logo-extra-wide.png?raw=true" height="420"></img>
-</p>
+<div align="center">
+  <div style="width:420px">
+    <img src="/images/logo.png" width="420">
+  </div>
+</div>
+
+<br />
 
 An in-depth tutorial about building mobile apps using React-Native.
 
@@ -19,13 +23,19 @@ By the end of the tutorial we'll have a fully working mobile app that can also b
 
 I'm planning to periodically submit a new update but I haven't defined the release cycle yet. Stay tuned!
 
-<br />
+<div class="float-images">
+  <div style="width:220px">
+    <img src="/images/screenshot-1.png" />
+  </div>
+  <div style="width:220px">
+    <img src="/images/screenshot-2.png" />
+  </div>
+  <div style="width:220px">
+    <img src="/images/screenshot-3.png" />
+  </div>
+</div>
 
-<p align="center">
-<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/00-screenshot-1.png?raw=true" height="520" style="height:520px"></img>
-<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/00-screenshot-2.png?raw=true" height="520" style="height:520px"></img>
-<img src="https://github.com/mmazzarolo/the-starter-app/blob/master/.github/00-screenshot-3.png?raw=true" height="520" style="height:520px" style="height:520px"></img>
-</p>
+<br />
 
 # The tutorial
 
