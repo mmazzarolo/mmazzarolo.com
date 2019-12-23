@@ -145,7 +145,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: initial;
   }
 
-  img {
+  article img {
     position: relative;
     display: block;
     margin-left: auto;
