@@ -6,7 +6,6 @@ import SEO from "../components/seo";
 
 const links = [
   { title: "Flat Icon: Free vector icons", url: "https://www.flaticon.com/" },
-  { title: "High quality SVG logos", url: "https://svgporn.com/" },
   { title: "Uses This", url: "https://usesthis.com/" },
   { title: "5000 best movies", url: "http://5000best.com/movies/" },
   { title: "Animista", url: "https://animista.net/" },
