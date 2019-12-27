@@ -40,8 +40,7 @@ export const LinksIndexPage = () => {
           <h3>🔖A few bookmarks</h3>
           <ul>
             {links.map(link => {
-              const prefixLessUrl = new URL(link.url || "").hostname;
-              const favicon = `https://www.google.com/s2/favicons?domain=${prefixLessUrl}`;
+              const favicon = `https://www.google.com/s2/favicons?domain=${link.url}`;
               return (
                 <li key={link.title}>
                   <Bookmark href={link.url}>
