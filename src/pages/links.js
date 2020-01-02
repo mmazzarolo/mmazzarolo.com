@@ -28,6 +28,10 @@ const links = [
   {
     title: "Encoding Video for the web",
     url: "https://gist.github.com/Vestride/278e13915894821e1d6f"
+  },
+  {
+    title: "nickbentley.games",
+    url: "https://www.nickbentley.games/"
   }
 ];
 
