@@ -23,7 +23,7 @@ export const Header = ({ description, lang, meta, title }) => {
     <Root>
       <Nav>
         <Menu>
-          {menuLinks.map(menuLink => {
+          {menuLinks.map((menuLink) => {
             return (
               <MenuItem key={menuLink.name}>
                 <MenuItemLink

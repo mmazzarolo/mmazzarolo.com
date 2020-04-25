@@ -34,14 +34,14 @@ const POST_LIST_QUERY = graphql`
 export const BlogIndexPage = () => {
   const queryResult = useStaticQuery(POST_LIST_QUERY);
   const posts = queryResult.allMarkdownRemark.edges;
-  const years = uniq(posts.map(post => post.node.frontmatter.year))
+  const years = uniq(posts.map((post) => post.node.frontmatter.year))
     .sort()
     .reverse();
-  const postsByYear = groupBy(posts, post => post.node.frontmatter.year);
+  const postsByYear = groupBy(posts, (post) => post.node.frontmatter.year);
   return (
     <Layout>
       <SEO title="Blog" />
-      {years.map(year => {
+      {years.map((year) => {
         return (
           <Fragment key={year}>
             <Year>{year}</Year>
