@@ -17,22 +17,22 @@ const links = [
   { title: "Drew DeVault's Blog", url: "https://drewdevault.com/" },
   {
     title: "iTunes Artwork Finder",
-    url: "https://bendodson.com/projects/itunes-artwork-finder/,index.html"
+    url: "https://bendodson.com/projects/itunes-artwork-finder/,index.html",
   },
   { title: "UI Garage", url: "https://uigarage.net/" },
   { title: "unDraw: Open-source illustrations", url: "https://undraw.co/" },
   {
     title: "Open Doodles: Free Illustrations",
-    url: "https://www.opendoodles.com/"
+    url: "https://www.opendoodles.com/",
   },
   {
     title: "Encoding Video for the web",
-    url: "https://gist.github.com/Vestride/278e13915894821e1d6f"
+    url: "https://gist.github.com/Vestride/278e13915894821e1d6f",
   },
   {
     title: "nickbentley.games",
-    url: "https://www.nickbentley.games/"
-  }
+    url: "https://www.nickbentley.games/",
+  },
 ];
 
 export const LinksIndexPage = () => {
@@ -43,7 +43,7 @@ export const LinksIndexPage = () => {
         <summary>
           <h3>🔖A few bookmarks</h3>
           <ul>
-            {links.map(link => {
+            {links.map((link) => {
               const favicon = `https://www.google.com/s2/favicons?domain=${link.url}`;
               return (
                 <li key={link.title}>

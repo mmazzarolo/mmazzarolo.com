@@ -1,5 +1,5 @@
 import React from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 const SEO_QUERY = graphql`
@@ -25,9 +25,10 @@ function SEO({ description, location, title, twitterImage }) {
     image: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
     title: title || site.siteMetadata.title,
     titleTemplate: site.siteMetadata.titleTemplate,
-    twitterImage: `${site.siteMetadata.siteUrl}${twitterImage ||
-      site.siteMetadata.image}`,
-    twitterUsername: site.siteMetadata.twitterUsername
+    twitterImage: `${site.siteMetadata.siteUrl}${
+      twitterImage || site.siteMetadata.image
+    }`,
+    twitterUsername: site.siteMetadata.twitterUsername,
   };
 
   return (
