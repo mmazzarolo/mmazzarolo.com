@@ -18,7 +18,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { elevations } from "./elevations";
 
-const ElevatedView: React.FC = function() {
+const ElevatedView: React.FC = function () {
   return (
     <View style={styles.root}>
       <Text>👋! My shadow now looks the same on iOS and Android</Text>
@@ -29,7 +29,7 @@ const ElevatedView: React.FC = function() {
 const styles = StyleSheet.create({
   root: {
     // Assuming you want a shadow that looks like and Android elevation of 2:
-    ...elevations[2]
-  }
+    ...elevations[2],
+  },
 });
 ```

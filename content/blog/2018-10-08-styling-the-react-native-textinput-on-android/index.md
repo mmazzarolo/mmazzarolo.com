@@ -51,10 +51,10 @@ const LIGHT_GRAY = "#D3D3D3";
 
 class MyTextInput extends React.Component {
   state = {
-    isFocused: false
+    isFocused: false,
   };
 
-  handleFocus = event => {
+  handleFocus = (event) => {
     this.setState({ isFocused: true });
     // Remember to propagate the `onFocus` event to the
     // parent as well (if set)
@@ -63,7 +63,7 @@ class MyTextInput extends React.Component {
     }
   };
 
-  handleBlur = event => {
+  handleBlur = (event) => {
     this.setState({ isFocused: false });
     // Remember to propagate the `onBlur` event to the
     // parent as well (if set)
@@ -100,8 +100,8 @@ class MyTextInput extends React.Component {
 const styles = StyleSheet.create({
   textInput: {
     height: 40,
-    paddingLeft: 6
-  }
+    paddingLeft: 6,
+  },
 });
 
 export default MyTextInput;

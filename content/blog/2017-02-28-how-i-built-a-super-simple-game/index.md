@@ -235,7 +235,7 @@ export default {
   BOARD_MARGIN,
   BOARD_HEIGHT,
   BOARD_WIDTH,
-  TIME_BAR_HEIGHT: DEVICE_HEIGHT * 0.02
+  TIME_BAR_HEIGHT: DEVICE_HEIGHT * 0.02,
 };
 ```
 
@@ -356,19 +356,19 @@ Specifically, I wanted to animate the TimeBar width and the TimeBar color from g
 
 ```javascript
 type State = {
-  animateValue: any
+  animateValue: any,
 };
 
 export default class TimeBar extends Component<void, {}, State> {
   state = {
-    animateValue: new Animated.Value(timings.TIME_LIMIT_MS)
+    animateValue: new Animated.Value(timings.TIME_LIMIT_MS),
   };
 
   componentDidMount() {
     Animated.timing(this.state.animateValue, {
       duration: timings.TIME_LIMIT_MS,
       easing: Easing.linear, // No easing
-      toValue: 0
+      toValue: 0,
     }).start();
   }
 
@@ -377,13 +377,13 @@ export default class TimeBar extends Component<void, {}, State> {
     // only 12 seconds left
     const backgroundColor = this.state.animateValue.interpolate({
       inputRange: [0, timings.TIME_LIMIT_MS * 0.4, timings.TIME_LIMIT_MS],
-      outputRange: ["rgba(255,0,0, 1)", "rgba(0,0,0, 0.3)", "rgba(0,0,0, 0.3)"]
+      outputRange: ["rgba(255,0,0, 1)", "rgba(0,0,0, 0.3)", "rgba(0,0,0, 0.3)"],
     });
     // Animate the TimeBar width from DEVICE_WIDTH to 0 in TIME_LIMIT_MS
     // (which currently is 30 seconds)
     const width = this.state.animateValue.interpolate({
       inputRange: [0, timings.TIME_LIMIT_MS],
-      outputRange: [0, metrics.DEVICE_WIDTH]
+      outputRange: [0, metrics.DEVICE_WIDTH],
     });
     return (
       <View style={styles.container}>
@@ -420,7 +420,7 @@ _handleButtonPress = async () => {
     // Animates out header and body
     await Promise.all([
       this._headerRef.fadeOutLeft(400),
-      this._bodyRef.fadeOutRight(400)
+      this._bodyRef.fadeOutRight(400),
     ]);
   }
   this.props.navigateToNextScreen(); // Animations ended: move to next screen

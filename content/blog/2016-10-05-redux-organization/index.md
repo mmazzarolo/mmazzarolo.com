@@ -109,83 +109,87 @@ In such situation, having a dedicated file for each action creator, action type 
 
 ```javascript
 // src/ducks/auth.js
-const AUTO_LOGIN = 'AUTH/AUTH_AUTO_LOGIN'
-const SIGNUP_REQUEST = 'AUTH/SIGNUP_REQUEST'
-const SIGNUP_SUCCESS = 'AUTH/SIGNUP_SUCCESS'
-const SIGNUP_FAILURE = 'AUTH/SIGNUP_FAILURE'
-const LOGIN_REQUEST = 'AUTH/LOGIN_REQUEST'
-const LOGIN_SUCCESS = 'AUTH/LOGIN_SUCCESS'
-const LOGIN_FAILURE = 'AUTH/LOGIN_FAILURE'
-const LOGOUT = 'AUTH/LOGOUT'
+const AUTO_LOGIN = "AUTH/AUTH_AUTO_LOGIN";
+const SIGNUP_REQUEST = "AUTH/SIGNUP_REQUEST";
+const SIGNUP_SUCCESS = "AUTH/SIGNUP_SUCCESS";
+const SIGNUP_FAILURE = "AUTH/SIGNUP_FAILURE";
+const LOGIN_REQUEST = "AUTH/LOGIN_REQUEST";
+const LOGIN_SUCCESS = "AUTH/LOGIN_SUCCESS";
+const LOGIN_FAILURE = "AUTH/LOGIN_FAILURE";
+const LOGOUT = "AUTH/LOGOUT";
 
 const initialState = {
   user: null,
   isLoading: false,
-  error: null
-}
+  error: null,
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.SIGNUP_REQUEST:
     case actionTypes.LOGIN_REQUEST:
-      return { ...state, isLoading: true, error: null }
+      return { ...state, isLoading: true, error: null };
 
     case actionTypes.SIGNUP_SUCCESS:
     case actionTypes.LOGIN_SUCCESS:
-      return { ...state, isLoading: false, user: action.user }
+      return { ...state, isLoading: false, user: action.user };
 
     case actionTypes.SIGNUP_FAILURE:
     case actionTypes.LOGIN_FAILURE:
-      return { ...state, isLoading: false, error: action.error }
+      return { ...state, isLoading: false, error: action.error };
 
     case actionTypes.LOGOUT:
-      return { ...state, user: null }
+      return { ...state, user: null };
 
     default:
-      return state
+      return state;
   }
-}
+};
 
 export const signup = (email, password) => ({
-  type: SIGNUP_REQUEST, email, password
-})
+  type: SIGNUP_REQUEST,
+  email,
+  password,
+});
 export const login = (email, password) => ({
-  type: LOGIN_REQUEST, email, password
-})
+  type: LOGIN_REQUEST,
+  email,
+  password,
+});
 export const logout = () => ({
-  type: LOGOUT
-})
+  type: LOGOUT,
+});
 
 // src/ducks/product.js
-const GET_PRODUCTS_REQUEST = 'PRODUCT/GET_PRODUCTS_REQUEST'
-const GET_PRODUCTS_SUCCESS = 'PRODUCT/GET_PRODUCTS_SUCCESS'
-const GET_PRODUCTS_FAILURE = 'PRODUCT/GET_PRODUCTS_FAILURE'
+const GET_PRODUCTS_REQUEST = "PRODUCT/GET_PRODUCTS_REQUEST";
+const GET_PRODUCTS_SUCCESS = "PRODUCT/GET_PRODUCTS_SUCCESS";
+const GET_PRODUCTS_FAILURE = "PRODUCT/GET_PRODUCTS_FAILURE";
 
 const initialState = {
   products: null,
   isLoading: false,
-  error: null
-}
+  error: null,
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.GET_PRODUCTS_REQUEST:
-      return { ...state, isLoading: true, error: null }
+      return { ...state, isLoading: true, error: null };
 
     case actionTypes.GET_PRODUCTS_SUCCESS:
-      return { ...state, isLoading: false, user: action.products }
+      return { ...state, isLoading: false, user: action.products };
 
     case actionTypes.GET_PRODUCTS_FAILURE:
-      return { ...state, isLoading: false, error: action.error }
+      return { ...state, isLoading: false, error: action.error };
 
     default:
-      return state
+      return state;
   }
-}
+};
 
 export const getProducts = () => ({
-  type: GET_PRODUCTS_REQUEST
-})
+  type: GET_PRODUCTS_REQUEST,
+});
 ```
 
 The first time I adopted this syntax I fell in love with it.  
@@ -397,12 +401,12 @@ export const types = {
   SHOW_SNACKBAR: "APP/SHOW_SNACKBAR",
   HIDE_SNACKBAR: "APP/HIDE_SNACKBAR",
   SHOW_DRAWER: "APP/SHOW_DRAWER",
-  HIDE_DRAWER: "APP/HIDE_DRAWER"
+  HIDE_DRAWER: "APP/HIDE_DRAWER",
 };
 
 export const initialState = {
   snackbarMessage: null,
-  isDrawerVisible: false
+  isDrawerVisible: false,
 };
 
 export default (state = initialState, action) => {
@@ -425,13 +429,13 @@ export default (state = initialState, action) => {
 
 export const actions = {
   loadData: () => ({ type: types.LOAD_DATA_REQUEST }),
-  showSnackbar: snackbarMessage => ({
+  showSnackbar: (snackbarMessage) => ({
     type: types.SHOW_SNACKBAR,
-    snackbarMessage
+    snackbarMessage,
   }),
   hideSnackbar: () => ({ type: types.HIDE_SNACKBAR }),
   showDrawer: () => ({ type: types.SHOW_DRAWER }),
-  hideDrawer: () => ({ type: types.HIDE_DRAWER })
+  hideDrawer: () => ({ type: types.HIDE_DRAWER }),
 };
 ```
 

@@ -11,7 +11,7 @@ Here's a React-Native hook that I've been using for a while to animate views tro
 import { useRef } from "react";
 import { Animated, Easing } from "react-native";
 
-export const useAnimation = function(initialValue: number = 0) {
+export const useAnimation = function (initialValue: number = 0) {
   const endValue = initialValue === 0 ? 1 : 0;
   const animationValueRef =
     useRef < Animated.Value > new Animated.Value(initialValue);
@@ -21,12 +21,12 @@ export const useAnimation = function(initialValue: number = 0) {
       toValue: endValue,
       useNativeDriver: true,
       easing: Easing.inOut(Easing.quad),
-      ...config
+      ...config,
     });
 
   return {
     value: animationValueRef.current,
-    setup: setup
+    setup: setup,
   };
 };
 ```
@@ -38,7 +38,7 @@ import React, { useEffect } from "react";
 import { View } from "react-native";
 import { useAnimation } from "./useAnimation";
 
-const FadeInOnMount: React.FC = function() {
+const FadeInOnMount: React.FC = function () {
   const fadeAnim = useAnimation();
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const FadeInOnMount: React.FC = function() {
     opacity: fadeAnim.value,
     width: 50,
     height: 50,
-    backgroundColor: "red"
+    backgroundColor: "red",
   };
   return <View style={style} />;
 };
