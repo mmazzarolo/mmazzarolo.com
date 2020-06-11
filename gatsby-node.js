@@ -40,8 +40,8 @@ exports.createPages = async ({ graphql, actions }) => {
       path: post.node.fields.slug,
       component: blogPost,
       context: {
-        slug: post.node.fields.slug
-      }
+        slug: post.node.fields.slug,
+      },
     });
   });
 };
@@ -54,7 +54,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
 };

@@ -6,15 +6,18 @@ module.exports = {
     siteUrl: `https://mmazzarolo.com/`,
     image: `/seo.png`,
     twitterUsername: `@mmazzarolo`,
-    menuLinks: [{ name: "About", link: "/" }, { name: "Blog", link: "/blog" }]
+    menuLinks: [
+      { name: "About", link: "/" },
+      { name: "Blog", link: "/blog" },
+    ],
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content`,
-        name: `blog`
-      }
+        name: `blog`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -25,24 +28,24 @@ module.exports = {
             options: {
               maxWidth: 590,
               showCaptions: true,
-              linkImagesToOriginal: false
-            }
+              linkImagesToOriginal: false,
+            },
           },
           `gatsby-remark-embed-video`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
-            }
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
           `@raae/gatsby-remark-oembed`,
           `gatsby-remark-embed-gist`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-external-links`
-        ]
-      }
+          `gatsby-remark-external-links`,
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-feed`,
@@ -62,12 +65,12 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                 });
               });
             },
@@ -93,10 +96,10 @@ module.exports = {
             `,
             output: "blog/index.xml",
             title: "mmazzarolo.com blog",
-            match: "/blog/"
-          }
-        ]
-      }
+            match: "/blog/",
+          },
+        ],
+      },
     },
     "gatsby-redirect-from",
     "gatsby-plugin-meta-redirect",
@@ -105,6 +108,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    { resolve: `gatsby-plugin-styled-components`, options: { display: true } }
-  ]
+    { resolve: `gatsby-plugin-styled-components`, options: { display: true } },
+  ],
 };

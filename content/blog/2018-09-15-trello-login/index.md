@@ -32,7 +32,7 @@ Once you obtained a Trello API key, showing the Trello login webpage can be easi
 
   <body>
     <script>
-      var authorize = function() {
+      var authorize = function () {
         window.Trello.authorize({
           type: "redirect",
           persist: true,
@@ -40,16 +40,16 @@ Once you obtained a Trello API key, showing the Trello login webpage can be easi
           name: "Trello login example",
           scope: {
             read: "true",
-            write: "true"
+            write: "true",
           },
           expiration: "never",
-          success: function() {
+          success: function () {
             var trelloToken = localStorage.getItem("trello_token");
             alert("User login success, auth token: " + trelloToken);
           },
-          error: function() {
+          error: function () {
             alert("Authentication failure");
-          }
+          },
         });
       };
       authorize();
@@ -100,7 +100,7 @@ To do so we can use the `onMessage`/`postMessage` API: with it you can send mess
 
   <body>
     <script>
-      var sendToReactNative = function(data) {
+      var sendToReactNative = function (data) {
         // React-Native can only handle string messages.
         // In order to distinguish a success message from a failure one our best
         // bet is sending a stringified JSON data with a field that marks
@@ -108,7 +108,7 @@ To do so we can use the `onMessage`/`postMessage` API: with it you can send mess
         var stringData = JSON.stringify(data);
         window.postMessage(stringData, "*");
       };
-      var authorize = function() {
+      var authorize = function () {
         window.Trello.authorize({
           type: "redirect",
           persist: true,
@@ -116,16 +116,16 @@ To do so we can use the `onMessage`/`postMessage` API: with it you can send mess
           name: "Trello login example",
           scope: {
             read: "true",
-            write: "true"
+            write: "true",
           },
           expiration: "never",
-          success: function() {
+          success: function () {
             var trelloToken = localStorage.getItem("trello_token");
             sendToReactNative({ type: "AUTH_SUCCESS", authToken: trelloToken });
           },
-          error: function() {
+          error: function () {
             sendToReactNative({ type: "AUTH_FAILURE" });
-          }
+          },
         });
       };
       authorize();
@@ -140,7 +140,7 @@ import { Alert, View, WebView } from "react-native";
 import trelloLoginWebsiteHtml from "./trelloLoginWebsite.html";
 
 export default class TrelloLoginExample extends React.Component {
-  handleWebViewMessage = e => {
+  handleWebViewMessage = (e) => {
     let data;
     try {
       data = JSON.parse(e.nativeEvent.data);

@@ -70,12 +70,12 @@ With [typesafe-actions](https://github.com/piotrwitek/typesafe-actions), [immer]
 I'm also glad I used [redux-saga](https://github.com/redux-saga/redux-saga) for handling the game events/timings because... almost the entire logic of the game is contained in a single saga which controls the game flow; the components just "react" to it:
 
 ```javascript
-export const runRoundSaga = function*() {
+export const runRoundSaga = function* () {
   yield delay(PREPARE_BOARD_DURATION);
   yield put(actions.play());
   const { isTimeLimitReached, isBoardClear } = yield race({
     isTimeLimitReached: call(runTimerSaga),
-    isBoardClear: call(checkBoardClearSaga)
+    isBoardClear: call(checkBoardClearSaga),
   });
   if (isTimeLimitReached) {
     const score = yield select(getScore);

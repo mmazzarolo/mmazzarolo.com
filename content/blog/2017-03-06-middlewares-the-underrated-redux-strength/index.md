@@ -43,7 +43,7 @@ Actually, writing a Redux middleware is not that hard:
 
 ```javascript
 // This middleware just prints the dispatched action name
-const myMiddleware = store => next => action => {
+const myMiddleware = (store) => (next) => (action) => {
   console.log("dispatching:", action);
   let result = next(action);
   return result;
@@ -89,7 +89,7 @@ Here's list of some simple middlewares that you can take as an example.
 /**
  * Logs all actions and states after they are dispatched.
  */
-const logger = store => next => action => {
+const logger = (store) => (next) => (action) => {
   console.group(action.type);
   console.info("dispatching", action);
   let result = next(action);
@@ -105,7 +105,7 @@ const logger = store => next => action => {
  * If the promise is resolved, its result will be dispatched as an action.
  * The promise is returned from `dispatch` so the caller may handle rejection.
  */
-const vanillaPromise = store => next => action => {
+const vanillaPromise = (store) => (next) => (action) => {
   if (typeof action.then !== "function") {
     return next(action);
   }
@@ -118,7 +118,7 @@ const vanillaPromise = store => next => action => {
 /**
  * Shows an alert when an user doesn't have an high enough permission level.
  */
-const permissionChecker = store => next => action => {
+const permissionChecker = (store) => (next) => (action) => {
   if (!action.permissionLevel) {
     return next(action);
   }

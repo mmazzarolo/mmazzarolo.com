@@ -83,7 +83,7 @@ export const createClasses = async () => {
       name: { type: "String" },
       activationDate: { type: "Date" },
       isActive: { type: "Boolean" },
-      owner: { type: "Pointer", targetClass: "_User" }
+      owner: { type: "Pointer", targetClass: "_User" },
     });
   } catch (err) {
     if (err.code === 103) {
@@ -115,7 +115,7 @@ export const setCLPs = async () => {
     create: { "role:admin": true },
     update: { "role:admin": true },
     delete: { "role:admin": true },
-    addField: {}
+    addField: {},
   });
 };
 ```
