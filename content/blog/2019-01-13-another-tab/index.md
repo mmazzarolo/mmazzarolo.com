@@ -1,12 +1,12 @@
 ---
 date: "2019-01-13"
-title: "Another Tab: An open source bookmarks Chrome extension"
+title: "Another Tab: An open-source bookmarks Chrome extension"
 tags: [react, chrome, extension, programming]
 redirect_from:
   - /2019/01/13/another-tab-an-open-source-bookmarks-chrome-extension/
 ---
 
-Today I published [Another Tab](https://chrome.google.com/webstore/detail/another-tab/oaaeanlgefipegfcbgpgnhhnpengdjld): An open source Chrome extension that shows your bookmarks when you open a new tab.  
+Today I published [Another Tab](https://chrome.google.com/webstore/detail/another-tab/oaaeanlgefipegfcbgpgnhhnpengdjld): An open-source Chrome extension that shows your bookmarks when you open a new tab.  
 Built with Create React App and TypeScript.  
 The project source code is available on [GitHub](https://github.com/mmazzarolo/chrome-another-tab).
 
@@ -56,14 +56,14 @@ I already created a few [issues](https://github.com/mmazzarolo/chrome-another-ta
 ### Developing locally
 
 This is a standard Create React App, so you can easily start working on it by simply cloning the project and running `yarn` to install all its dependencies.  
-To develop the app locally you can run `yarn start`, I already included some fake bookmarks to simulate the production behaviour of the extension.
+To develop the app locally you can run `yarn start`, I already included some fake bookmarks to simulate the production behavior of the extension.
 
 ### Development tips
 
-This app uses TypeScript, React Hooks, Redux and Styled-Components, so you might need to be confortable with these technologies to completely understand the codebase.  
+This app uses TypeScript, React Hooks, Redux and Styled-Components, so you might need to be comfortable with these technologies to completely understand the codebase.  
 The app is still pretty simple, doesn't have too many components and most of the logic is just in the Chrome Bookmarks parsing and in the Redux sagas.  
 If you feel intimidated by the codebase **please just open an issue/send a PR**, I'm open to discussion and tips.  
-Also, if you're not confortable with hooks feel free to use class components.
+Also, if you're not comfortable with hooks feel free to use class components.
 
 ### Chrome Web Store deployment
 

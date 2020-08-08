@@ -14,7 +14,7 @@ Did you know that the Macbook keyboard layout has a shorter space bar than a "st
 
 ![](/images/standard-keyboard.png "Standard Windows keyboard layout")
 
-Shortening the space bar is a common choice on smaller keyboard, especially on laptops, because it leaves more space for the cursor keys (the "arrows").
+Shortening the space bar is a common choice on smaller keyboards, especially on laptops, because it leaves more space for the cursor keys (the "arrows").
 
 On the Macbook keyboard there's a really interesting side-effect of this approach: it moves the two <kbd>Command</kbd> keys closer to the center of the keyboard.
 
@@ -55,7 +55,7 @@ The only mechanical keyboards I've found that are built with a short space bar a
 
 ![](/images/filco-minila.jpg "Filco Majestouch Minila Air")
 
-And the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com/), which is a composable split keybaord that can also be used in a standard way:
+And the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com/), which is a composable split keyboard that can also be used in a standard way:
 
 ![](/images/ultimate-hacking-keyboard.jpg "Ultimate Hacking Keyboard")
 
@@ -76,5 +76,5 @@ I'd love giving it a try in the future... but I'm not ready for it yet.
 
 I still haven't decided which keyboard would suits better my workflow and if I should pull the trigger on a new mechanical one.
 
-For now, as a temporary solution, I (sadly) stopped using a top-notch mechanical keyboard that has a big space bar ([Varmilo VA87](https://www.varmilo.com/keyboardproscenium/en_subject_product_detailed?subjectid=31)) in favour of a [compact Apple Magic Keyboard](https://www.apple.com/shop/product/MLA22LL/A/magic-keyboard-us-english).  
- I know, it has an horrible key travel, but at least it uses the same layout used by the Macbook keyboard and I don't have to do weird thumb movements to reach the <kbd>Command</kbd> keys.
+For now, as a temporary solution, I (sadly) stopped using a top-notch mechanical keyboard that has a big space bar ([Varmilo VA87](https://www.varmilo.com/keyboardproscenium/en_subject_product_detailed?subjectid=31)) in favor of a [compact Apple Magic Keyboard](https://www.apple.com/shop/product/MLA22LL/A/magic-keyboard-us-english).  
+ I know, it has a horrible key-travel, but at least it uses the same layout used by the Macbook keyboard and I don't have to do weird thumb movements to reach the <kbd>Command</kbd> keys.

@@ -104,7 +104,7 @@ After the short adventure of grouping by feature I went back to my initial proje
 const login = (email, password) => ({ type: LOGIN_REQUEST, email, password });
 ```
 
-In such situation, having a dedicated file for each action creator, action type and reducer seemed a bit overkill, so I decided to try out the "Ducks" approach.
+In such situations, having a dedicated file for each action creator, action type and reducer seemed a bit overkill, so I decided to try out the "Ducks" approach.
 [Ducks](https://github.com/erikras/ducks-modular-redux) is a proposal for bundling reducers, action types and actions in the same file, leading to a reduced boilerplate:
 
 ```javascript
@@ -499,7 +499,7 @@ src
      └── productsApi.js
 ```
 
-This structure might work nicely on some project and poorly on others, but I'm aware that it's still far from perfect.
+This structure might work nicely on some projects and poorly on others, but I'm aware that it's still far from perfect.
 I just hope that some parts of this post helped you in developing a comfortable project structure!
 
 If you have any tips or critics just drop me a comment!

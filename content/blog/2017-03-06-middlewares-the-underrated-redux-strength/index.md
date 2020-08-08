@@ -14,9 +14,9 @@ Quoting the Redux docs:
 
 _A Redux middleware provides a third-party extension point between dispatching an action, and the moment it reaches the reducer. People use Redux middleware for logging, crash reporting, talking to an asynchronous API, routing, and more._
 
-Simply put: You can think of a Redux middleware as a simple function that runs whenever you dispatch an action, before it gets handled by a reducer.
+Simply put: You can think of a Redux middleware as a simple function that runs whenever you dispatch an action before it gets handled by a reducer.
 
-This function can use this three parameters:
+This function can use these three parameters:
 
 - **store**: The store instance, so that you can call `getState()` on it and obtain the current store state;
 - **action**: The action that is being dispatched, the one that triggered the middleware;
@@ -33,7 +33,7 @@ sequentially until the action finally reach the reducer.
 
 ## How do I write a Redux middleware?
 
-I can't stress this enough: Even if there are already many different middlewares already available on npm (which is one of the reason Redux is so strong right now) you can and **you should** create your own middlewares.
+I can't stress this enough: Even if there are already many different middlewares already available on npm (which is one of the reasons why Redux is so strong right now) you can and **you should** create your own middlewares.
 
 The Redux documentation [on middlewares](http://redux.js.org/docs/advanced/Middleware.html) explains
 in an extremely detailed way how to use middlewares, but it might be a bit hard to digest if you're
@@ -83,7 +83,7 @@ also use it for more interesting stuff like obtaining the next state of your sto
 
 Almost anything.  
 I'll suggest you to start using them for handling side-effects or asynchronous code, but the limit is only your imagination.  
-Here's list of some simple middlewares that you can take as an example.
+Here's a list of some simple middlewares that you can take as an example.
 
 ```javascript
 /**

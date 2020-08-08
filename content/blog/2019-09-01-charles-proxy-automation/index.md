@@ -12,9 +12,9 @@ redirect_from:
 
 [Charles Proxy](https://www.charlesproxy.com) is fantastic a cross-platform HTTP/HTTPS debugging proxy server application, probably the most user friendly of its genre. Its initial setup is painless and it can be configured trough a nice user interface.
 
-I've recently started to use it a lot more than what I was used to at my daily job, so today I've spent some time checking in what way the Charles usage can be automated trough a command line interface.
+I've recently started to use it a lot more than what I was used to at my daily job, so today I've spent some time checking in what way the Charles usage can be automated trough a command-line interface.
 
-> Being cross-platform, Charles is compatible with MacOS, Linux and Windows. The instructions shown in this post are based on MacOS, so if you're planning to follow it on another OS they might need some minor adjustments.
+> Being cross-platform, Charles is compatible with macOS, Linux and Windows. The instructions shown in this post are based on macOS, so if you're planning to follow it on another OS they might need some minor adjustments.
 
 <br />
 

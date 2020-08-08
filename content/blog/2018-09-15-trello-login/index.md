@@ -11,7 +11,7 @@ If you'll ever find yourself needing to use Trello's APIs on React-Native you'll
 There are currently two different ways to authorize a client and receive an authentication token: the first is via the Trello's official authorize route, the second is via basic OAuth1.0.
 Using the basic OAuth solution is probably the safest way to obtain an API token but the former might be enough for smaller applications (making sure the obtained authentication tokens are not shared publicly).
 
-Authorizing an user using Trello's official authorization route consists in showing to the user the Trello login webpage and, once the user login succeeds, intercept the authentication token.
+Authorizing a user using Trello's official authorization route consists in showing to the user the Trello login webpage and, once the user login succeeds, intercept the authentication token.
 
 Before doing so though you'll need a Trello API key. Every Trello user is given an API key. You can retrieve your API key by logging into Trello and visiting https://trello.com/app-key/.
 

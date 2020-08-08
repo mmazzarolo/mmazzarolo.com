@@ -70,7 +70,7 @@ const schema = await config.database.loadSchema();
 
 For the schema APIs you can take a look at the [holy bible for the schema APIs: the schema specs][6].  
 By studying a bit this file you'll notice the use of `schema.addClassIfNotExists`, which is exactly what we're interested on.  
-Strong of these information we can create our class:
+Strong of this information we can create our class:
 
 ```javascript
 import Config from "parse-server/lib/Config";
@@ -98,7 +98,7 @@ export const createClasses = async () => {
 
 > It might sound a bit weird, but `addClassIfNotExists` throws an error (103) if the class already exists, hence you should catch it.
 
-## Setting class level permissions
+## Setting class-level permissions
 
 Strong of the information we acquired in the previous step, setting CLPs will be a breeze.  
 This time we're interested on `schema.setPermissions`, which you can always find in the [schema spec][6].
@@ -123,7 +123,7 @@ export const setCLPs = async () => {
 ## Conclusion
 
 These functions can be executed after your parse-server startup and they're pretty simple, so you can customize them easily.  
-As you can see, under the hood parse-server offers an lot of freedom in its configuration, and it's a perfect example of the [spec tests][8] fulfilling their original purpose.
+As you can see, under the hood parse-server offers a lot of freedom in its configuration, and it's a perfect example of the [spec tests][8] fulfilling their original purpose.
 
 [1]: https://github.com/ParsePlatform/parse-server
 [2]: https://github.com/ParsePlatform/parse-server#parse-server-sample-application

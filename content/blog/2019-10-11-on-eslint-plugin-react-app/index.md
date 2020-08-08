@@ -11,11 +11,11 @@ A couple of years ago I created [eslint-plugin-react-app](https://github.com/mma
 I can just run `yarn add eslint-plugin-react-app`, add it to my `.eslintrc` config, and I'm ready to go.  
 It works on React and React-Native codebases and I always pair it with TypeScript and Prettier.
 
-Bascially, what `eslint-plugin-react-app` does is exposing [the ESLint configuration used by Create React App](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app) without the need of declaring all its dependencies.
+Basically, what `eslint-plugin-react-app` does is exposing [the ESLint configuration used by Create React App](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app) without the need of declaring all its dependencies.
 
 I'm still using this plugin on a daily basis, mostly because I almost never want to enforce strict linting rules.  
 A set of simple common rules is enough these days.  
-TypeScript takes care of the typing issues. Prettier makes bikeshedding a thing of the past. ESLint can finally focus on what it does better: warn you about unsafe instructions and stupid mistakes.
+TypeScript takes care of typing issues. Prettier makes bikeshedding a thing of the past. ESLint can finally focus on what it does better: warn you about unsafe instructions and stupid mistakes.
 
 The currently included plugins are the following:
 
