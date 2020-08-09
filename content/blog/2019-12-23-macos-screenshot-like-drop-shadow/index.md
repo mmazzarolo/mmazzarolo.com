@@ -2,10 +2,10 @@
 date: "2019-12-23"
 title: "Apply a MacOS-like drop shadow to any image"
 tags: [macos, utility]
-description: The MacOS screenshot utility adds a nice drop shadows to your screenshots. Here's how you can apply a similar drop shadow to any image using ImageMagick.
+description: The MacOS screenshot utility adds a nice drop shadow to your screenshots. Here's how you can apply a similar drop shadow to any image using ImageMagick.
 ---
 
-The MacOS screenshot utility adds a nice drop shadows to your screenshots.
+The MacOS screenshot utility adds a nice drop shadow to your screenshots.
 
 ![](/images/screenshot.png)
 

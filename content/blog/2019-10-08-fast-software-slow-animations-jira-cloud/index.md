@@ -2,7 +2,7 @@
 date: "2019-10-08"
 title: "Fast software, slow animations: Jira Cloud"
 tags: [programming]
-description: The new Jira Cloud app for MacOS is now available. Does it feel faster than the Jira web interface?
+description: The new Jira Cloud app for macOS is now available. Does it feel faster than the Jira web interface?
 ---
 
 I love [fast software](https://craigmod.com/essays/fast_software/).  

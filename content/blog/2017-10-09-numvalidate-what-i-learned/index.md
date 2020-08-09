@@ -6,7 +6,7 @@ redirect_from:
   - /2017/10/09/numvalidate-open-source-phone-number-validation-rest-api/
 ---
 
-I recently publisfhed [NumValidate](https://numvalidate.com), a fully featured open source phone number validation REST API service.
+I recently published [NumValidate](https://numvalidate.com), a fully-featured open-source phone number validation REST API service.
 
 ![](/images/website-screenshot.png)
 
@@ -21,10 +21,10 @@ Here is a small overview of NumValidate:
 - Server-side rendered responsive React website/landing-page (~160kb GZipped) using [NextJS](https://github.com/zeit/next.js/)
 - Private API tokens generation and management for authenticated users through the Dashboard
 - Fully featured authentication for accessing the Dashboard: email + password, Github and Google login thanks to [Auth0](https://auth0.com/)
-- API requests with different rate limits for unauthenticated user, free user and pro user, updated in real time after a subscription change
+- API requests with different rate limits for unauthenticated user, free user and pro user, updated in real-time after a subscription change
 - Rate limits can be increased by subscribing to a paid account: The secure payment is handled by [Stripe](https://stripe.com) and its settings can be changed at any given time
 - API tokens cached with Redis for faster response time on consecutive requests
-- Production ready logging and error reporting using Winston, [Sentry](https://sentry.io) and [Papertrail](https://papertrailapp.com/)
+- Production-ready logging and error reporting using Winston, [Sentry](https://sentry.io) and [Papertrail](https://papertrailapp.com/)
 
 That’s it!  
 If you’re interested in the setup of the project and in the more technical details you should also take a look at [the README on GitHub](https://github.com/mmazzarolo/numvalidate).

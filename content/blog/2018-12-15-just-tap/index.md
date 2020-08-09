@@ -19,7 +19,7 @@ Hooks! 🎣
 
 New React feature, new test project!  
 This time I wanted to test the shiny React-Hooks and achieve a fully type-safe Redux coverage.  
-I also thrown into the mix Redux-Saga for handling the game loop and Immer for handling the reducers immutability.
+I also thrown into the mix Redux-Saga for handling the game loop and Immer for handling the reducers' immutability.
 
 ### Features
 
@@ -56,7 +56,7 @@ Here is a comparison of the app with and without the `console.warn` calls (check
 ### React-Hooks
 
 I'm still not sure if hooks live up to the hype but I like them so far...  
-In this project I tried using hooks in a few different ways and it was surpisingly fun!
+In this project I tried using hooks in a few different ways and it was surprisingly fun!
 
 - They're way more re-usable and composable than what I expected
 - You can finally use functional components without any drawback
