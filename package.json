@@ -15,7 +15,6 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "@raae/gatsby-remark-oembed": "^0.1.1",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.23.1",
     "gatsby-image": "^2.4.6",
