@@ -27,7 +27,7 @@ export const IndexPage = () => {
             <a href="https://www.invisionapp.com/">InVision</a>.
           </SubContent>
           <SubContent>
-            To keep updated with my work, follow me on{" "}
+            To keep updated with my works, follow me on{" "}
             <a href="https://twitter.com/mazzarolomatteo">Twitter</a>,{" "}
             <a href="https://github.com/mmazzarolo">GitHub</a> or subscribe to
             this blog <a href="/blog/index.xml">with RSS</a>.
