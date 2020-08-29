@@ -18,7 +18,7 @@ jobs:
         uses: jakepartusch/wait-for-netlify-action@v1.2
         id: netlify
         with:
-          site_name: 'your-netlify-site-name'
+          site_name: 'mmazzarolo'
           max_timeout: 300
       - name: Lighthouse CI
         run: |
