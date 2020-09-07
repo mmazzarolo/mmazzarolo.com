@@ -2,7 +2,7 @@
 date: "2020-09-07"
 title: "Generating iOS App Previews for the App Store"
 tags: [ios, mobile, apple]
-description: Creating iOS App Previews can be a slow and error-prone process. Here are a few tips on how you can capture and generate them by recording your app.
+description: Creating iOS App Previews can be a slow and error-prone process. Here are a few tips on how you can capture and generate them by recording your app from the simulator.
 ---
 
 Are you familiar with [iOS App Previews](https://developer.apple.com/app-store/app-previews/)?
