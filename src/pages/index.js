@@ -5,9 +5,9 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const RYM_MOVIES_URL =
-  "https://rateyourmusic.com/film_collection/mazzaaaaa/r0.5-5.0,ss.dd";
+  "https://rateyourmusic.com/film_collection/mmazzarolo/r0.5-5.0,ss.dd";
 const RYM_ALBUMS_URL =
-  "https://rateyourmusic.com/collection/mazzaaaaa/r0.5-5.0,ss.dd";
+  "https://rateyourmusic.com/collection/mmazzarolo/r0.5-5.0,ss.dd";
 
 export const IndexPage = () => {
   return (
