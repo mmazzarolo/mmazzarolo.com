@@ -41,7 +41,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-embed-gist`,
             options: {
-              gistCssUrlAddress: "/gist-embed-b3b573358bfc66d89e1e95dbf8319c09",
+              gistCssUrlAddress:
+                "/gist-embed-b3b573358bfc66d89e1e95dbf8319c09.css",
             },
           },
           `gatsby-remark-prismjs`,
