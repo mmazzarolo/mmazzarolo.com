@@ -5,7 +5,7 @@ tags: [alfred, programming, automation, github]
 description: I created a GitHub workflow to quickly open my company GitHub repositories in the browser.
 ---
 
-One thing I do very multiple times a day is browsing my company's GitHub organization repositories.  
+One thing I do multiple times a day is browsing my company's GitHub organization repositories.  
 My process for opening these repositories in the browser is:
 
 - Open Chrome
