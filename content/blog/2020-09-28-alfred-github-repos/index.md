@@ -27,7 +27,7 @@ Knowing that:
 
 Making an API request to filter the repositories each time I invoke the Alfred workflow wasn't an option.
 
-So I decided to 1) download the entire repository list into a JSON file, 2) transform it into an Alred-compatible workflow, and 3) use the [Alfred's fuzzy search helper](https://github.com/deanishe/alfred-fuzzy) to filter the results.
+So I decided to 1) download the entire repository list into a JSON file, 2) transform it into an Alred-compatible format, and 3) use the [Alfred's fuzzy search helper](https://github.com/deanishe/alfred-fuzzy) to filter the results.
 
 ## Creating the GitHub repository list
 
@@ -92,9 +92,9 @@ githubapi-get.sh "{USERNAME}:{TOKEN}" "/user/repos" > ~/my-github-repos.txt
 
 ## Making the repository list compatible with Alfred
 
-To populate the Alfred list filter, for each repo I extract the following information:
+To populate the Alfred list filter, for each repo I extracted the following information:
 
-- `uid`: Unique identifier for the item which allows help Alfred to learn about this item for subsequent sorting and ordering of the user's actioned results. I used the repository ID (`id`).
+- `uid`: Unique identifier for the item which allows Alfred to learn about this item for subsequent sorting and ordering of the user's actioned results. I used the repository ID (`id`).
 - `arg`: The argument which is passed through the workflow to open it in the browser. I used the repository URL (`html_url`).
 - `title`: The title displayed in the result row. I used the repository name (`name`).
 - `subtitle`: The subtitle displayed in the result row. I used the repository description (`description`).
@@ -134,3 +134,5 @@ That's it.
 I can now invoke the workflow using the keyword set in the "Script Filter" action and fuzzy search the repo I'm interested in.
 
 Alfred is also smart enough to keep track of my workflow usage, surfacing the most clicked results to the top of the list 💥
+
+> Yes, the workflow can be improved in several ways (e.g.: auto-update the repository list after n days)... but I'm happy enough with the current result for now.
