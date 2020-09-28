@@ -2,7 +2,7 @@
 date: "2020-09-28"
 title: "Using Alfred to open your GitHub repositories in the browser"
 tags: [alfred, programming, automation, github]
-description: I created an Alfred workflow to quickly open my company GitHub repositories in the browser.
+description: I created an Alfred workflow to quickly open my company's GitHub repos in the browser.
 ---
 
 One thing I do multiple times a day is browsing my company's GitHub organization repositories.  
