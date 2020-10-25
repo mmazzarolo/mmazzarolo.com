@@ -110,3 +110,10 @@ pre[class*="language-"] {
 .language-css .token.property {
   color: #005cc5;
 }
+
+
+
+
+a > code {
+  color: var(--link-color) !important;
+}

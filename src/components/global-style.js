@@ -64,7 +64,6 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: underline;
   }
 
-
   ul { 
     margin-bottom: 1rem;
   }
