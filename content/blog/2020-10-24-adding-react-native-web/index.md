@@ -9,7 +9,7 @@ description: Adding React Native for Web to an existing React Native app
 
 The [React Native for Web documentation](http://necolas.github.io/react-native-web/docs/) has a few examples of **how to get started from scratch**. For example, you can use `expo` or `create-react-native-app` to create a new React Native project compatible with React Native for Web. Or you can use [Create React App](https://github.com/facebook/create-react-app) to generate a simple, web-only React app with built-in support of React Native for Web.
 
-In this post, I'd like to take a different approach from the one used in the React Native for Web documentation: I'll explain how you can **add React Native for Web to an existing React Native app using [Create React App](https://github.com/facebook/create-react-app)**.
+In this post, I'd like to take a different approach from the one used in the React Native for Web documentation: I'll explain how to **add React Native for Web to an existing React Native app using [Create React App](https://github.com/facebook/create-react-app)**.
 
 ## Setup the Create React App project
 
@@ -155,7 +155,7 @@ That will permanently disable this message but you might encounter other issues.
 This warning shows up because React Native ships with a version of `babel-jest` (or other packages, depending on what your warning says) that is different from the one used by Create React App.
 
 The warning itself will point you to several possible fixes.  
-The two options I would suggest you to try are:
+The two options I would suggest you try are:
 
 - Ignore this check by adding `SKIP_PREFLIGHT_CHECK=true` to a `.env` file at the root of your project. This will force `react-script` to use the dependency versions set in your `package.json` instead of the ones required by Create React App. Most of the time these errors are caused by a slightly different version of `babel-jest` or `jest` that can still be compatible with the versions you were using in your React Native app — which is why this solution will likely work.
 - Or uninstall the incriminated dependencies and run again `npm install` or `yarn install`. This will make your React Native app use the dependencies shipped with Create React App.
@@ -250,7 +250,7 @@ To activate these customizations, update your existing calls to `react-scripts` 
 ## Conclusion
 
 It's true, creating a React Native for Web project might not be as easy as creating a web app.  
-But in some cases the effort is definitely worth it: at the end of the day you're still building a native app and a web app using a single codebase.  
+But in some cases the effort is definitely worth it: at the end of the day, you're still building a native app and a web app using a single codebase.  
 I think the setup complexity is definitely justified here.
 
-Thanks [@necolas](https://github.com/necolas) for creating and maintaing React Native for Web.
+Thanks [@necolas](https://github.com/necolas) for creating and maintaining React Native for Web.
