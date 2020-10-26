@@ -104,7 +104,7 @@ This is the entry point of the JavaScript code that will be injected in your HTM
 
 You might have noticed that you now have two different `index.js` files — one at the root of your project, and one in the `src` directory.
 
-The metro bundler — which is the JavaScript bundler that builds your React Native app — will use the `index.js` file that you already have at the root of your project for building the Android/iOS app.
+The metro bundler — which is the JavaScript bundler that builds your React Native app — will use the `index.js` file that you already have at the root of your project for building the Android/iOS app.  
 Webpack — used under the hood by Create React App — will instead use the new `src/index.js`.
 
 > To be a bit more explicit on which JS index file is used on a specific platform, I'd suggest renaming the root `index.js` file to `index.native.js`. See the [official React-Native documentation](https://reactnative.dev/docs/platform-specific-code#platform-specific-extensions) for more details on the platform-specific extensions.
@@ -122,10 +122,10 @@ To complete the Create React App setup, add two script to your `package.json` to
 
 ## Running the Web App
 
-You can now use `npm run web:start`/`yarn web:start` to spin-up the development environment of your web app and `npm run web:build`/`yarn web:build` to create a production build.  
+You can now use `npm run web:start` to spin-up the development environment of your web app and `npm run web:build` to create a production build.  
 The default configuration of Create React App already aliases all `react-native` imports to `react-native-web` by default, so you won't have to worry about manually having to swap them based on the target platform.
 
-That said, unless you're extremely lucky, you won't be able to run your React Native app on the web on the first try.
+That said, unless you're extremely lucky, you won't be able to run your React Native app on the web on the first try...
 
 Here's a list of a few common issues you might face.
 
@@ -154,33 +154,35 @@ That will permanently disable this message but you might encounter other issues.
 
 This warning shows up because React Native ships with a version of `babel-jest` (or other packages, depending on what your warning says) that is different from the one used by Create React App.
 
-The warning itself will point you to several possible fixes. The two options I would suggest you to try are:
+The warning itself will point you to several possible fixes.  
+The two options I would suggest you to try are:
 
-- Ignore this check by adding `SKIP_PREFLIGHT_CHECK=true` to a `.env` file at the root of your project. This will force `react-script` to use the dependency versions set in your `package.json` instead of the ones required by Create React App. Most of the time these errors are caused by a slightly different version of `babel-jest` or `jest` that might still be compatible with the versions you were using in your React Native app, which is why this solution will likely work.
+- Ignore this check by adding `SKIP_PREFLIGHT_CHECK=true` to a `.env` file at the root of your project. This will force `react-script` to use the dependency versions set in your `package.json` instead of the ones required by Create React App. Most of the time these errors are caused by a slightly different version of `babel-jest` or `jest` that can still be compatible with the versions you were using in your React Native app — which is why this solution will likely work.
 - Or uninstall the incriminated dependencies and run again `npm install` or `yarn install`. This will make your React Native app use the dependencies shipped with Create React App.
 
-Regardless of what choice you make here, this change is one of the things you should test for regressions when in the future you'll update your project to a new version of React Native or `react-scripts`.
+Regardless of what choice you make here, this change is one of the things you should **test for regressions when in the future you'll update your project** to a new version of React Native or `react-scripts`.
 
 ### Resolve Native Module Conflicts
 
-React Native for Web is compatible with [many native modules that ship with React Native](https://github.com/necolas/react-native-web#components): `Button`, `Views`, `TextInput`, etc... will be automatically mapped to their web counterparts correctly when imported from `react-native`. That said, using other external native libraries like [`react-native-sound`](https://github.com/zmxv/react-native-sound) or [`react-native-keep-awake`](https://github.com/corbt/react-native-keep-awake) can be a bit hit-and-miss because many native functionalities are not available on the web.
+React Native for Web is compatible with [many native modules that ship with React Native](https://github.com/necolas/react-native-web#components): `Button`, `Views`, `TextInput`, etc... will be automatically mapped to their web counterparts correctly when imported from `react-native`.  
+Unfortunately, using other external native libraries like [`react-native-sound`](https://github.com/zmxv/react-native-sound) or [`react-native-keep-awake`](https://github.com/corbt/react-native-keep-awake) can be a bit hit-and-miss because many native functionalities are not available on the web.
 
-In these cases, your web app will fail to compile with errors such as `Module not found`. So you'll probably want to avoid referencing these native modules in your web application while still keeping them on Android/iOS.
+In these cases, your web app will fail to compile with errors such as `Module not found`.
 
-The [React Native "Platform Specific Code" documentation](https://reactnative.dev/docs/platform-specific-code) has some great tips on how you can run platform-specific code and solves these issues.
+The [React Native "Platform Specific Code" documentation](https://reactnative.dev/docs/platform-specific-code) has some great tips on how you can run platform-specific code and solve these issues.
 
-My suggestion is to **abstract these native libraries in files with [platform-specific extensions](https://reactnative.dev/docs/platform-specific-code#platform-specific-extensions)**.
+My suggestion is to **abstract these native libraries in files with [platform-specific extensions](https://reactnative.dev/docs/platform-specific-code#platform-specific-extensions)** so that only the React Native bundler will import them.
 
 For example, assuming you want to use the `KeepAwake` component exported by the `react-native-keep-awake` only in your React Native app you should create two files:
 
-- A file with the code that runs on the native app named `KeepAwake.native.js` that just acts as a proxy for the `react-native-keep-awake` library:
+- A file with the code that runs **on the native app** named `KeepAwake.native.js` that just acts as a proxy for the `react-native-keep-awake` library:
 
 ```js
 import KeepAwake from "react-native-keep-awake";
 export default KeepAwake;
 ```
 
-- A file with the code that runs on the web named `KeepAwake.js` that exports a mock/empty component:
+- A file with the code that runs **on the web** named `KeepAwake.js` that exports a mock/empty component:
 
 ```js
 import { Fragment } from "react";
@@ -244,3 +246,10 @@ To activate these customizations, update your existing calls to `react-scripts` 
 ### TypeScript
 
 [Create React App supports TypeScript](https://create-react-app.dev/docs/adding-typescript). If your React Native is written in TypeScript, you just need to make sure your `.tsconfig` follows [the same rules used in the TypeScript template](https://www.typescriptlang.org/play?jsx=2&esModuleInterop=true&e=196#example/typescript-with-react).
+
+## Conclusion
+
+It's true, creating a React Native for Web project might not be as easy as creating a web app.  
+But I think that in some cases the effort is definitely worth: at the end of the day you're still building a native app and a web app using a single codebase. I think the setup complexity is definitely justified here.
+
+Thanks [@necolas](https://github.com/necolas) for creating and maintaing React Native for Web.
