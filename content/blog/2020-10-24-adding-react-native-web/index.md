@@ -1,6 +1,6 @@
 ---
 date: "2020-10-24"
-title: "Adding React Native for Web to a React Native app"
+title: "Run your React Native app on the web with React Native for Web"
 tags: [react, react-native, web, programming]
 description: Adding React Native for Web to an existing React Native app
 ---
@@ -9,7 +9,7 @@ description: Adding React Native for Web to an existing React Native app
 
 The [React Native for Web documentation](http://necolas.github.io/react-native-web/docs/) has a few examples of **how to get started from scratch**. For example, you can use `expo` or `create-react-native-app` to create a new React Native project compatible with React Native for Web. Or you can use [Create React App](https://github.com/facebook/create-react-app) to generate a simple, web-only React app with built-in support of React Native for Web.
 
-In this post, I'd like to take a different approach from the one used in the React Native for Web documentation: I'll explain how you can **add React Native for Web to an existing React Native app using [Create React App]([Create React App](https://github.com/facebook/create-react-app)**.
+In this post, I'd like to take a different approach from the one used in the React Native for Web documentation: I'll explain how you can **add React Native for Web to an existing React Native app using [Create React App](https://github.com/facebook/create-react-app)**.
 
 ## Setup the Create React App project
 
@@ -250,6 +250,7 @@ To activate these customizations, update your existing calls to `react-scripts` 
 ## Conclusion
 
 It's true, creating a React Native for Web project might not be as easy as creating a web app.  
-But I think that in some cases the effort is definitely worth: at the end of the day you're still building a native app and a web app using a single codebase. I think the setup complexity is definitely justified here.
+But in some cases the effort is definitely worth it: at the end of the day you're still building a native app and a web app using a single codebase.  
+I think the setup complexity is definitely justified here.
 
 Thanks [@necolas](https://github.com/necolas) for creating and maintaing React Native for Web.
