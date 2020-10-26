@@ -13,7 +13,7 @@ In this post, I'd like to take a different approach from the one used in the Rea
 
 ## Setup the Create React App project
 
-The standard way to setup a React app from scratch using Create React App involves [using the `create-react-app` CLI](https://create-react-app.dev/docs/getting-started) to generate the entire project. However, in our case, we're **adding** a React app on top of an existing project, so the setup process will be a bit different.
+The standard way to setup a React app from scratch using Create React App is by [using the `create-react-app` CLI](https://create-react-app.dev/docs/getting-started) to generate the entire project. However, in our case, we're **adding** a React app on top of an existing project, so the setup process will be a bit different.
 
 ### Dependencies
 
@@ -27,7 +27,7 @@ npm install react-native-web react-scripts react-dom
 yarn add react-native-web react-scripts react-dom
 ```
 
-- `react-native-web`(https://github.com/necolas/react-native-web) is the React Native for Web library. It provides a mapping of the React Native features to the web.
+- `react-native-web`(https://github.com/necolas/react-native-web) is the React Native for Web library. It provides a mapping of the React Native components and APIs to their web counterparts.
 - `react-scripts` are the scripts used by [Create React App](https://github.com/facebook/create-react-app) to bundle and run your web application.
 - `react-dom` is what allows React to run on the web. It's recommended to install a version of React DOM that matches your currently installed version of React.
 
@@ -35,7 +35,7 @@ yarn add react-native-web react-scripts react-dom
 
 Create React App expects your project to follow a [specific directory structure](https://create-react-app.dev/docs/folder-structure).
 
-Depending on how your current React Native setup looks like, you might need to make some changes to its directory structure to support the Create React App convention.
+Depending on how your current React Native setup looks like, you might need to make some changes to accommodate the Create React App convention.
 
 The next steps will assume you're starting with a directory structure similar to the following:
 
