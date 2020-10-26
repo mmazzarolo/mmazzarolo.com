@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     padding: 30px 20px;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   h1,

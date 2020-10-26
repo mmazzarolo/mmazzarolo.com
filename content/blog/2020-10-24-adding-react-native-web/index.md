@@ -27,7 +27,7 @@ npm install react-native-web react-scripts react-dom
 yarn add react-native-web react-scripts react-dom
 ```
 
-- `react-native-web`(https://github.com/necolas/react-native-web) is the React Native for Web library. It provides a mapping of the React Native components and APIs to their web counterparts.
+- `react-native-web` is the React Native for Web library. It provides a mapping of the React Native components and APIs to their web counterparts.
 - `react-scripts` are the scripts used by [Create React App](https://github.com/facebook/create-react-app) to bundle and run your web application.
 - `react-dom` is what allows React to run on the web. It's recommended to install a version of React DOM that matches your currently installed version of React.
 
