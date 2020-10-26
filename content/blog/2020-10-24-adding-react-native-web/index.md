@@ -245,7 +245,7 @@ To activate these customizations, update your existing calls to `react-scripts` 
 
 ### TypeScript
 
-[Create React App supports TypeScript](https://create-react-app.dev/docs/adding-typescript). If your React Native is written in TypeScript, you just need to make sure your `.tsconfig` follows [the same rules used in the TypeScript template](https://www.typescriptlang.org/play?jsx=2&esModuleInterop=true&e=196#example/typescript-with-react).
+[Create React App supports TypeScript](https://create-react-app.dev/docs/adding-typescript). If your React Native is written in TypeScript, you just need to make sure your `.tsconfig` follows [the same rules used in the Create React App TypeScript template](https://www.typescriptlang.org/play?jsx=2&esModuleInterop=true&e=196#example/typescript-with-react).
 
 ## Conclusion
 
