@@ -1,16 +1,15 @@
 ---
 date: "2020-10-24"
-title: "Adding react-native-web to a react-native app"
+title: "Adding React Native for Web to a React Native app"
 tags: [react, react-native, web, programming]
 description: Adding React Native for Web to an existing React Native app
 ---
 
-["React Native for Web"](https://github.com/necolas/react-native-web) makes it possible to run React Native components and APIs on the web using React DOM.
-There are multiple reasons why you might wanna use React Native to build a web application. The most common one is to re-use the same code that runs your native mobile app on the web.
+["React Native for Web"](https://github.com/necolas/react-native-web) makes it possible to run [React Native](https://reactnative.dev/) components and APIs on the web using React DOM — allowing you to target the Android, iOS, and web platforms using a single codebase.
 
-The [React Native for Web documentation](http://necolas.github.io/react-native-web/docs/) has a few examples of how to get started. You can use `expo` or `create-react-native-app` to create a new React Native project compatible with React Native for Web. Or you can use [Create React App](https://github.com/facebook/create-react-app) to setup a simple, web-only React app with built-in support of React Native for Web.
+The [React Native for Web documentation](http://necolas.github.io/react-native-web/docs/) has a few examples of **how to get started from scratch**. For example, you can use `expo` or `create-react-native-app` to create a new React Native project compatible with React Native for Web. Or you can use [Create React App](https://github.com/facebook/create-react-app) to generate a simple, web-only React app with built-in support of React Native for Web.
 
-In this post, I'd like to explain in detail how you can add React Native for Web in an already existing React Native app using Create React App, which in my opinion is the easiest way to get started.
+In this post, I'd like to take a different approach from the one used in the React Native for Web documentation: I'll explain how you can **add React Native for Web to an existing React Native app using [Create React App]([Create React App](https://github.com/facebook/create-react-app)**.
 
 ## Setup the Create React App project
 
@@ -123,7 +122,8 @@ To complete the Create React App setup, add two script to your `package.json` to
 
 ## Running the Web App
 
-You can now use `npm run web:start`/`yarn web:start` to spin-up the development environment of your web app and `npm run web:build`/`yarn web:build` to create a production build.
+You can now use `npm run web:start`/`yarn web:start` to spin-up the development environment of your web app and `npm run web:build`/`yarn web:build` to create a production build.  
+The default configuration of Create React App already aliases all `react-native` imports to `react-native-web` by default, so you won't have to worry about manually having to swap them based on the target platform.
 
 That said, unless you're extremely lucky, you won't be able to run your React Native app on the web on the first try.
 
