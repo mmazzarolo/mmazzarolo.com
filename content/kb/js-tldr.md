@@ -299,3 +299,53 @@ setTimeout(person.print, 1000, "Doe"); // "undefined Doe" (in this case the cont
 
 setTimeout(person.print.bind(person), 1000, "Doe"); // "John Doe" (in this case the context is the window object)
 ```
+
+```js
+// hard binding
+
+const person = {
+  firstName: "John",
+  print(lastName) {
+    console.log(`${this.firstName} ${lastName}`);
+  },
+};
+
+setTimeout(person.print, 1000, "Doe"); // "undefined Doe" (in this case the context is the window object)
+
+setTimeout(person.print.bind(person), 1000, "Doe"); // "John Doe" (in this case the context is the window object)
+```
+
+```js
+// default binding
+const firstName = "John";
+
+function print(lastName) {
+  console.log(`${this.firstName} ${lastName}`);
+}
+
+function printAgain(lastName) {
+  "use strict";
+  console.log(`${this.firstName} ${lastName}`);
+}
+
+print("Doe"); // "John Doe" (goes to the global scope)
+
+printAgain("Doe"); // TypeError
+```
+
+```js
+// arrow functions
+const person = {
+  firstName: "John",
+  print(lastName) {
+    setTimeout(() => {
+      // The "this.firstName" called in the arrow function will bubble up
+      // of scopes until it finds a referece to a "this.firstName". In this
+      // case it will bubble up to the "print" function.
+      console.log(`${this.firstName} ${lastName}`);
+    });
+  },
+};
+
+person.ask("Doe"); // John Doe
+```
