@@ -226,7 +226,7 @@ module.exports = override(
         process.env.NODE_ENV || "development"
       ),
       // Add support for the __DEV__ global variable
-      __DEV__: process.env.NODE_ENV === "production" || true,
+      __DEV__: process.env.NODE_ENV !== "production",
     })
   )
 );
