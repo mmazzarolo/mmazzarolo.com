@@ -1,11 +1,11 @@
 ---
 date: "2020-11-15"
-title: "Media queries of <source> elements can be used only in <picure> elements"
+title: "Media queries of <source> elements can be used only within <picure> elements"
 tags: [web, programming]
-description: You can set the media attribute of a <source> element only inside <picture> elements. So you can't switch a <video> source based on the preferred color scheme for dark/light mode support.
+description: You can set the media attribute of a <source> element only within <picture> elements. So you can't switch a <video> source based on the preferred color scheme for dark/light mode support.
 ---
 
-TL;DR: [You can set the `media` attribute of a `<source>` element only inside `<picture>` elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source). So you can't switch a `<video>` source based on the preferred color scheme for dark/light mode support.
+TL;DR: [You can set the `media` attribute of a `<source>` element only within `<picture>` elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source). So you can't switch a `<video>` source based on the preferred color scheme for dark/light mode support.
 
 ---
 
