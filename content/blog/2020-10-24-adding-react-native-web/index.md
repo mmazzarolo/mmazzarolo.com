@@ -213,7 +213,7 @@ npm install -S customize-cra react-app-rewired
 yarn add customize-cra react-app-rewired
 ```
 
-Then create a `config-overrides.js` file at the root of your project. It will be used by `react-app-rewired` + `customize-cra` to apply customizations to Create React App:
+Then, create a `config-overrides.js` file at the root of your project. It will be used by `react-app-rewired` + `customize-cra` to apply customizations to Create React App:
 
 ```js
 const webpack = require("webpack");
