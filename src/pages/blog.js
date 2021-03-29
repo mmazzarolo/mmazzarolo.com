@@ -31,7 +31,7 @@ const POST_LIST_QUERY = graphql`
   }
 `;
 
-export const BlogIndexPage = () => {
+const BlogIndexPage = () => {
   const queryResult = useStaticQuery(POST_LIST_QUERY);
   const posts = queryResult.allMarkdownRemark.edges;
   const years = uniq(posts.map((post) => post.node.frontmatter.year))

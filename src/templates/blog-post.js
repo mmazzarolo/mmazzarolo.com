@@ -24,7 +24,7 @@ export const SINGLE_POST_QUERY = graphql`
   }
 `;
 
-export const BlogPostTemplate = ({ data, location }) => {
+const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
 

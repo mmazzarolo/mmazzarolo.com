@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 
 const RYM_URL = "https://rateyourmusic.com/film_collection/mazzaaaaa";
 
-export const ReviewsIndexPage = () => {
+const ReviewsIndexPage = () => {
   return (
     <Layout>
       <SEO title="Reviews" />
