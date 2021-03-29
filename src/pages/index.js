@@ -9,7 +9,7 @@ const RYM_MOVIES_URL =
 const RYM_ALBUMS_URL =
   "https://rateyourmusic.com/collection/mmazzarolo/r0.5-5.0,ss.dd";
 
-export const IndexPage = () => {
+const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Mazzarolo Matteo" />

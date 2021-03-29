@@ -114,6 +114,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    { resolve: `gatsby-plugin-styled-components`, options: { display: true } },
+    `gatsby-plugin-styled-components`,
   ],
 };

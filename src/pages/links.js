@@ -35,7 +35,7 @@ const links = [
   },
 ];
 
-export const LinksIndexPage = () => {
+const LinksIndexPage = () => {
   return (
     <Layout>
       <SEO title="Links" />

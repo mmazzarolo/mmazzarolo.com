@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-export const NotFound = () => {
+const NotFound = () => {
   useEffect(() => {
     window?.plausible?.("404", { props: { path: document.location.pathname } });
   }, []);
