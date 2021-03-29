@@ -52,12 +52,18 @@ function SEO({ description, location, title, twitterImage }) {
       {seo.twitterImage && (
         <meta name="twitter:image" content={seo.twitterImage} />
       )}
-      <script
+      {/* <script
         async
         defer
         data-domain="mmazzarolo.com"
         src="https://stats.mmazzarolo.com/js/plausible.outbound-links.js"
-      />
+      /> */}
+      <script
+        async
+        defer
+        data-domain="mmazzarolo.com"
+        src="https://plausible.io/js/plausible.js"
+      ></script>
     </Helmet>
   );
 }
