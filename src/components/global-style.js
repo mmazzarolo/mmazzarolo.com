@@ -30,11 +30,11 @@ export const GlobalStyle = createGlobalStyle`
   h5 {
     font-family: var(--header-font-family);
     font-weight: 500;
-    letter-spacing: 0.004em;
   }
 
   h1 {
     font-size: 2rem;
+    line-height: 1.3;
   }
 
   h2 {

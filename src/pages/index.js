@@ -69,7 +69,7 @@ const Username = styled.p`
   font-weight: 300;
   color: #9b9b9b;
   @media only screen and (max-width: 380px) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 `;
 
