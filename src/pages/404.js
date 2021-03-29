@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 export const NotFound = () => {
+  useEffect(() => {
+    window?.plausible?.("404", { props: { path: document.location.pathname } });
+  }, []);
   return (
     <Layout>
       <SEO title="404: Not Found" />
