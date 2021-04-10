@@ -32,7 +32,13 @@ function SEO({ description, location, title, twitterImage }) {
   };
 
   return (
-    <Helmet title={seo.title} titleTemplate={seo.titleTemplate}>
+    <Helmet
+      title={seo.title}
+      titleTemplate={seo.titleTemplate}
+      htmlAttributes={{
+        lang: "en",
+      }}
+    >
       <link rel="icon" href="/favicon.png" />
       <meta name="description" content={seo.description} />
       <meta property="og:type" content="website" />

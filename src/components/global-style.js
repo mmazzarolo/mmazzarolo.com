@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
   
   :root {
-    --text-color: #303336;
+    --text-color: #050505;
     --text-content-color: #6F6865;
     --time-color: #777; 
     --link-color: #0366d6;
@@ -52,6 +52,7 @@ export const GlobalStyle = createGlobalStyle`
   p {
     margin-bottom: 1rem;
     margin-top: 0;
+    font-weight: 400;
   }
 
   a {

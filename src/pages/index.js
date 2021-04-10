@@ -67,7 +67,7 @@ const Greetings = styled.h1`
 const Username = styled.p`
   font-size: 1.2rem;
   font-weight: 300;
-  color: #9b9b9b;
+  color: #4b5563;
   @media only screen and (max-width: 380px) {
     font-size: 1rem;
   }
@@ -83,7 +83,7 @@ const Content = styled.h2`
   }
 `;
 
-const SubContent = styled.h4`
+const SubContent = styled.h3`
   font-size: 1.3rem;
   font-family: var(--text-font-family);
   font-weight: 300;
