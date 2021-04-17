@@ -1,6 +1,6 @@
 ---
 date: "2021-04-16"
-title: 'How to disable Google''s "People also search for" box'
+title: 'How to disable the annoying Google''s "People also search for" box'
 tags: [web, chrome, google, performance]
 description: Let's see how to disable the annoying "People also search for" box in Google search results. 
 twitter_image: images/twitter-card.png
