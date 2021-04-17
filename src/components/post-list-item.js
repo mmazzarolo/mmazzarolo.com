@@ -20,7 +20,7 @@ const Root = styled.li`
   display: grid;
   grid-template-columns: 1fr min-content;
   grid-column-gap: 5px;
-  padding-top: 5px;
+  padding-top: 12px;
   @media only screen and (max-width: 540px) {
     padding-top: 1rem;
     display: block;

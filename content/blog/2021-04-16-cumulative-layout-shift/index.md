@@ -1,9 +1,9 @@
 ---
 date: "2021-04-16"
-title: 'Cumulative Layout Shift and how to disable Google''s "People also search for" box'
+title: 'How to disable Google''s "People also search for" box'
 tags: [web, chrome, google, performance]
-description: Let's see how we can disable the "People also search for" box in Google's search result in order to lower the "Cumulative Layout Shift" metric and provide a less annoying user experience. 
-twitter_image: images/twitter-card.jpg
+description: Let's see how to disable the annoying "People also search for" box in Google search results. 
+twitter_image: images/twitter-card.png
 ---
 
 Have you ever been reading an article online when something suddenly changes on the page? Without warning, the text moves, and you've lost your place. Or even worse: you're about to tap a link or a button, but in the instant before your finger lands—BOOM—the link moves, and you end up clicking something else! 
