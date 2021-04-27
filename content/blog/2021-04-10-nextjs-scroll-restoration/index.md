@@ -22,12 +22,12 @@ module.exports = {
 
 ### next-router-scroll
 
-For my use case, this solution is working fine, but there are some cases where you need to take control of how your application scroll is handled; namely, you may want to restore scroll when the user is navigating within your application pages, but you need to do extra work before or after the page has changed, either by using some sort of page transition or any other feature.  
+For my use case, this solution is working fine. But there are some cases where you need to take control of how your application scroll is handled; namely, you may want to restore scroll when the user is navigating within your application pages, but you need to do extra work before or after the page has changed, either by using some sort of page transition or any other feature.  
 In these cases, I'd suggest you give `@moxy/next-router-scroll` a try: This package is built on top of [`scroll-behavior`](https://www.npmjs.com/package/scroll-behavior) and it actively listens to Next.js router events, writing the scroll values associated with the current location in the Session Storage and reading these values whenever `updateScroll()` is called.
 
 ### Completely disabling scroll restoration
 
-There's one inconsistency I noticed around not making scroll restoration work automatically in Next.js: by default, scroll restoration doesn't work when the navigation logic is being handled by JavaScript, but it works fine when it's handled by the browser (e.g.: on a full-refresh or while navigating whit JavaScript disabled).
+There's one inconsistency I noticed around not making scroll restoration work automatically in Next.js: by default, scroll restoration doesn't work when the navigation logic is being handled by JavaScript, but it works fine when it's handled by the browser (e.g.: on a full-refresh or while navigating with JavaScript disabled).
 
 So, in the rare occasions where you want to fully disable scroll restoration, remember to add this snippet to the `<head>` of your project:
 
