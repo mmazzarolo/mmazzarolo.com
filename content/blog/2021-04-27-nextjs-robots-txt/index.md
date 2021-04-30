@@ -7,7 +7,7 @@ description: A robots.txt file tells search engine crawlers which pages or files
 
 A `robots.txt` file tells search engine crawlers which pages or files the crawler can or can't request from your site.  
 Next.js does not generate a `robots.txt` out-of-the-box.  
-You _can_ manually create one in the `/public` directory, but by doing so it will be used everywhere you deploy your Next.js website — which might be problematic if you want to avoid indexing preview/testing environment.  
+You _can_ manually create one in the `/public` directory, but by doing so it will be used in all environments where you deploy your Next.js website — which might be problematic if you want to avoid indexing preview/testing environments. 
 
 To generate a `robots.txt` conditionally, based on the current environment, you can either generate it on the server side or through a build script.  
 
@@ -73,7 +73,7 @@ function generateRobotsTxt() {
 module.exports = generateRobotsTxt;
 ```
 
-You can then run `scripts/generate-robots-txt.js` either by invoking it a `prebuild` script of your `package.json`:
+You can then run `scripts/generate-robots-txt.js` by invoking it in a `prebuild` script from your `package.json`:
 
 ```json
 {
@@ -84,7 +84,7 @@ You can then run `scripts/generate-robots-txt.js` either by invoking it a `prebu
 }
 ```
 
-Or by adding by invoking it during the Webpack build step in `next.config.js`:
+Or by invoking it during the Webpack build step in `next.config.js`:
 
 ```js
 module.exports = {
@@ -97,6 +97,6 @@ module.exports = {
 };
 ```
 
-> You'll probably want to add `public/robots.txt` to your `.gitignore`: since this is generated on each build, there's no need to commit it anymore. 
+For what is worth, ☝ this is the approach I'm currently using in [Remotebear](https://remotebear.io) (source code [here](https://github.com/remotebear-io/remotebear/tree/master/packages/website)).
 
-This is the approach I'm currently using on [Remotebear](https://remotebear.io) (source code [here](https://github.com/remotebear-io/remotebear/tree/master/packages/website)).
+> You'll probably want to add `public/robots.txt` to your `.gitignore`: since this is generated on each build, there's no need to commit it anymore. 
