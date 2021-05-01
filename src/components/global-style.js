@@ -110,7 +110,8 @@ export const GlobalStyle = createGlobalStyle`
   figure figcaption {
     font-weight: 300;
     color: gray;
-    text-align: center;
+    text-align: center;   
+    margin-top: 10px;
   }
 
   code,
