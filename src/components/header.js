@@ -51,7 +51,7 @@ const Root = styled.header`
 const Nav = styled.nav`
   font-family: var(--text-font-family);
   color: var(--text-color);
-  max-width: 690px;
+  max-width: 720px;
   margin: 0 auto;
   font-size: 1rem;
   line-height: 1.5;
