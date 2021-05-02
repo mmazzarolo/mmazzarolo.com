@@ -28,7 +28,7 @@ Building this kind of websites _can_ be simple, but you can also spend a ton of 
 
  ## Open-sourcing Remotebear
 
- I "published" Remotebear around a month ago, but I haven't promoted it much more besides sharing it on Hacker News and Indie Hackers.  
+ I "published" Remotebear around a month ago, but I haven't promoted it much besides sharing it on Hacker News and Indie Hackers.  
 
 Given that: 
 - Remotebear has never been more than a side-project 
@@ -63,7 +63,7 @@ Why? Because this pattern is working well enough for our current use case.
 Does it scale well? No.  
 Are we planning to scale? Who knows.  
 
-Remotebear's website is built with NextJS, is hosted on [Vercel](http://vercel.com/), and uses Server Side Rendering for the pages generation. It grabs the jobs/companies data from distributed serverless functions that expose `jobs-data.json` and `company-data.json` (they just read them once loaded and keep them in memory).  
+Remotebear's website is built with NextJS, is hosted on [Vercel](http://vercel.com/), and uses Server Side Rendering for the pages generation. It grabs the jobs/companies data from NextJS serverless functions that expose `jobs-data.json` and `company-data.json` (they just read them once loaded and keep them in memory).  
 For jobs and companies data, we set a long caching window at the edge. We never show stale data because every time a pull request is merged, Vercel starts a new build, invalidating the entire jobs/companies cache.  
 Immutable assets (e.g.: fonts, images, etc...) are also cached on the browser.  
 Basically, the way we store and use data on the front-end is a mixture between [State Site Generation](https://jamstack.org/generators/) and Server Side Rendering; we're not going all-in with a Static Site Generation approach because pagination, search, and filtering, would still require some kind of Server Side Rendering to generate the pages on-demand. 
