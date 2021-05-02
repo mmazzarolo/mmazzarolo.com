@@ -28,11 +28,11 @@ Building this kind of websites _can_ be simple, but you can also spend a ton of 
 
  ## Open-sourcing Remotebear
 
- I "published" Remotebear around a month ago, but I haven't done much more than sharing it on Hacker News and Indie Hackers.  
+ I "published" Remotebear around a month ago, but I haven't promoted it much more besides sharing it on Hacker News and Indie Hackers.  
 
 Given that: 
 - Remotebear has never been more than a side-project 
-- (as of today) I'm not planning to make money with it
+- (as of today) I'm not planning to monetize it in any way
 - a few people asked "how" it works under-the-hood
 
 ...I think it kinda makes sense to just open-source it. 
@@ -41,8 +41,8 @@ You can find [Remotebear's source code on GitHub](https://github.com/remotebear-
 
 ## Technology & Architecture
 
-Remotebear is a [NextJS](https://nextjs.org/) web application that gathers job offers from public APIs or by scraping public websites using a Node script.
-The entire codebase and "database" are contained in the repo [remotebear-io/remotebear repo](https://github.com/remotebear-io/remotebear) and is organized using [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/).
+Remotebear is a [NextJS](https://nextjs.org/) web application that gathers job offers from public APIs and by scraping public websites using a Node script.
+The entire codebase and "database" are contained in the [remotebear-io/remotebear repo](https://github.com/remotebear-io/remotebear) and is organized using [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/).
 
 
 ![](/images/flow.png)
@@ -63,7 +63,7 @@ Why? Because this pattern is working well enough for our current use case.
 Does it scale well? No.  
 Are we planning to scale? Who knows.  
 
-Remotebear's website is built with NextJS, is hosted on [Vercel](http://vercel.com/), and uses SSR to grab the jobs/companies data from distributed serverless functions that expose `jobs-data.json` and `company-data.json` (they just read them once loaded and keep them in memory).  
-For jobs and companies data, we set a long caching window at the edge — but we never show stale data because every time the pull request with updated jobs is merged, Vercel starts a new build, invalidating the entire cache.  
+Remotebear's website is built with NextJS, is hosted on [Vercel](http://vercel.com/), and uses Server Side Rendering for the pages generation. It grabs the jobs/companies data from distributed serverless functions that expose `jobs-data.json` and `company-data.json` (they just read them once loaded and keep them in memory).  
+For jobs and companies data, we set a long caching window at the edge. We never show stale data because every time a pull request is merged, Vercel starts a new build, invalidating the entire jobs/companies cache.  
 Immutable assets (e.g.: fonts, images, etc...) are also cached on the browser.  
 Basically, the way we store and use data on the front-end is a mixture between [State Site Generation](https://jamstack.org/generators/) and Server Side Rendering; we're not going all-in with a Static Site Generation approach because pagination, search, and filtering, would still require some kind of Server Side Rendering to generate the pages on-demand. 
