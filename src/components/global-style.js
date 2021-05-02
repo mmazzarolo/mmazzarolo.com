@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: var(--text-font-family);
     color: var(--text-color);
-    max-width: 690px;
+    max-width: 720px;
     margin: 0 auto;
     padding: 30px 20px;
     font-size: 1rem;
@@ -108,9 +108,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   figure figcaption {
-    font-weight: 200;
+    font-weight: 300;
     color: gray;
-    text-align: center;
+    text-align: center;   
     margin-top: 10px;
   }
 
@@ -150,7 +150,7 @@ export const GlobalStyle = createGlobalStyle`
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 590px;
+    max-width: 720px;
   }
 
   video {
