@@ -1,6 +1,6 @@
 ---
 date: "2021-05-30"
-title: "Content Security Policy violation inconsistencies across different browsers"
+title: "Content Security Policy violation inconsistencies across browsers"
 tags: [web, csp]
 description: I recently learned that Content Security Policy (CSP) violations are reported differently depending on the browser being used, so I created a small webpage to test these differences.
 ---
