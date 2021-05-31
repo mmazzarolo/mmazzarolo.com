@@ -38,7 +38,7 @@ Policy whose enforcement uncovered the violation.
 **`effectiveDirective`**
 
 Directive whose enforcement uncovered the violation.  
-To me, this is the biggest difference in violation even implementation. 
+To me, this is the biggest difference in how violations are implemented. 
 - In Firefox and Safari, this is the policy directive that was violated. In the example, this is `script-src`. 
 - In Chrome, this is the most "specific" directive that was violated. In the example, this is `script-src-elem` — even if we haven't declared this directive — because this is where the violation would have occurred if such directive was present in the policy. 
 
