@@ -6,6 +6,7 @@ const SEO_QUERY = graphql`
   query SEO {
     site {
       siteMetadata {
+        author
         description
         image
         siteUrl
@@ -17,10 +18,11 @@ const SEO_QUERY = graphql`
   }
 `;
 
-function SEO({ description, location, title, twitterImage }) {
+function SEO({ author, description, location, title, twitterImage }) {
   const { site } = useStaticQuery(SEO_QUERY);
 
   const seo = {
+    author: author || site.siteMetadata.author,
     description: description || site.siteMetadata.description,
     image: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
     title: title || site.siteMetadata.title,

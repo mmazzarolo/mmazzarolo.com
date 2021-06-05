@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `mmazzarolo.com`,
+    author: `Matteo Mazzarolo`,
     titleTemplate: "%s · mmazzarolo.com",
-    description: `Personal blog by Matteo. Tech, code, dumb stuff.`,
+    description: `Matteo's personal blog. Tech, code, dumb stuff.`,
     siteUrl: `https://mmazzarolo.com/`,
     image: `/seo.png`,
     twitterUsername: `@mmazzarolo`,
