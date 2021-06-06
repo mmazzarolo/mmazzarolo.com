@@ -5,7 +5,7 @@ tags: [web, vercel, api, node]
 description: Nowadays, most websites provide metadata about their content directly in the HTML markup. This post will show you how to create a Vercel serverless function to scrape this data using Metascraper.
 ---
 
-Nowadays, most websites provide metadata about their content directly in the HTML markup. 
+Nowadays, most websites provide metadata about their content directly in the HTML markup.  
 This post will show you how to create a Vercel serverless function to scrape this data using [Metascraper](https://metascraper.js.org/#/).  
 
 ## Metascraper overview
