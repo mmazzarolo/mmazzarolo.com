@@ -16,6 +16,9 @@ It's an HTML page served with a `base-uri 'self'` CSP, which means that only `<b
 In the example, there's a `<base>` element pointing at a valid location (the origin), and you can validate it by checking the DevTools console, where you won't find any report of CSP violations.   
 
 Click the "Remove base element" button in the example: a JavaScript listener will remove the `<base>` element from the page and boom: **Safari will report a CSP violation**.  
-Other browsers won't report any violation — I tested it on Chrome (`v90.0.4430.212`), Safari (`v14.1`), and Firefox (`v88.0.1`).
+
+![](/images/safari-screenshot.png)
+
+The violation is triggered and reported only in Safari.  
 
 From my understanding of the [Content Security Policy level 2](https://www.w3.org/TR/CSP2/#directive-base-uri) spec and [the algorithm defined in the HTML5 spec to obtain a document’s base](https://www.w3.org/TR/CSP2/#parse-a-source-list), the issue should be on Safari's end: if no `<base>` element is available on the page, the document's base should fallback to the document URL (which in this case would satisfy the CSP).
