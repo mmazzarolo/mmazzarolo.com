@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safari Content Security Policy's "base-uri" violation example</title>
+    <meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
+    <meta
+      name="description"
+      content="Test a Safari-specific Content Security Policy 'base-uri' violation in your browser."
+    />
+    <meta
+      property="og:title"
+      content="Safari-specific CSP 'base-uri' violation example"
+    />
+    <meta
+      property="og:description"
+      content="Test a Safari-specific Content Security Policy 'base-uri' violation in your browser."
+    />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://mmazzarolo.com/content-security-policy-safari-base-uri-violation"
+    />
+    <link
+      rel="canonical"
+      href="https://mmazzarolo.com/content-security-policy-safari-base-uri-violation"
+    />
+    <style>
+      html {
+        font-size: 16pt;
+        line-height: 1.5;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+      }
+      h1 {
+        font-size: 26pt;
+      }
+      button {
+        font-size: 16pt;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      code {
+        font-family: monospace;
+        background-color: #eeeeee;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <base href="https://mmazzarolo.com/" />
+    <h1>Safari-specific CSP <code>'base-uri'</code> violation example</h1>
+    <p>
+      In Safari, removing a <code>base</code> element from a page that has a Content Security Policy <code>base-uri</code> directive causes a CSP violation — regardless of the <code>base-uri</code>'s value. 
+    </p>
+    <p>You can test this behaviour using this page.</p>
+    <p>
+      This HTML document is served with a <code>"base-uri 'self'"</code> Content
+      Security Policy, and there's a
+      <code>&lt;base href="https://mmazzarolo.com/"&gt;</code> element in its
+      body.
+    </p>
+    <p>
+      The <code>base</code> element will be
+      removed from the page by pressing the button below, and if you're on Safari, a CSP violation will be
+      reported (in the console).
+    </p>
+    <p>
+      For more info, check out my
+      <a
+        href="https://mmazzarolo.com/blog/2021-06-11-safari-base-uri-csp-violation/"
+        >"Yet another browser-specific CSP quirk: Safari and base-uri" blog
+        post</a
+      >.
+    </p>
+    <button>Remove base element</button>
+    <script>
+      document.querySelector("button").onclick = function onButtonClick() {
+        document.querySelector("base").remove();
+        this.disabled = true;
+      };
+    </script>
+  </body>
+</html>
