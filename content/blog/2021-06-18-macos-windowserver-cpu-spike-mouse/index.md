@@ -2,8 +2,7 @@
 date: "2021-06-18"
 title: 'Moving the cursor causes CPU spikes on macOS when using a gaming mouse'
 tags: [macos, performance]
-description:  
-twitter_image: images/twitter-card.png
+description:  Today I learned that, depending on the polling rate of the input device, just moving the cursor on macOS can cause CPU spikes.
 ---
 
 I recently noticed that just moving the cursor on my MacBook Pro causes CPU spikes.  
