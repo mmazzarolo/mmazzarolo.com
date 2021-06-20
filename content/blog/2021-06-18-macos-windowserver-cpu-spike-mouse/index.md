@@ -28,7 +28,7 @@ Sigh.
 I did some tests out of curiosity, and I can confirm that the CPU spike does scale with the polling rate. 
 
 The mouse I'm using daily (the one used in the recording above) is a [Logitech Pro X Superlight](https://www.logitechg.com/en-us/products/gaming-mice/pro-x-superlight-wireless-mouse.html), a gaming mouse with a 1000 Hz polling rate (I use a gaming mouse even if I don't play videogames because I'm very sensitive to input delay).  
-After a fresh start, with a 1000Hz polling, rate WindowServer goes from ~2% to ~50% CPU usage. Lowering the polling rate to 125Hz (the lowest polling rate I can choose) makes the WindowServer reach ~20% CPU usage. Doing so also **makes my MacBook way more silent, because the fans don't start as often as when using a higher polling rate** (can't provide a "scientific" proof of this though, so you should take it with a grain of salt).     
+After a fresh start, with a 1000Hz polling, rate WindowServer goes from ~2% to ~50% CPU usage. Lowering the polling rate to 125Hz (the lowest polling rate I can choose) makes the WindowServer process reach ~20% CPU usage. Doing so also **makes my MacBook more silent because the fans don't start as often as when using a higher polling rate** (I can't provide "scientific" proof, though, so please take it with a grain of salt).  
 
 Then, I tried with two other mice: a [Logitech G203](https://www.logitechg.com/en-US/products/gaming-mice/g203-prodigy-gaming-mouse.html) (wired) that produced the same results, and an Amazon Basics wireless mouse (no idea what its polling rate is), which made WindowServer reach ~25% CPU usage.   
 
