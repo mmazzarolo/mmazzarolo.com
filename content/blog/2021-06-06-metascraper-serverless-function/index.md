@@ -150,7 +150,9 @@ export default async function handler(req, res) {
     // serve data to your users as fast as possible.
     // Here we're caching the response at the edge for 1 hour.
     // See https://vercel.com/docs/edge-network/caching for details.
-    res.setHeader("Cache-Control", "s-maxage=3600");
+    res.setHeader("Cache-Control", "s-maxage=3600");    
+    // Make this API publicly accessible. 
+    res.setHeader("Access-Control-Allow-Origin", "*");
     // Return the metadata as JSON
     res.status(200).json(metadata);
   } catch (err) {
