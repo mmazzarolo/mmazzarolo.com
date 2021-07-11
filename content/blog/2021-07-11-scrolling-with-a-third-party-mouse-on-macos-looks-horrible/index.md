@@ -1,6 +1,6 @@
 ---
-date: "2021-07-04"
-title: "Making third-party mice scrolling suck less on macOS"
+date: "2021-07-11"
+title: "Scrolling with a third-party mouse on macOS looks horrible"
 tags: [macos]
 description: Here's how you can make any third-party mouse scrolling suck a bit less on macOS.
 ---
