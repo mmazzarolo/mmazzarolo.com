@@ -1,0 +1,123 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CSP violation on redirected resources</title>
+    <meta
+      property="og:title"
+      content="Content Security Policy violation on redirected resources"
+    />
+    <meta
+      name="description"
+      content="Test how browsers handle Content Security Policy violation on redirected resources."
+    />
+    <meta
+      property="og:description"
+      content="Test how browsers handle Content Security Policy violation on redirected resources."
+    />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://mmazzarolo.com/content-security-policy-redirect-violation"
+    />
+    <link
+      rel="canonical"
+      href="https://mmazzarolo.com/content-security-policy-redirect-violation"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'unsafe-inline' https://csp-violation-examples.vercel.app/script-1.js https://csp-violation-examples.vercel.app/script-jquery.js;"
+    />
+    <style>
+      h1,
+      h2,
+      h3,
+      p,
+      li {
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+          Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        color: #24292e;
+      }
+      pre {
+        margin: 4px;
+        color: #24292e;
+      }
+      code {
+        background: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+        font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+          monospace;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        color: #24292e;
+        margin: 0;
+        padding: 0.2em 0.4em;
+      }
+      .description {
+        font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+          monospace;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        color: #505050;
+        margin: 4px;
+      }
+    </style>
+    <script>
+      document.addEventListener("securitypolicyviolation", function (event) {
+        console.log('Security Policy Violation event:', event);
+        document.querySelector("#blocked-uri").innerHTML = event.blockedURI;
+        document.querySelector("#original-policy").innerHTML =
+          event.originalPolicy;
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Content Security Policy violations on redirected resources</h1>
+    <h2>Description</h2>
+    <p>
+      This document is a showcase of how browsers handle 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+        >Content Security Policy</a
+      > violations on redirected resources.  
+    </p>
+    <p>
+      The Content Security Policy set on this document is the following: <br/>
+      <code>script-src 'unsafe-inline' https://csp-violation-examples.vercel.app/script-1.js https://csp-violation-examples.vercel.app/script-jquery.js;</code>
+    </p>
+    <p>
+      It allows loading only:
+      <ul>
+        <li>Inline scripts</li>
+        <li>The <code>https://csp-violation-examples.vercel.app/script-1.js</code> script</li>
+        <li>The <code>https://csp-violation-examples.vercel.app/script-jquery.js</code> script</li>
+      </ul>
+    </p>
+    <p>
+      When this page is loaded, we try to load both scripts defined above. 
+    </p>
+    <p>
+      On the server side, these scripts are being redirected (with a <code>301</code> redirect) this way:
+      <ul>
+        <li><code>https://csp-violation-examples.vercel.app/script-1.js</code> is redirected to <code>https://csp-violation-examples.vercel.app/script-2.js</code></li>
+        <li><code>https://csp-violation-examples.vercel.app/script-jquery.js</code> is redirected to <code>https://code.jquery.com</code></li>
+      </ul>
+    </p>
+    <p>
+      Below, you can find the violation details. We are able to capture them by
+      adding a <code>securitypolicyviolation</code> listener.<br/>
+      You can also check the Developer Tools console for more info.
+    </p>
+    <p>
+      Try opening this page on multiple browsers to see the differences of how
+      the violation is captured and reported.
+    </p>
+    <h3>Violation blocked-uri:</h3>
+    <code id="blocked-uri"></code>
+    <h3>Violation original-policy:</h3>
+    <code id="original-policy"></code>
+    <script src="https://csp-violation-examples.vercel.app/script-1.js"></script>
+    <script src="https://csp-violation-examples.vercel.app/script-jquery.js"></script>
+  </body>
+</html>
